@@ -13,4 +13,4 @@ Automated Promotion Bot - Twitter (query, favorite, follow, reply)
 
 ## usage
 twatBot.py [-s,--scrape-twitter <n> [-a,--favorite] [-o,--follow] [-p,--promote]] [-u,--update-status] [-h,--help]
-        where <n> is number of tweets to scrape (n<=200)
+where <n> is number of tweets to scrape (n<=200)
