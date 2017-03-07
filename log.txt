@@ -46,3 +46,61 @@ Tue, 07 Mar 2017 01:00:09 Followed: @MilehamAngela2017Mar07 01:17:30 [{'message'
 2017Mar07 02:27:37 Error: [{'message': 'You have already favorited this status.', 'code': 139}]
 2017Mar07 02:27:37 Error: [{'message': 'You have already favorited this status.', 'code': 139}]
 2017Mar07 02:27:38 Scraped: 6 relevant tweets
+2017Mar07 10:43:15 Error: [{'message': 'You have already favorited this status.', 'code': 139}]
+2017Mar07 10:43:15 Error: [{'message': 'You have already favorited this status.', 'code': 139}]
+2017Mar07 10:43:16 Error: [{'message': "You have been blocked from favoriting this user's tweets.", 'code': 136}]
+2017Mar07 10:43:16 Error: [{'message': 'You have already favorited this status.', 'code': 139}]
+2017Mar07 10:43:17 Error: [{'message': 'You have already favorited this status.', 'code': 139}]
+2017Mar07 10:43:17 Error: [{'message': 'You have already favorited this status.', 'code': 139}]
+2017Mar07 10:43:18 Scraped: 6 relevant tweets
+2017Mar07 10:57:28 Scraped: 6 relevant tweets
+2017Mar07 10:59:58 Scraped: 6 tweets with: -from:rydercarroll #bulletjournal OR "bullet journal" OR #bujo #android OR android
+2017Mar07 11:03:21 Scraped: 6 tweets with: -from:rydercarroll #bulletjournal OR "bullet journal" OR #bujo #android OR android
+2017Mar07 11:04:46 Scraped: 6 tweets with: -from:rydercarroll #bulletjournal OR "bullet journal" OR #bujo #android OR android
+2017Mar07 11:53:00 Scraped: 6 tweets with: -from:rydercarroll #bulletjournal OR "bullet journal" OR #bujo #android OR android
+2017Mar07 12:04:54 Scraped: 6 tweets with: -from:rydercarroll #bulletjournal OR "bullet journal" OR #bujo #android OR android
+
+2017Mar07 12:04:54 Scraped: 0 tweets with: ? "android task management app" OR "android task manager app" OR "android note taking app" OR "note-taking app for android" OR "android list app" OR "to do list android app" OR "to-do list android app" OR "todo list android app" OR "list making app for android"
+2017Mar07 12:06:32 Scraped: 6 tweets with: -from:rydercarroll #bulletjournal OR "bullet journal" OR #bujo #android OR android
+
+2017Mar07 12:06:33 Scraped: 0 tweets with: "?" "android task management app" OR "android task manager app" OR "android note taking app" OR "note-taking app for android" OR "android list app" OR "to do list android app" OR "to-do list android app" OR "todo list android app" OR "list making app for android"
+2017Mar07 12:07:03 Scraped: 6 tweets with: -from:rydercarroll #bulletjournal OR "bullet journal" OR #bujo #android OR android
+
+2017Mar07 12:07:04 Scraped: 4 tweets with: "android task management app" OR "android task manager app" OR "android note taking app" OR "note-taking app for android" OR "android list app" OR "to do list android app" OR "to-do list android app" OR "todo list android app" OR "list making app for android"
+2017Mar07 14:25:46 Scraped: 2 tweets with: -from:rydercarroll #bulletjournal OR "bullet journal" OR #bujo #android OR android
+
+2017Mar07 14:25:47 Scraped: 0 tweets with: ? "android task management app" OR "android task manager app" OR "android note taking app" OR "note-taking app for android" OR "android list app" OR "to do list android app" OR "to-do list android app" OR "todo list android app" OR "list making app for android"
+2017Mar07 14:28:17 Scraped: 3 tweets with: -from:rydercarroll #bulletjournal OR "bullet journal" OR #bujo #android OR android
+
+2017Mar07 14:28:17 Scraped: 0 tweets with: ? "android task management app" OR "android task manager app" OR "android note taking app" OR "note-taking app for android" OR "android list app" OR "to do list android app" OR "to-do list android app" OR "todo list android app" OR "list making app for android"
+2017Mar07 14:55:39 Scraped: 1 tweets with: -from:rydercarroll #bulletjournal OR "bullet journal" OR #bujo #android OR android
+
+2017Mar07 14:55:40 Scraped: 0 tweets with: ? "android task management app" OR "android task manager app" OR "android note taking app" OR "note-taking app for android" OR "android list app" OR "to do list android app" OR "to-do list android app" OR "todo list android app" OR "list making app for android"
+2017Mar07 14:56:46 Scraped: 1 tweets with: -from:rydercarroll #bulletjournal OR "bullet journal" OR #bujo #android OR android
+
+2017Mar07 14:56:46 Scraped: 0 tweets with: ? "android task management app" OR "android task manager app" OR "android note taking app" OR "note-taking app for android" OR "android list app" OR "to do list android app" OR "to-do list android app" OR "todo list android app" OR "list making app for android"
+2017Mar07 14:59:07 Error: [{'message': 'You have already favorited this status.', 'code': 139}]
+2017Mar07 14:59:07 Scraped: 1 tweets with: -from:rydercarroll #bulletjournal OR "bullet journal" OR #bujo #android OR android
+
+2017Mar07 14:59:08 Scraped: 0 tweets with: ? "android task management app" OR "android task manager app" OR "android note taking app" OR "note-taking app for android" OR "android list app" OR "to do list android app" OR "to-do list android app" OR "todo list android app" OR "list making app for android"
+2017Mar07 15:13:49 Scraped: 1 tweets with: -from:rydercarroll #bulletjournal OR "bullet journal" OR #bujo #android OR android
+
+2017Mar07 15:13:49 Scraped: 0 tweets with: ? "android task management app" OR "android task manager app" OR "android note taking app" OR "note-taking app for android" OR "android list app" OR "to do list android app" OR "to-do list android app" OR "todo list android app" OR "list making app for android"
+2017Mar07 15:20:10 Scraped: 1 tweets with: -from:rydercarroll #bulletjournal OR "bullet journal" OR #bujo #android OR android
+
+2017Mar07 15:20:10 Scraped: 0 tweets with: ? "android task management app" OR "android task manager app" OR "android note taking app" OR "note-taking app for android" OR "android list app" OR "to do list android app" OR "to-do list android app" OR "todo list android app" OR "list making app for android"
+2017Mar07 15:24:21 Spammed: @jasonperrier
+2017Mar07 15:24:26 Scraped: 1 tweets with: -from:rydercarroll #bulletjournal OR "bullet journal" OR #bujo #android OR android
+
+2017Mar07 15:24:26 Scraped: 0 tweets with: ? "android task management app" OR "android task manager app" OR "android note taking app" OR "note-taking app for android" OR "android list app" OR "to do list android app" OR "to-do list android app" OR "todo list android app" OR "list making app for android"
+2017Mar07 15:26:15 Error: [{'message': 'Status is a duplicate.', 'code': 187}]
+2017Mar07 15:26:15 Scraped: 1 tweets with: -from:rydercarroll #bulletjournal OR "bullet journal" OR #bujo #android OR android
+
+2017Mar07 15:26:15 Scraped: 0 tweets with: ? "android task management app" OR "android task manager app" OR "android note taking app" OR "note-taking app for android" OR "android list app" OR "to do list android app" OR "to-do list android app" OR "todo list android app" OR "list making app for android"
+2017Mar07 15:32:39 Spammed: @jasonperrier
+2017Mar07 15:32:45 Scraped: 1 tweets with: -from:rydercarroll #bulletjournal OR "bullet journal" OR #bujo #android OR android
+
+2017Mar07 15:32:45 Scraped: 0 tweets with: ? "android task management app" OR "android task manager app" OR "android note taking app" OR "note-taking app for android" OR "android list app" OR "to do list android app" OR "to-do list android app" OR "todo list android app" OR "list making app for android"
+2017Mar07 15:35:58 Scraped: 7 tweets with: -from:rydercarroll #bulletjournal OR "bullet journal" OR #bujo #android OR android
+
+2017Mar07 15:35:59 Scraped: 0 tweets with: ? "android task management app" OR "android task manager app" OR "android note taking app" OR "note-taking app for android" OR "android list app" OR "to do list android app" OR "to-do list android app" OR "todo list android app" OR "list making app for android"
