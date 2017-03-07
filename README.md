@@ -1,13 +1,13 @@
 # twatbot
 A python commandline bot for automating promotion on social media. Scrape social media with custom queries and promote your product to relevant results with a single command. 
 - Features
- -Twitter
-  -update user status
-  -scan twitter for list of custom queries, dump results in local file (scrapeDump.txt)
-   -argument options
-    -favorite relevant tweets
-    -follow original posters
-    -reply to relevant tweets with random promotional tweet from file (promoTweets.txt)
+ - Twitter
+  - update user status
+  - scan twitter for list of custom queries, dump results in local file (scrapeDump.txt)
+   - argument options
+    - favorite relevant tweets
+    - follow original posters
+    - reply to relevant tweets with random promotional tweet from file (promoTweets.txt)
 
 ## quick setup
 - replace twitter credentials (credentials.py) with your app's own
