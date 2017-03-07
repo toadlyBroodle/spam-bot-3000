@@ -10,3 +10,7 @@ Automated Promotion Bot - Twitter (query, favorite, follow, reply)
 - replace search queries (queries.txt) with your own
  - individual queries on seperate lines
  - for list of twitter API operators see: https://dev.twitter.com/rest/public/search
+
+## usage
+twatBot.py [-s,--scrape-twitter <n> [-a,--favorite] [-o,--follow] [-p,--promote]] [-u,--update-status] [-h,--help]
+        where <n> is number of tweets to scrape (n<=200)
