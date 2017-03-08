@@ -1,5 +1,5 @@
-# twatbot
-A python commandline bot for automating promotion on social media. Scrape social media with custom queries and promote your product to all relevant results with a single command. 
+# twatBot
+A python command-line bot for automating promotion on social media. Scrape social media with custom queries and promote your product to all relevant results with a single command. Use at your own risk: depending on how specific your custom queries are, you could find yourself banned from associated social media sites very quickly ;)
 
 ## features
 - Twitter
