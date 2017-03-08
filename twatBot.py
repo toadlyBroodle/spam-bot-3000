@@ -97,7 +97,7 @@ def scrapeTwitter(query, numItems, fav, fol, spam):
     log("Scraped: " + str(i) + " tweets with: " + query)
 
 def usage():
-    print("usage: twatterBot.py [-s,--scrape-twitter <n> [-a,--favorite] [-o,--follow] [-p,--promote]] [-u,--update-status] [-h,--help]\n\twhere <n> is number of tweets to scrape (n<=200)")
+    print("usage: " + sys.argv[0] + " [-s,--scrape-twitter <n> [-a,--favorite] [-o,--follow] [-p,--promote]] [-u,--update-status] [-h,--help]\n\twhere <n> is number of tweets to scrape (n<=200)")
 
 # get command line arguments and execute appropriate functions
 def main(argv):
