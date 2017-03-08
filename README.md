@@ -20,7 +20,7 @@ access_token_secret = "your_access_token_secret"
 ```
 
 - create new 'credentials.py' file in main directory with your twitter credentials
- - <a href="https://www.digitalocean.com/community/tutorials/how-to-create-a-twitterbot-with-python-3-and-the-tweepy-library">a good guide for how to get credentials</a>
+ - <a href="https://www.digitalocean.com/community/tutorials/how-to-create-a-twitterbot-with-python-3-and-the-tweepy-library">a good guide for how to get twitter credentials</a>
 - replace promotional tweets (promoTweets.txt) with your own
  - individual tweets on seperate lines
  - each line must by <= 140 characters long
@@ -31,3 +31,6 @@ access_token_secret = "your_access_token_secret"
 ## usage
 twatBot.py [-s,--scrape-twitter \<n\> [-a,--favorite] [-o,--follow] [-p,--promote]] [-u,--update-status] [-h,--help]
 : where \<n\> is number of tweets to scrape (n\<=200)
+
+## notes
+Future updates will include modules for promoting to reddit, facebook, instagram, etc.
