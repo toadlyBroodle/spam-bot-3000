@@ -12,10 +12,10 @@ A python command-line bot for automating promotion on social media. Scrape socia
 
 ## quick setup
 credentials.py
-    consumer_key = 'your_consumer_key'
-    consumer_secret = 'your_consumer_secret'
-    access_token = 'your_access_token'
-    access_token_secret = 'your_access_token_secret'
+```consumer_key = "your_consumer_key"
+consumer_secret = "your_consumer_secret"
+access_token = "your_access_token"
+access_token_secret = "your_access_token_secret"```
 
 - create new 'credentials.py' file in main directory with your twitter credentials
  - <a href="https://www.digitalocean.com/community/tutorials/how-to-create-a-twitterbot-with-python-3-and-the-tweepy-library">a good guide for how to get credentials</a>
