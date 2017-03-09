@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import sys
 import getopt
 import tweepy
@@ -143,7 +145,7 @@ def main(argv):
     if update:
         updateStatus()
 
-
+# so main() isn't executed if file is imported
 if __name__ == "__main__":
     # remove first script name argument
     main(sys.argv[1:])

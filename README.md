@@ -10,9 +10,23 @@ A python command-line bot for automating promotion on social media. Scrape socia
   - reply to relevant tweets with random promotional tweet from file (promoTweets.txt)
   - write all activity to log (log.txt)
 
-## quick setup
-- replace twitter credentials (credentials.py) with your app's own
- - <a href="https://www.digitalocean.com/community/tutorials/how-to-create-a-twitterbot-with-python-3-and-the-tweepy-library">a good guide for how to get credentials</a>
+## reddit initial setup
+- install praw python library `pip install praw`
+- <a href="https://praw.readthedocs.io/en/v4.0.0/getting_started/configuration/prawini.html">update praw.ini with</a> <a href="http://pythonforengineers.com/build-a-reddit-bot-part-1/">your reddit app credentials</a>
+ - 
+ 
+ 
+## twitter initial setup
+credentials.py
+```
+consumer_key = "your_consumer_key"
+consumer_secret = "your_consumer_secret"
+access_token = "your_access_token"
+access_token_secret = "your_access_token_secret"
+```
+
+- create new 'credentials.py' file in main directory with your twitter credentials
+ - <a href="https://www.digitalocean.com/community/tutorials/how-to-create-a-twitterbot-with-python-3-and-the-tweepy-library">a good guide for how to get twitter credentials</a>
 - replace promotional tweets (promoTweets.txt) with your own
  - individual tweets on seperate lines
  - each line must by <= 140 characters long
@@ -23,3 +37,6 @@ A python command-line bot for automating promotion on social media. Scrape socia
 ## usage
 twatBot.py [-s,--scrape-twitter \<n\> [-a,--favorite] [-o,--follow] [-p,--promote]] [-u,--update-status] [-h,--help]
 : where \<n\> is number of tweets to scrape (n\<=200)
+
+## notes
+Future updates will include modules for promoting to reddit, facebook, instagram, etc.
