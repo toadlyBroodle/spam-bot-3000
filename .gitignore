@@ -1,5 +1,5 @@
 __pycache__/
-twitter/credentials.py
-reddit/praw.ini
+credentials.py
+praw.ini
 log.txt
 *scrapeDump.*

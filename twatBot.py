@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 
 import sys
-import getopt
+import argparse
 import tweepy
-import json
+#import json
 from time import sleep, localtime, strftime
 from random import randint
 # Import our Twitter credentials from credentials.py
@@ -58,93 +58,78 @@ def updateStatus():
 
 
 # write file with last x many tweets of interest
-def scrapeTwitter(query, numItems, fav, fol, spam):
+def scrapeTwitter(numItems, fav, fol, spam):
     # open file in append mode
     f = open('scrapeDump.txt', 'a')
     
-    # count number of scraped tweets
-    i = 0
-    for tweet in tweepy.Cursor(api.search, q = query).items(numItems):
-        i = i + 1
-        #f.write(json.dumps(tweet._json) + "\n")
-        
-        op = tweet.user.screen_name
-        
-        # append poster, time, and tweet to file
-        postTime = tweet.created_at.strftime("%Y%b%d %H:%M:%S")
-        f.write(op + " - " + postTime + "\n")
-        f.write(tweet.text + "\n\n")
-        
-        # favorite and follow poster if not already
-        try:
-            # if already spammed post, it'll already be favorited and will throw error so won't double spam
-            if fav:
-                tweet.favorite()
-            if fol and not tweet.user.following:
-                tweet.user.follow()
-                log("Followed: @" + op)
+    for query in q_lines:
+        # count number of scraped tweets for each query
+        i = 0
+        for tweet in tweepy.Cursor(api.search, q = query).items(numItems):
+            i = i + 1
+            #f.write(json.dumps(tweet._json) + "\n")
             
-            # spam original poster with random promo line
-            if spam:
-                spamPost = getRandPromo()
-                api.update_status('@' + op + ' ' + spamPost, tweet.id)
-                log("Spammed: " + '@' + op)
-                # seconds to wait between spam tweets
-                sleep(5)
-        
-        except tweepy.TweepError as e:
-            log("Error: " + e.reason)
-        
-    f.close()
-    log("Scraped: " + str(i) + " tweets with: " + query)
-
-def usage():
-    print("usage: " + sys.argv[0] + " [-s,--scrape-twitter <n> [-a,--favorite] [-o,--follow] [-p,--promote]] [-u,--update-status] [-h,--help]\n\twhere <n> is number of tweets to scrape (n<=200)")
+            op = tweet.user.screen_name
+            
+            # append poster, time, and tweet to file
+            postTime = tweet.created_at.strftime("%Y%b%d %H:%M:%S")
+            f.write(op + " - " + postTime + "\n")
+            f.write(tweet.text + "\n\n")
+            
+            # favorite and follow poster if not already
+            try:
+                # if already spammed post, it'll already be favorited and will throw error so won't double spam
+                if fav:
+                    tweet.favorite()
+                if fol and not tweet.user.following:
+                    tweet.user.follow()
+                    log("Followed: @" + op)
+                
+                # spam original poster with random promo line
+                if spam:
+                    spamPost = getRandPromo()
+                    api.update_status('@' + op + ' ' + spamPost, tweet.id)
+                    log("Spammed: " + '@' + op)
+                    # seconds to wait between spam tweets
+                    sleep(5)
+            
+            except tweepy.TweepError as e:
+                log("Error: " + e.reason)
+            
+        log("Scraped: " + str(i) + " tweets with: " + query)
+        f.close()
 
 # get command line arguments and execute appropriate functions
 def main(argv):
-    try:
-        opts, args = getopt.getopt(argv, "hs:uaop", ["help", "update-status", "scrape-twitter=", "favorite", "follow", "promote"])
-    except getopt.GetoptError:
-          usage()
-          sys.exit(2)
-    if len(opts) == 0:
-        usage()
-        sys.exit()
+    parser = argparse.ArgumentParser(description="Social media promotion bot - Let's get spammy!")
 
-    scrape = 0
-    count = 0
-    update = 0
-    favorite = 0
-    follow = 0
-    promote = 0
+    subparsers = parser.add_subparsers(help='platforms', dest='platform')
+    
+    # Twitter
+    twit_parser = subparsers.add_parser('twitter', help='Scrape twitter for all queries in queries.txt')
+    group = twit_parser.add_argument_group('promotion')
+    group.add_argument('N', action='store', type=int, help='Number of tweets to scrape: N<=200, N=0 for status updates (-u)')
+    group.add_argument('-a', '--favorite', action='store_true', dest='t_fav', help='favorite matching tweet')
+    group.add_argument('-o', '--follow', action='store_true', dest='t_fol', help='follow original tweeter')
+    group.add_argument('-r', '--reply', action='store_true', dest='t_rep', help='reply with random promo from promoTweets.txt ')
+    twit_parser.add_argument('-u', '--update-status', action='store_true', dest='t_upd', help='update status with random promo from promoTweets.txt ')
+    
+    # Reddit
+    reddit_parser = subparsers.add_parser('reddit', help='Scrape reddit')
+    reddit_parser.add_argument('-t', '--test', action='store_true', dest='r_tst', help='help test')
 
-    # get argument flags
-    for opt, arg in opts:
-        if opt in ("-s", "--scrape-twitter"):
-            scrape = 1
-            count = int(arg)
-        if opt in ("-a", "--favorite"):
-            favorite = 1
-        if opt in ("-o", "--follow"):
-            follow = 1
-        if opt in ("-p", "--promote"):
-            promote = 1
-        if opt in ("-u", "--update-status"):
-            update = 1
-        # display usage help
-        if opt in ("-h", "--help"):
-            usage()
-            sys.exit()
+    args = parser.parse_args()
 
-    # scrape twitter for all queries and favorite, follow, and/or promote OPs
-    if scrape:
-        for query in q_lines:
-            scrapeTwitter(query, count, favorite, follow, promote)
-    # update status
-    if update:
-        updateStatus()
+    if args.platform == 'twitter':
+        # scrape twitter for all queries and favorite, follow, and/or promote OPs
+        if args.N > 0:
+            scrapeTwitter(args.N, args.t_fav, args.t_fol, args.t_rep)
+        # update status
+        if args.t_upd:
+            updateStatus()
 
+            
+            
 # so main() isn't executed if file is imported
 if __name__ == "__main__":
     # remove first script name argument
