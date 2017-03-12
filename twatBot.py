@@ -101,6 +101,7 @@ def scrapeTwitter(numItems, fav, fol, spam):
 
 # get command line arguments and execute appropriate functions
 def main(argv):
+
     parser = argparse.ArgumentParser(description="Social media promotion bot - Let's get spammy!")
 
     subparsers = parser.add_subparsers(help='platforms', dest='platform')
@@ -118,15 +119,26 @@ def main(argv):
     reddit_parser = subparsers.add_parser('reddit', help='Scrape reddit')
     reddit_parser.add_argument('-t', '--test', action='store_true', dest='r_tst', help='help test')
 
+    executed = 0 # catches any command/args that fall through below tree
     args = parser.parse_args()
-
+    
     if args.platform == 'twitter':
         # scrape twitter for all queries and favorite, follow, and/or promote OPs
         if args.N > 0:
             scrapeTwitter(args.N, args.t_fav, args.t_fol, args.t_rep)
+            executed = 1
         # update status
         if args.t_upd:
             updateStatus()
+            executed = 1
+    if args.platform == 'reddit':
+        print('yay reddit')
+        executed = 1
+    
+    if not executed:
+        print("exit: unknown error")
+        parser.print_help()
+        sys.exit(1)
 
             
             
@@ -134,3 +146,6 @@ def main(argv):
 if __name__ == "__main__":
     # remove first script name argument
     main(sys.argv[1:])
+    
+    
+    
