@@ -10,6 +10,7 @@ A python command-line bot for automating promotion on social media. Scrape socia
   - reply to relevant tweets with random promotional tweet from file (promoTweets.txt)
   - write all activity to log (log.txt)
 
+<<<<<<< HEAD
 ## reddit initial setup
 - install praw python library `pip install praw`
 - <a href="https://praw.readthedocs.io/en/v4.0.0/getting_started/configuration/prawini.html">update praw.ini with</a> <a href="http://pythonforengineers.com/build-a-reddit-bot-part-1/">your reddit app credentials</a>
@@ -17,6 +18,9 @@ A python command-line bot for automating promotion on social media. Scrape socia
  
  
 ## twitter initial setup
+=======
+## quick setup
+>>>>>>> 3f0df5fa2681ea518ce8c36bdbeb45ccb357be4d
 credentials.py
 ```
 consumer_key = "your_consumer_key"
