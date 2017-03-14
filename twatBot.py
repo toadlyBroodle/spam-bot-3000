@@ -32,9 +32,9 @@ q_length = sum(1 for _ in q_lines)
 def log(s):
     t = strftime("%Y%b%d %H:%M:%S", localtime()) + " " + s
 
-    l = open('log.txt', 'a')
-    l.write(t + "\n")
-    l.close()
+    with open('log.txt', 'a') as l:
+        l.write(t + "\n")
+        
     # also print truncated log to screen
     p = t[:75] + (t[75:] and '..')
     print(p)
@@ -56,49 +56,91 @@ def updateStatus():
     except tweepy.TweepError as e:
         log(e.reason)
 
+def processTweet(tweet, fav, fol, spam):
+
+    op = tweet.user.screen_name
+    
+    # open file in append mode
+    with open('scrapeDump.txt', 'a') as f:
+    
+        # append poster, time, and tweet to file
+        postTime = tweet.created_at.strftime("%Y%b%d %H:%M:%S")
+        f.write(postTime +  " @" + op + " ")
+        f.write(tweet.text + "\n")
+    
+    # try to favorite and follow poster if not already
+    try:
+        # if already spammed post, it'll already be favorited and will throw error so won't double spam
+        if fav:
+            tweet.favorite()
+            log("Favorited @" + op + "'s post")
+        if fol and not tweet.user.following:
+            tweet.user.follow()
+            log("Followed: @" + op)
+        
+        # spam original poster with random promo line
+        if spam:
+            spamPost = getRandPromo()
+            api.update_status('@' + op + ' ' + spamPost, tweet.id)
+            log("Spammed: " + '@' + op)
+            # seconds to wait between spam tweets
+            sleep(5)
+    
+    except tweepy.TweepError as e:
+        log("Error: " + e.reason)
+
 
 # write file with last x many tweets of interest
 def scrapeTwitter(numItems, fav, fol, spam):
-    # open file in append mode
-    f = open('scrapeDump.txt', 'a')
-    
-    for query in q_lines:
-        # count number of scraped tweets for each query
-        i = 0
-        for tweet in tweepy.Cursor(api.search, q = query).items(numItems):
-            i = i + 1
-            #f.write(json.dumps(tweet._json) + "\n")
-            
-            op = tweet.user.screen_name
-            
-            # append poster, time, and tweet to file
-            postTime = tweet.created_at.strftime("%Y%b%d %H:%M:%S")
-            f.write(op + " - " + postTime + "\n")
-            f.write(tweet.text + "\n\n")
-            
-            # favorite and follow poster if not already
+    i = 0
+   
+    # continuously execute mode
+    if numItems is 0:
+        
+        # TODO get tweets for each query
+        #tweets = []
+        #for i in range(q_length):
+             #tweets += tweepy.Cursor(api.search, q=q_lines[i]).items()
+        
+        # for now just iterate over first query
+        try:
+            q = tweepy.Cursor(api.search, q=q_lines[0]).items()
+        except tweepy.TweepError as e:
+            log("TweepyError: " + e.reason)
+        
+        while True:
+            i += 1
             try:
-                # if already spammed post, it'll already be favorited and will throw error so won't double spam
-                if fav:
-                    tweet.favorite()
-                if fol and not tweet.user.following:
-                    tweet.user.follow()
-                    log("Followed: @" + op)
+                #for q in tweets:
+                tweet = q.next()
+                processTweet(tweet, fav, fol, spam)                    
                 
-                # spam original poster with random promo line
-                if spam:
-                    spamPost = getRandPromo()
-                    api.update_status('@' + op + ' ' + spamPost, tweet.id)
-                    log("Spammed: " + '@' + op)
-                    # seconds to wait between spam tweets
-                    sleep(5)
-            
             except tweepy.TweepError as e:
-                log("Error: " + e.reason)
+                log(i + " tweets scraped")
+                log("TweepyError: " + e.reason)
+                
+                # wait for next request window to continue
+                time.sleep(60 * 15)
+                continue
+            except StopIteration:
+                break
+                
+        log("Scraped: " + str(i) + " tweets with: " + q_lines[0])
+                
+        
+    else: # only iterate over number of tweet specified
+    
+        for query in q_lines:
             
-        log("Scraped: " + str(i) + " tweets with: " + query)
-        f.close()
-
+            for tweet in tweepy.Cursor(api.search, q=query).items(numItems):
+                i += 1
+                #f.write(json.dumps(tweet._json) + "\n")
+                
+                processTweet(tweet, fav, fol, spam)
+                
+            log("Scraped: " + str(i) + " tweets with: " + query)
+        
+    
 # get command line arguments and execute appropriate functions
 def main(argv):
 
@@ -109,7 +151,8 @@ def main(argv):
     # Twitter
     twit_parser = subparsers.add_parser('twitter', help='Scrape twitter for all queries in queries.txt')
     group = twit_parser.add_argument_group('promotion')
-    group.add_argument('N', action='store', type=int, help='Number of tweets to scrape: N<=200, N=0 for status updates (-u)')
+    group.add_argument('N', action='store', type=int, help='Num tweets to scrape: N<=200; N=0 when -u | -c')
+    group.add_argument('-c', '--continuous', action='store_true', dest='t_con', help='continue executing (within rate limits) until stopped')
     group.add_argument('-a', '--favorite', action='store_true', dest='t_fav', help='favorite matching tweet')
     group.add_argument('-o', '--follow', action='store_true', dest='t_fol', help='follow original tweeter')
     group.add_argument('-r', '--reply', action='store_true', dest='t_rep', help='reply with random promo from promoTweets.txt ')
@@ -123,10 +166,17 @@ def main(argv):
     args = parser.parse_args()
     
     if args.platform == 'twitter':
+        
         # scrape twitter for all queries and favorite, follow, and/or promote OPs
         if args.N > 0:
             scrapeTwitter(args.N, args.t_fav, args.t_fol, args.t_rep)
             executed = 1
+        
+        # execute continuously, until stopped, while respecting the 900 requests per 15 minutes rate limit
+        if args.t_con:
+            scrapeTwitter(args.N, args.t_fav, args.t_fol, args.t_rep)
+            executed = 1
+            
         # update status
         if args.t_upd:
             updateStatus()

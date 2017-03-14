@@ -3,3 +3,4 @@ credentials.py
 praw.ini
 log.txt
 *scrapeDump.*
+queriesInactive.txt
