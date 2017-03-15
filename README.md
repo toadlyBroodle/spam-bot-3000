@@ -1,5 +1,5 @@
 # twatBot
-A python command-line bot for automating promotion on social media. Scrape social media with custom queries and promote your product to all relevant results with a single command. <b>Use at your own risk:</b> depending on how specific your custom queries are, you could find yourself banned from associated social media sites very quickly ;)
+A python command-line bot for automating promotion on social media. Scrape social media with custom queries and promote your product to all relevant results with a single command. <b>Use at your own risk:</b> depending on how specific your custom queries are, your bot could find itself banned from associated social media sites very quickly ;)
 
 ## features
 - Twitter
@@ -39,13 +39,13 @@ access_token_secret = "your_access_token_secret"
 usage: twatBot.py twitter [-h] [-s] [-f] [-p] [-u]
 
 optional arguments:
-  - h, --help           		show this help message and exit
-  - u, --update-status update status with random promo from promoTweets.txt
+- -h, --help           		show this help message and exit
+- -u, --update-status update status with random promo from promoTweets.txt
 
 promotion:
-  - s, --scrape       		scrape for tweets matching query
-  - f, --follow         		follow original tweeters in scrapeDump.txt
-  - p, --promote        	favorite tweets and reply to tweeters in scrapeDump.txt with random promo from promoTweets.txt
+- -s, --scrape       		scrape for tweets matching query
+- -f, --follow         		follow original tweeters in scrapeDump.txt
+- -p, --promote        	favorite tweets and reply to tweeters in scrapeDump.txt with random promo from promoTweets.txt
 
 ## notes
 Future updates will include modules for promoting to reddit, facebook, instagram, etc.
