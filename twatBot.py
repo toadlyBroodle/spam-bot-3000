@@ -25,7 +25,7 @@ def log(s):
         l.write(t + "\n")
         
     # also print truncated log to screen
-    p = t[:75] + (t[75:] and '..')
+    p = t[:90] + (t[90:] and '..')
     print(p)
 
 
@@ -131,14 +131,22 @@ def processTweet(tweet, pro, fol):
 
     scrn_name = tweet.user.screen_name
     
-    # open file in append mode
-    with open('scrapeDump.txt', 'a') as f:
-    
-        # append time, tweetID, screenName, and tweetText to file
-        f.write(tweet.created_at.strftime("%b%d %H:%M"))
-        f.write("TWT_ID" + str(tweet.id))
-        f.write("SCRN_NAME" + scrn_name)
-        f.write("TWT_TXT" + tweet.text.replace("\n", "") + "\n")
+    # open dump file in read/write/append mode
+    with open('scrapeDump.txt', '+a') as f:
+        scrp_lines = f.readlines()
+
+        # append time, tweetID, screenName, and tweetText to line
+        new_line = (tweet.created_at.strftime("%b%d %H:%M")
+                    + "TWT_ID" + str(tweet.id)
+                    + "SCRN_NAME" + scrn_name
+                    + "TWT_TXT" + tweet.text.replace("\n", "") + "\n")
+        # only add new, unique tweets
+        k = 0 
+        for l in scrp_lines:
+            if new_line == l:
+                continue 
+            f.write(new_line)
+            k += 1
     
     # follow op, if not already following
     if fol and not tweet.user.following:
@@ -147,6 +155,8 @@ def processTweet(tweet, pro, fol):
     # favorite and respond to op's tweet
     if pro:
         replyToTweet(tweet.id, scrn_name)
+    
+    return k # return count of new tweets added to scrapeDump.txt
 
 
 # continuously scrape for tweets matching all queries
@@ -157,9 +167,10 @@ def scrapeTwitter(fol, pro):
         c = tweepy.Cursor(api.search, q=query).items()
         i = 0
         while True:
+            k = 0 # new tweets scraped
             try:
                 # process next tweet
-                processTweet(c.next(), pro, fol)                    
+                k = processTweet(c.next(), pro, fol)                    
                 i += 1 # keep track of number of tweets processed
             except tweepy.TweepError as e:
                 log(i + " tweets scraped")
@@ -168,7 +179,10 @@ def scrapeTwitter(fol, pro):
                 time.sleep(60 * 15)
                 continue
             except StopIteration:
-                log("Scraped: " + str(i) + " tweets with: " + query.replace("\n", ""))
+                log(("Scraped: {total} tweets ({new} new) found with: {query}\n".format(
+                    total=str(i), 
+                    new=str(k), 
+                    query=query.replace("\n", ""))))
                 break
                 
     
