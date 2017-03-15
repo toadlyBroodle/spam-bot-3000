@@ -5,18 +5,20 @@ A python command-line bot for automating promotion on social media. Scrape socia
 - Twitter
  - update user status
  - scan twitter for list of custom queries, dump results in local file (scrapeDump.txt)
-  - favorite relevant tweets
   - follow original posters
+  - favorite relevant tweets
   - reply to relevant tweets with random promotional tweet from file (promoTweets.txt)
   - write all activity to log (log.txt)
 
 ## reddit initial setup
-- install praw python library `pip install praw`
+- install praw python library dependency `pip install praw`
 - <a href="https://praw.readthedocs.io/en/v4.0.0/getting_started/configuration/prawini.html">update praw.ini with</a> <a href="http://pythonforengineers.com/build-a-reddit-bot-part-1/">your reddit app credentials</a>
  - 
  
  
 ## twitter initial setup
+- install tweepy dependency `pip install tweepy`
+
 credentials.py
 ```
 consumer_key = "your_consumer_key"
@@ -35,8 +37,17 @@ access_token_secret = "your_access_token_secret"
  - <a href="https://dev.twitter.com/rest/public/search">guide to constructing twitter queries</a>
 
 ## usage
-twatBot.py [-s,--scrape-twitter \<n\> [-a,--favorite] [-o,--follow] [-p,--promote]] [-u,--update-status] [-h,--help]
-: where \<n\> is number of tweets to scrape (n\<=200)
+usage: twatBot.py twitter [-h] [-s] [-f] [-p] [-u]
+
+optional arguments:
+  -h, --help           		show this help message and exit
+  -u, --update-status update status with random promo from promoTweets.txt
+
+promotion:
+  -s, --scrape       		scrape for tweets matching query
+  -f, --follow         		follow original tweeters in scrapeDump.txt
+  -p, --promote        	favorite tweets and reply to tweeters in scrapeDump.txt
+								with random promo from promoTweets.txt
 
 ## notes
 Future updates will include modules for promoting to reddit, facebook, instagram, etc.
