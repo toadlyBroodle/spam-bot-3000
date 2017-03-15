@@ -2,5 +2,5 @@ __pycache__/
 credentials.py
 praw.ini
 log.txt
-*scrapeDump.*
-queriesInactive.txt
+scrapeDump.txt
+*_inactive*
