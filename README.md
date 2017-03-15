@@ -12,7 +12,7 @@ A python command-line bot for automating promotion on social media. Scrape socia
 
 ## reddit initial setup
 - install praw python library dependency `pip install praw`
-- <a href="https://praw.readthedocs.io/en/v4.0.0/getting_started/configuration/prawini.html">update praw.ini with</a> <a href="http://pythonforengineers.com/build-a-reddit-bot-part-1/">your reddit app credentials</a>
+- <a href="https://praw.readthedocs.io/en/v4.0.0/getting_started/configuration/prawini.html">update praw.ini</a> with <a href="http://pythonforengineers.com/build-a-reddit-bot-part-1/">your reddit app credentials</a>
  
  
 ## twitter initial setup
@@ -39,14 +39,13 @@ access_token_secret = "your_access_token_secret"
 usage: twatBot.py twitter [-h] [-s] [-f] [-p] [-u]
 
 optional arguments:
-  -h, --help           		show this help message and exit
-  -u, --update-status update status with random promo from promoTweets.txt
+  - h, --help           		show this help message and exit
+  - u, --update-status update status with random promo from promoTweets.txt
 
 promotion:
-  -s, --scrape       		scrape for tweets matching query
-  -f, --follow         		follow original tweeters in scrapeDump.txt
-  -p, --promote        	favorite tweets and reply to tweeters in scrapeDump.txt
-								with random promo from promoTweets.txt
+  - s, --scrape       		scrape for tweets matching query
+  - f, --follow         		follow original tweeters in scrapeDump.txt
+  - p, --promote        	favorite tweets and reply to tweeters in scrapeDump.txt with random promo from promoTweets.txt
 
 ## notes
 Future updates will include modules for promoting to reddit, facebook, instagram, etc.
