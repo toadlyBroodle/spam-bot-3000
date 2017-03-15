@@ -3,17 +3,16 @@ A python command-line bot for automating promotion on social media. Scrape socia
 
 ## features
 - Twitter
- - update user status
- - scan twitter for list of custom queries, dump results in local file (scrapeDump.txt)
-  - follow original posters
-  - favorite relevant tweets
-  - reply to relevant tweets with random promotional tweet from file (promoTweets.txt)
-  - write all activity to log (log.txt)
+	- update user status
+	- scan twitter for list of custom queries, dump results in local file (scrapeDump.txt)
+		- follow original posters
+		- favorite relevant tweets
+		- reply to relevant tweets with random promotional tweet from file (promoTweets.txt)
+		- write all activity to log (log.txt)
 
 ## reddit initial setup
 - install praw python library dependency `pip install praw`
 - <a href="https://praw.readthedocs.io/en/v4.0.0/getting_started/configuration/prawini.html">update praw.ini with</a> <a href="http://pythonforengineers.com/build-a-reddit-bot-part-1/">your reddit app credentials</a>
- - 
  
  
 ## twitter initial setup
@@ -28,13 +27,13 @@ access_token_secret = "your_access_token_secret"
 ```
 
 - create new 'credentials.py' file in main directory with your twitter credentials
- - <a href="https://www.digitalocean.com/community/tutorials/how-to-create-a-twitterbot-with-python-3-and-the-tweepy-library">a good guide for how to get twitter credentials</a>
+	- <a href="https://www.digitalocean.com/community/tutorials/how-to-create-a-twitterbot-with-python-3-and-the-tweepy-library">a good guide for how to get twitter credentials</a>
 - replace promotional tweets (promoTweets.txt) with your own
- - individual tweets on seperate lines
- - each line must by <= 140 characters long
+	- individual tweets on seperate lines
+	- each line must by <= 140 characters long
 - replace search queries (queries.txt) with your own
- - individual queries on seperate lines
- - <a href="https://dev.twitter.com/rest/public/search">guide to constructing twitter queries</a>
+	- individual queries on seperate lines
+	- <a href="https://dev.twitter.com/rest/public/search">guide to constructing twitter queries</a>
 
 ## usage
 usage: twatBot.py twitter [-h] [-s] [-f] [-p] [-u]
