@@ -9,11 +9,6 @@ A python command-line bot for automating promotion on social media. Scrape socia
 		- favorite relevant tweets
 		- reply to relevant tweets with random promotional tweet from file (promoTweets.txt)
 		- write all activity to log (log.txt)
-
-## reddit initial setup
-- install praw python library dependency `pip install praw`
-- <a href="https://praw.readthedocs.io/en/v4.0.0/getting_started/configuration/prawini.html">update praw.ini</a> with <a href="http://pythonforengineers.com/build-a-reddit-bot-part-1/">your reddit app credentials</a>
- 
  
 ## twitter initial setup
 - install tweepy dependency `pip install tweepy`
@@ -35,7 +30,7 @@ access_token_secret = "your_access_token_secret"
 	- individual queries on seperate lines
 	- <a href="https://dev.twitter.com/rest/public/search">guide to constructing twitter queries</a>
 
-## usage
+## twitter usage
 usage: twatBot.py twitter [-h] [-s] [-f] [-p] [-u]
 
 optional arguments:
@@ -46,6 +41,21 @@ promotion:
 - -s, --scrape       		scrape for tweets matching query
 - -f, --follow         		follow original tweeters in scrapeDump.txt
 - -p, --promote        	favorite tweets and reply to tweeters in scrapeDump.txt with random promo from promoTweets.txt
+
+## twitter workflows
+    1) continuous mode
+		- [-sp] scrape and promote to all tweets matching queries
+    2) overwatch mode
+		- [-s] scrape first
+		- manually edit scrapeDump.txt
+			- add '-' to beginning of line to ignore
+			- leave line unaltered to promote to
+		- [-p] then promote to remaining tweets in scrapeDump.txt
+
+
+## reddit initial setup
+- install praw python library dependency `pip install praw`
+- <a href="https://praw.readthedocs.io/en/v4.0.0/getting_started/configuration/prawini.html">update praw.ini</a> with <a href="http://pythonforengineers.com/build-a-reddit-bot-part-1/">your reddit app credentials</a>
 
 ## notes
 Future updates will include modules for promoting to reddit, facebook, instagram, etc.

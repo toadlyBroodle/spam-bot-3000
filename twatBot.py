@@ -117,8 +117,7 @@ def replyToTweet(twt_id, scrn_name):
         api.create_favorite(twt_id)
 
         # spam op with random promo line
-        if spam:
-            spamOP(tweet.id, scrn_name)
+        spamOP(twt_id, scrn_name)
 
     except tweepy.TweepError as e:
         log("Error: " + e.reason)
@@ -127,26 +126,37 @@ def replyToTweet(twt_id, scrn_name):
     log("Favorited: " + scrn_name + " [" + twt_id + "]")
 
 
+def buildDumpLine(tweet):
+    return (tweet.created_at.strftime("%b%d %H:%M")
+                + "TWT_ID" + str(tweet.id)
+                + "SCRN_NAME" + tweet.user.screen_name
+                + "TWT_TXT" + tweet.text.replace("\n", "") + "\n")
+    
+def parseDumpLine(dl):
+    # parse scrape dump file, seperate tweet ids from screen names
+    a1 = dl.split('TWT_ID')
+    a2 = a1[1].split('SCRN_NAME')
+    a3 = a2[1].split('TWT_TXT')
+    # [time, twt_id, scrn_name, twt_txt]
+    return [a1[0], a2[0], a3[0], a3[1]]
+   
+
 def processTweet(tweet, pro, fol):
 
     scrn_name = tweet.user.screen_name
     
-    # open dump file in read/write/append mode
-    with open('scrapeDump.txt', '+a') as f:
+    # open dump file in read mode
+    with open('scrapeDump.txt', 'r') as f:
         scrp_lines = f.readlines()
 
-        # append time, tweetID, screenName, and tweetText to line
-        new_line = (tweet.created_at.strftime("%b%d %H:%M")
-                    + "TWT_ID" + str(tweet.id)
-                    + "SCRN_NAME" + scrn_name
-                    + "TWT_TXT" + tweet.text.replace("\n", "") + "\n")
-        # only add new, unique tweets
-        k = 0 
-        for l in scrp_lines:
-            if new_line == l:
-                continue 
-            f.write(new_line)
-            k += 1
+        # if tweet already scraped, then return
+        if any(str(tweet.id) in s for s in scrp_lines):
+            return 0
+
+    # otherwise append to scrapeDump.txt    
+    new_line = buildDumpLine(tweet)
+    with open('scrapeDump.txt', 'a') as f:
+        f.write(new_line)
     
     # follow op, if not already following
     if fol and not tweet.user.following:
@@ -156,34 +166,39 @@ def processTweet(tweet, pro, fol):
     if pro:
         replyToTweet(tweet.id, scrn_name)
     
-    return k # return count of new tweets added to scrapeDump.txt
+    return 1 # return count of new tweets added to scrapeDump.txt
 
 
 # continuously scrape for tweets matching all queries
 def scrapeTwitter(fol, pro):
    
+    def scrape_log(i, k):
+        log(("Scraped: {total} tweets ({new} new) found with: {query}\n".format(
+        total=str(i), 
+        new=str(k), 
+        query=query.replace("\n", ""))))
+   
     for query in q_lines:
             
         c = tweepy.Cursor(api.search, q=query).items()
-        i = 0
+        i = 0 # total tweets scraped
+        k = 0 # new tweets scraped
         while True:
-            k = 0 # new tweets scraped
             try:
                 # process next tweet
-                k = processTweet(c.next(), pro, fol)                    
-                i += 1 # keep track of number of tweets processed
+                k += processTweet(c.next(), pro, fol)                    
+                i += 1
             except tweepy.TweepError as e:
-                log(i + " tweets scraped")
+                scrape_log(i, k)
+                log("Error: " + e.reason)
                 
                 # wait for next request window to continue
                 time.sleep(60 * 15)
                 continue
             except StopIteration:
-                log(("Scraped: {total} tweets ({new} new) found with: {query}\n".format(
-                    total=str(i), 
-                    new=str(k), 
-                    query=query.replace("\n", ""))))
+                scrape_log(i, k)
                 break
+                
                 
     
 # get command line arguments and execute appropriate functions
@@ -226,19 +241,20 @@ def main(argv):
                 t_lines = f.readlines()
 
                 for t in t_lines:
-                    # parse scrape dump file, seperate tweet ids from screen names
-                    a1 = t.split('TWT_ID')
-                    a2 = a1[1].split('SCRN_NAME')
-                    a3 = a2[1].split('TWT_TXT')
-                    twt_id = a2[0]
-                    scrn_name = a3[0]
+                    pd = parseDumpLine(t)
+
+                    # ignore lines beginning with '-'
+                    if pd[0][0] == '-':
+                        continue
+
+                    twt_id = pd[1]
+                    scrn_name = pd[2]
                     
                     if args.t_fol:
                         folTweeter(scrn_name)
                     
                     if args.t_pro:
                         replyToTweet(twt_id, scrn_name)
-        
             executed = 1
 
 
