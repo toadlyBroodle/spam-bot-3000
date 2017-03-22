@@ -170,7 +170,7 @@ def processTweet(tweet, pro, fol):
 
 
 # continuously scrape for tweets matching all queries
-def scrapeTwitter(fol, pro):
+def scrapeTwitter(con, fol, pro):
    
     def scrape_log(i, k):
         log(("Scraped: {total} tweets ({new} new) found with: {query}\n".format(
@@ -185,6 +185,12 @@ def scrapeTwitter(fol, pro):
         k = 0 # new tweets scraped
         while True:
             try:
+                # prompt user to continue scraping after 50 results
+                if (not con and i%51 == 50):
+                    query_trunc = query[:20] + (query[20:] and '..')
+                    keep_going = input("{num} results scraped for {srch}, keep going? (Y/n):".format(num=str(i), srch=query_trunc))
+                    if (keep_going != "Y"):
+                        raise StopIteration()
                 # process next tweet
                 k += processTweet(c.next(), pro, fol)                    
                 i += 1
@@ -214,6 +220,7 @@ def main(argv):
     group.add_argument('-s', '--scrape', action='store_true', dest='t_scr', help='scrape for tweets matching query')
     group.add_argument('-f', '--follow', action='store_true', dest='t_fol', help='follow original tweeters in scrapeDump.txt')
     group.add_argument('-p', '--promote', action='store_true', dest='t_pro', help='favorite tweets and reply to tweeters in scrapeDump.txt with random promo from promoTweets.txt')
+    twit_parser.add_argument('-c', '--continuous', action='store_true', dest='t_con', help='scape continuously, without prompting to continue')
     twit_parser.add_argument('-u', '--update-status', action='store_true', dest='t_upd', help='update status with random promo from promoTweets.txt ')
     
     # Reddit
@@ -234,7 +241,7 @@ def main(argv):
 
         # scrape twitter for all queries and favorite, follow, and/or promote OPs
         if args.t_scr:
-            scrapeTwitter(args.t_fol, args.t_pro)
+            scrapeTwitter(args.t_con, args.t_fol, args.t_pro)
             executed = 1
         else: # otherwise promote to all entries in scrapeDump file
             with open('scrapeDump.txt') as f:

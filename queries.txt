@@ -1,4 +1,1 @@
--from:rydercarroll #bulletjournal OR "bullet journal" OR #bujo OR bujo #android OR android OR app
-? "android task management app" OR "android task manager app" OR "android note taking app" OR "note-taking app for android" OR "android list app" OR "to do list android app" OR "to-do list android app" OR "todo list android app" OR "list making app for android"
-list app android -ios -iphone ?
-daily list android ?
+test
