@@ -216,12 +216,13 @@ def main(argv):
     
     # Twitter
     twit_parser = subparsers.add_parser('twitter', help='Scrape twitter for all queries in queries.txt')
-    group = twit_parser.add_argument_group('promotion')
-    group.add_argument('-s', '--scrape', action='store_true', dest='t_scr', help='scrape for tweets matching query')
-    group.add_argument('-f', '--follow', action='store_true', dest='t_fol', help='follow original tweeters in scrapeDump.txt')
-    group.add_argument('-p', '--promote', action='store_true', dest='t_pro', help='favorite tweets and reply to tweeters in scrapeDump.txt with random promo from promoTweets.txt')
-    twit_parser.add_argument('-c', '--continuous', action='store_true', dest='t_con', help='scape continuously, without prompting to continue')
     twit_parser.add_argument('-u', '--update-status', action='store_true', dest='t_upd', help='update status with random promo from promoTweets.txt ')
+    group_scrape = twit_parser.add_argument_group('query')
+    group_scrape.add_argument('-s', '--scrape', action='store_true', dest='t_scr', help='scrape for tweets matching queries in queries.txt')
+    group_scrape.add_argument('-c', '--continuous', action='store_true', dest='t_con', help='scape continuously - suppress prompt to continue after 50 results per query')
+    group_promote = twit_parser.add_argument_group('spam')
+    group_promote.add_argument('-f', '--follow', action='store_true', dest='t_fol', help='follow original tweeters in scrapeDump.txt')
+    group_promote.add_argument('-p', '--promote', action='store_true', dest='t_pro', help='favorite tweets and reply to tweeters in scrapeDump.txt with random promo from promoTweets.txt')
     
     # Reddit
     reddit_parser = subparsers.add_parser('reddit', help='Scrape reddit')
