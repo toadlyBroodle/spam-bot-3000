@@ -107,8 +107,8 @@ def spamOP(twt_id, scrn_name):
         log("Error: " + e.reason)
         
     log("Spammed: " + scrn_name)
-    # seconds to wait between spam tweets
-    sleep(5)
+    # wait 1-5 seconds between spam tweets
+    sleep(randint(1, 5))
 
 
 def replyToTweet(twt_id, scrn_name):
