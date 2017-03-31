@@ -4,12 +4,35 @@ A python command-line bot for automating promotion on social media. Scrape socia
 ## features
 - Twitter
 	- update user status
-	- scan twitter for list of custom queries, dump results in local file (scrapeDump.txt)
+	- scan twitter for list of custom queries, dump results in local file (twit_scrape_dump.txt)
+		- scan continuously or in overwatch mode
+	- promotion abilities
 		- follow original posters
 		- favorite relevant tweets
-		- reply to relevant tweets with random promotional tweet from file (promoTweets.txt)
-		- write all activity to log (log.txt)
+		- reply to relevant tweets with random promotional tweet from file (twit_promos.txt)
+		- ignore tweets by marking them in dump file with "-" prefix
+	- tweepy exception handling
+	- write all activity to log (log.txt)
+- Reddit
+	- scrape subreddit(s) for lists of keyword, dump results in local file (red_scrape_dump.txt)
+		- seperate keyword lists for AND, OR, NOT search operations (red_subkey_pairs.json)
+	- reply to posts in red_scrape_dump.txt with random promotion from red_promos.txt
+		- ignore posts by marking them in dump file with "-" prefix
+	- praw.errors.HTTPException handling
+	- write all activity to log (log.txt)
  
+## reddit initial setup
+- install praw python library dependency `pip install praw`
+- <a href="https://praw.readthedocs.io/en/v4.0.0/getting_started/configuration/prawini.html">update praw.ini</a> with <a href="http://pythonforengineers.com/build-a-reddit-bot-part-1/">your reddit app credentials</a>
+
+## reddit usage
+usage: twatBot.py reddit [-h] [-s N] [-r]
+
+optional arguments:
+-  -h, 	--help        	show this help message and exit
+-  -s N,	--scrape N  	scrape subreddits in subreddits.txt for keywords in red_keywords.txt; N = number of posts to scrape
+-  -r, 	--reply       	reply to posts in red_scrape_dump.txt not marked with a "-" prefix
+					
 ## twitter initial setup
 - install tweepy dependency `pip install tweepy`
 - create new 'credentials.py' file in main directory with your twitter credentials
@@ -55,10 +78,5 @@ spam:
 			- leave line unaltered to promote to
 		- [-p] then promote to remaining tweets in scrapeDump.txt
 
-
-## reddit initial setup
-- install praw python library dependency `pip install praw`
-- <a href="https://praw.readthedocs.io/en/v4.0.0/getting_started/configuration/prawini.html">update praw.ini</a> with <a href="http://pythonforengineers.com/build-a-reddit-bot-part-1/">your reddit app credentials</a>
-
 ## notes
-Future updates will include modules for promoting to reddit, facebook, instagram, etc.
+Future updates will include modules for promoting to facebook, instagram, etc.

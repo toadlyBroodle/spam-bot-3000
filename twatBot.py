@@ -2,6 +2,7 @@
 
 import sys
 import argparse
+import pprint
 import json
 from time import sleep, localtime, strftime
 import datetime
@@ -232,18 +233,16 @@ def scrapeTwitter(con, fol, pro):
 
 
 def buildRedDumpLine(submission):
-    return (datetime.datetime.fromtimestamp(int(submission.created)).strftime("%b%d %H:%M") 
-            + "SUBM_ID" + str(submission.id)
-            + "SUBM_TIT" + submission.title
+    return (datetime.datetime.fromtimestamp(int(submission.created)).strftime("%b%d %H:%M")
+            + "SUBM_URL" + str(submission.url)
             + "SUBM_TXT" + submission.selftext.replace("\n", "") + "\n")
 
 def parseRedDumpLine(dl):
     # parse scrape dump file, seperate tweet ids from screen names
-    a1 = dl.split('SUBM_ID')
-    a2 = a1[1].split('SUBM_TIT')
-    a3 = a2[1].split('SUBM_TXT')
+    a1 = dl.split('SUBM_URL')
+    a2 = a1[1].split('SUBM_TXT')
     # [time, twt_id, scrn_name, twt_txt]
-    return [a1[0], a2[0], a3[0], a3[1]]
+    return [a1[0], a2[0], a2[1]]
 
 def processSubmission(submission):
     # open dump file in read mode
@@ -259,10 +258,39 @@ def processSubmission(submission):
         f.write(buildRedDumpLine(submission))
         return 1
 
-def scrapeReddit():
+def getRandRedPromo():
+    with open('red_promos.txt') as f:
+        rp_lines = f.readlines()
+        f_length = sum(1 for _ in rp_lines)
+        return rp_lines[randint(0, f_length - 1)]
+
+def replyReddit():
+     # open dump file in read mode
+    with open('red_scrape_dump.txt', 'r') as f:
+        post_lines = f.readlines()
+
+        # reply to lines not marked with prefix '-'
+        for post in post_lines:
+            pd = parseRedDumpLine(post)
+
+            if pd[0][0] == '-':
+                continue
+            # get submission from submission.id stored in scrape dump
+            submission = reddit.submission(url=pd[1])
+            # reply with random promotion
+            try:
+                submission.reply(getRandRedPromo())
+                log('Replied: ' + pd[1])
+                
+                # wait for 3-6 secs to evade spamming flags
+                sleep(randint(3, 6))
+            except praw.errors.HTTPException as e:
+                log("Error: " + e.message)
+
+def scrapeReddit(scrape_limit):
     
     def scrape_log(i, k):
-        log("Scraped: {total} submissions ({new} new) in {subs}\n".format(
+        log("Scraped: {total} submissions ({new} new) in {subs}".format(
             total=str(i), 
             new=str(k),
             subs=subredstr))
@@ -275,7 +303,7 @@ def scrapeReddit():
         subredstr = subkey["subreddits"]
         subreddits = reddit.subreddit(subredstr)
         # indefinitely monitor new submissions with: subreddit.stream.submissions()
-        for submission in subreddits.new(limit=200):
+        for submission in subreddits.new(limit=int(scrape_limit)):
             done = False
             # process any submission with title/text fitting and/or/not keywords
             tit_txt = submission.title.lower() + submission.selftext.lower()
@@ -322,7 +350,8 @@ def main(argv):
     
     # Reddit arguments
     reddit_parser = subparsers.add_parser('reddit', help='Reddit: scrape subreddits, promote to results')
-    reddit_parser.add_argument('-s', '--scrape', action='store_true', dest='r_scr', help='scrape subreddits in subreddits.txt for keywords in red_keywords.txt')
+    reddit_parser.add_argument('-s', '--scrape', dest='N', help='scrape subreddits in subreddits.txt for keywords in red_keywords.txt; N = number of posts to scrape')
+    reddit_parser.add_argument('-r', '--reply', action='store_true', dest='r_rep', help='reply to posts in red_scrape_dump.txt not marked with a "-" prefix')
 
     executed = 0 # catches any command/args that fall through below tree
     args = parser.parse_args()
@@ -366,10 +395,13 @@ def main(argv):
     if args.platform == 'reddit':
         authReddit()
 
-        if args.r_scr:
-            scrapeReddit()
+        if args.N:
+            scrapeReddit(args.N)
+            executed = 1
 
-        executed = 1
+        if args.r_rep:
+            replyReddit()
+            executed = 1
     
     if not executed:
         print("exit: unknown error")
