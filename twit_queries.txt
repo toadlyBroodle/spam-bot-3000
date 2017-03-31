@@ -1,0 +1,6 @@
+@rydercarroll android
+-from:rydercarroll -from:minimalistTB #bulletjournal OR "bullet journal" OR #bujo OR bujo #android OR android OR app
+? android app "task management" OR "task manager" OR "note taking" OR "note-taking" OR "to do list" OR "to-do list" OR "todo list" OR "list making"
+list OR todo app android -ios -iphone ?
+daily list android ?
+app OR android "organize your life" OR declutter tips OR help OR advice -Dungeons -from:googletricks19 -from:TechWireAsia

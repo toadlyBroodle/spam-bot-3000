@@ -2,19 +2,29 @@
 
 import sys
 import argparse
-import tweepy
-#import json
+import json
 from time import sleep, localtime, strftime
+import datetime
 from random import randint
-# Import our Twitter credentials from credentials.py
+# Reddit imports:
+import praw
+import pdb
+import re
+import os
+# Twitter imports: credentials from credentials.py
+import tweepy
 from credentials import *
 
 # global variables
+# twitter
 p_lines = []
 p_length = 0
 q_lines = []
 q_length = 0
 api = None
+# reddit
+reddit = None
+reddit_subkeys = None
 
 
 # record certain events in log.txt
@@ -28,6 +38,21 @@ def log(s):
     p = t[:90] + (t[90:] and '..')
     print(p)
 
+def authReddit():
+    global reddit
+    global reddit_subkeys
+
+    print("Authenticating...")
+
+    reddit = praw.Reddit('twatBot')
+
+    print("Authenticated as: " + str(reddit.user.me()));
+
+    # get subreddits, e.g.: androidapps+androiddev+all
+    with open('red_subkey_pairs.json') as json_data:
+        subkeys_parsed = json.load(json_data)
+        reddit_subkeys = subkeys_parsed['sub_key_pairs']
+
 
 # get authentication credentials and tweepy api object
 def authTwitter():
@@ -39,6 +64,7 @@ def authTwitter():
     global api
 
     # get authorization credentials from credentials.py
+    print("Authenticating...")
     
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_token, access_token_secret)
@@ -46,18 +72,17 @@ def authTwitter():
     
     # ensure authentication was successful
     try:
-        print("Authenticating...")
         print("Authenticated as: " + api.me().screen_name)
     except tweepy.TweepError as e:
         log("Failed Twitter auth: " + e.reason)
         sys.exit(1)
 
     #  load promo lines (tweets) from text file
-    with open('promoTweets.txt', 'r') as promoFile:
+    with open('twit_promos.txt', 'r') as promoFile:
         p_lines = promoFile.readlines()
 
     # load queries from text file
-    with open('queries.txt', 'r') as queryFile:
+    with open('twit_queries.txt', 'r') as queryFile:
         q_lines = queryFile.readlines()
 
     # get number of promotional tweets and queries
@@ -146,16 +171,16 @@ def processTweet(tweet, pro, fol):
     scrn_name = tweet.user.screen_name
     
     # open dump file in read mode
-    with open('scrapeDump.txt', 'r') as f:
+    with open('twit_scrape_dump.txt', 'r') as f:
         scrp_lines = f.readlines()
 
         # if tweet already scraped, then return
         if any(str(tweet.id) in s for s in scrp_lines):
             return 0
 
-    # otherwise append to scrapeDump.txt    
+    # otherwise append to twit_scrape_dump.txt    
     new_line = buildDumpLine(tweet)
-    with open('scrapeDump.txt', 'a') as f:
+    with open('twit_scrape_dump.txt', 'a') as f:
         f.write(new_line)
     
     # follow op, if not already following
@@ -166,7 +191,7 @@ def processTweet(tweet, pro, fol):
     if pro:
         replyToTweet(tweet.id, scrn_name)
     
-    return 1 # return count of new tweets added to scrapeDump.txt
+    return 1 # return count of new tweets added to twit_scrape_dump.txt
 
 
 # continuously scrape for tweets matching all queries
@@ -204,9 +229,80 @@ def scrapeTwitter(con, fol, pro):
             except StopIteration:
                 scrape_log(i, k)
                 break
-                
-                
+
+
+def buildRedDumpLine(submission):
+    return (datetime.datetime.fromtimestamp(int(submission.created)).strftime("%b%d %H:%M") 
+            + "SUBM_ID" + str(submission.id)
+            + "SUBM_TIT" + submission.title
+            + "SUBM_TXT" + submission.selftext.replace("\n", "") + "\n")
+
+def parseRedDumpLine(dl):
+    # parse scrape dump file, seperate tweet ids from screen names
+    a1 = dl.split('SUBM_ID')
+    a2 = a1[1].split('SUBM_TIT')
+    a3 = a2[1].split('SUBM_TXT')
+    # [time, twt_id, scrn_name, twt_txt]
+    return [a1[0], a2[0], a3[0], a3[1]]
+
+def processSubmission(submission):
+    # open dump file in read mode
+    with open('red_scrape_dump.txt', 'r') as f:
+        scrp_lines = f.readlines()
+
+        # if submission already scraped, then return
+        if any(str(submission.id) in s for s in scrp_lines):
+            return 0
+
+    # otherwise append to red_scrape_dump.txt
+    with open('red_scrape_dump.txt', 'a') as f:
+        f.write(buildRedDumpLine(submission))
+        return 1
+
+def scrapeReddit():
     
+    def scrape_log(i, k):
+        log("Scraped: {total} submissions ({new} new) in {subs}\n".format(
+            total=str(i), 
+            new=str(k),
+            subs=subredstr))
+
+    # search each subreddit combo for new submissions matching its associated keywords
+    for subkey in reddit_subkeys:
+        i = 0 # total submissions scraped
+        k = 0 # new submissions scraped
+        
+        subredstr = subkey["subreddits"]
+        subreddits = reddit.subreddit(subredstr)
+        # indefinitely monitor new submissions with: subreddit.stream.submissions()
+        for submission in subreddits.new(limit=200):
+            done = False
+            # process any submission with title/text fitting and/or/not keywords
+            tit_txt = submission.title.lower() + submission.selftext.lower()
+
+            # must not contain any NOT keywords
+            for kw in subkey['keywords_not']:
+                if kw in tit_txt:
+                    done = True
+            if done:
+                continue
+
+            # must contain all AND keywords
+            for kw in subkey['keywords_and']:
+                if not kw in tit_txt:
+                    done = True
+            if done:
+                continue
+
+            # must contain at least one OR keyword
+            for kw in subkey['keywords_or']:
+                if kw in tit_txt:
+                    break
+
+            k += processSubmission(submission)
+            i += 1                    
+        scrape_log(i, k)
+
 # get command line arguments and execute appropriate functions
 def main(argv):
 
@@ -214,23 +310,24 @@ def main(argv):
 
     subparsers = parser.add_subparsers(help='platforms', dest='platform')
     
-    # Twitter
-    twit_parser = subparsers.add_parser('twitter', help='Scrape twitter for all queries in queries.txt')
-    twit_parser.add_argument('-u', '--update-status', action='store_true', dest='t_upd', help='update status with random promo from promoTweets.txt ')
+    # Twitter arguments
+    twit_parser = subparsers.add_parser('twitter', help='Twitter: scrape for queries, promote to results')
+    twit_parser.add_argument('-u', '--update-status', action='store_true', dest='t_upd', help='update status with random promo from twit_promos.txt ')
     group_scrape = twit_parser.add_argument_group('query')
-    group_scrape.add_argument('-s', '--scrape', action='store_true', dest='t_scr', help='scrape for tweets matching queries in queries.txt')
+    group_scrape.add_argument('-s', '--scrape', action='store_true', dest='t_scr', help='scrape for tweets matching queries in twit_queries.txt')
     group_scrape.add_argument('-c', '--continuous', action='store_true', dest='t_con', help='scape continuously - suppress prompt to continue after 50 results per query')
     group_promote = twit_parser.add_argument_group('spam')
-    group_promote.add_argument('-f', '--follow', action='store_true', dest='t_fol', help='follow original tweeters in scrapeDump.txt')
-    group_promote.add_argument('-p', '--promote', action='store_true', dest='t_pro', help='favorite tweets and reply to tweeters in scrapeDump.txt with random promo from promoTweets.txt')
+    group_promote.add_argument('-f', '--follow', action='store_true', dest='t_fol', help='follow original tweeters in twit_scrape_dump.txt')
+    group_promote.add_argument('-p', '--promote', action='store_true', dest='t_pro', help='favorite tweets and reply to tweeters in twit_scrape_dump.txt with random promo from twit_promos.txt')
     
-    # Reddit
-    reddit_parser = subparsers.add_parser('reddit', help='Scrape reddit')
-    reddit_parser.add_argument('-t', '--test', action='store_true', dest='r_tst', help='help test')
+    # Reddit arguments
+    reddit_parser = subparsers.add_parser('reddit', help='Reddit: scrape subreddits, promote to results')
+    reddit_parser.add_argument('-s', '--scrape', action='store_true', dest='r_scr', help='scrape subreddits in subreddits.txt for keywords in red_keywords.txt')
 
     executed = 0 # catches any command/args that fall through below tree
     args = parser.parse_args()
     
+    # twitter handler
     if args.platform == 'twitter':
         # get authentication credentials and api
         authTwitter()
@@ -244,8 +341,8 @@ def main(argv):
         if args.t_scr:
             scrapeTwitter(args.t_con, args.t_fol, args.t_pro)
             executed = 1
-        else: # otherwise promote to all entries in scrapeDump file
-            with open('scrapeDump.txt') as f:
+        else: # otherwise promote to all entries in scrape_dump file
+            with open('twit_scrape_dump.txt') as f:
                 t_lines = f.readlines()
 
                 for t in t_lines:
@@ -265,9 +362,13 @@ def main(argv):
                         replyToTweet(twt_id, scrn_name)
             executed = 1
 
-
+    # reddit handler
     if args.platform == 'reddit':
-        print('yay reddit')
+        authReddit()
+
+        if args.r_scr:
+            scrapeReddit()
+
         executed = 1
     
     if not executed:

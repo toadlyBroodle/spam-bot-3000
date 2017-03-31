@@ -34,16 +34,16 @@ access_token_secret = "your_access_token_secret"
 usage: twatBot.py twitter [-h] [-u] [-s] [-c] [-f] [-p]
 
 optional arguments:
- - -h, --help           show this help message and exit
- - -u, --update-status  update status with random promo from promoTweets.txt
+-  -h, --help           		show this help message and exit
+-  -u, --update-status  	update status with random promo from twit_promos.txt
 
 query:
- - -s, --scrape       scrape for tweets matching queries in queries.txt
- - -c, --continuous scape continuously - suppress prompt to continue after 50 results per query
+-  -s, --scrape         		scrape for tweets matching queries in twit_queries.txt
+-  -c, --continuous     	scape continuously - suppress prompt to continue after 50 results per query
 
 spam:
- - -f, --follow         follow original tweeters in scrapeDump.txt
- - -p, --promote    favorite tweets and reply to tweeters in scrapeDump.txt with random promo from promoTweets.txt
+-  -f, --follow         		follow original tweeters in twit_scrape_dump.txt
+-  -p, --promote        	favorite tweets and reply to tweeters in twit_scrape_dump.txt with random promo from twit_promos.txt
 
 ## twitter workflows
     1) continuous mode
