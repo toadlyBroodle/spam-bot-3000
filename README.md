@@ -30,9 +30,9 @@ A python command-line bot for automating promotion on social media. Scrape socia
 usage: twatBot.py reddit [-h] [-s N] [-r]
 
 optional arguments:
- -h,	--help			show this help message and exit
+ -h,	--help		show this help message and exit
  -s N,	--scrape N	scrape subreddits in subreddits.txt for keywords in red_keywords.txt; N = number of posts to scrape
- -r,	--reply			reply to posts in red_scrape_dump.txt not marked with a "-" prefix
+ -r,	--reply		reply to posts in red_scrape_dump.txt not marked with a "-" prefix
 ``` 
 
 ## twitter initial setup
