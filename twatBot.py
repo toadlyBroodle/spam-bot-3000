@@ -287,7 +287,7 @@ def replyReddit():
             except praw.errors.HTTPException as e:
                 log("Error: " + e.message)
 
-def scrapeReddit(scrape_limit, r_new, r_hot, r_ris):
+def scrapeReddit(scrape_limit, r_new, r_top, r_hot, r_ris):
     
     def scrape_log(i, k):
         log("Scraped: {total} submissions ({new} new) in {subs}".format(
@@ -308,6 +308,9 @@ def scrapeReddit(scrape_limit, r_new, r_hot, r_ris):
         if r_new:
             category = subreddits.new(limit=int(scrape_limit))
             print("Searching new " + str(subreddits))
+        elif r_top:
+            category = subreddits.top(limit=int(scrape_limit))
+            print("Searching top " + str(subreddits))
         elif r_hot:
             category = subreddits.hot(limit=int(scrape_limit))
             print("Searching hot " + str(subreddits))
@@ -315,7 +318,7 @@ def scrapeReddit(scrape_limit, r_new, r_hot, r_ris):
             category = subreddits.rising(limit=int(scrape_limit))
             print("Searching rising " + str(subreddits))
         else:
-            print("Which category would you like to scrape? [-n|-H|-r]")
+            print("Which category would you like to scrape? [-n|-t|-H|-r]")
             sys.exit(1)
         
         # indefinitely monitor new submissions with: subreddit.stream.submissions()
@@ -369,6 +372,7 @@ def main(argv):
     reddit_parser.add_argument('-s', '--scrape', dest='N', help='scrape subreddits in subreddits.txt for keywords in red_keywords.txt; N = number of posts to scrape')
     categories = reddit_parser.add_mutually_exclusive_group()
     categories.add_argument('-n', '--new', action='store_true', dest='r_new', help='scrape new posts')
+    categories.add_argument('-t', '--top', action='store_true', dest='r_top', help='scrape top posts')
     categories.add_argument('-H', '--hot', action='store_true', dest='r_hot', help='scrape hot posts')
     categories.add_argument('-r', '--rising', action='store_true', dest='r_ris', help='scrape rising posts')
     reddit_parser.add_argument('-p', '--promote', action='store_true', dest='r_pro', help='promote to posts in red_scrape_dump.txt not marked with a "-" prefix')
@@ -416,7 +420,7 @@ def main(argv):
         authReddit()
 
         if args.N:
-            scrapeReddit(args.N, args.r_new, args.r_hot, args.r_ris)
+            scrapeReddit(args.N, args.r_new, args.r_top, args.r_hot, args.r_ris)
             executed = 1
 
         if args.r_pro:

@@ -6,15 +6,57 @@
   "keywords_not": ["playlist", "listen"]
 },
 {
-  "subreddits": "adhd+getdisciplined+minimalism+organization+productivity+getmotivated+declutter+zenhabits",
+  "subreddits": "bulletjournal",
+  "keywords_and": ["android"],
+  "keywords_or": [],
+  "keywords_not": []
+},
+{
+  "subreddits": "adhd",
   "keywords_and": ["app", "android"],
   "keywords_or": ["list", "organize", "todo", "productivity", "outline"],
   "keywords_not": []
 },
 {
-  "subreddits": "bulletjournal",
-  "keywords_and": ["android"],
-  "keywords_or": [],
+  "subreddits": "getdisciplined",
+  "keywords_and": ["app", "android"],
+  "keywords_or": ["list", "organize", "todo", "productivity", "outline"],
+  "keywords_not": []
+},
+{
+  "subreddits": "minimalism",
+  "keywords_and": ["app", "android"],
+  "keywords_or": ["list", "organize", "todo", "productivity", "outline"],
+  "keywords_not": []
+},
+{
+  "subreddits": "organization",
+  "keywords_and": ["app", "android"],
+  "keywords_or": ["list", "organize", "todo", "productivity", "outline"],
+  "keywords_not": []
+},
+{
+  "subreddits": "productivity",
+  "keywords_and": ["app", "android"],
+  "keywords_or": ["list", "organize", "todo", "productivity", "outline"],
+  "keywords_not": []
+},
+{
+  "subreddits": "getmotivated",
+  "keywords_and": ["app", "android"],
+  "keywords_or": ["list", "organize", "todo", "productivity", "outline"],
+  "keywords_not": []
+},
+{
+  "subreddits": "declutter",
+  "keywords_and": ["app", "android"],
+  "keywords_or": ["list", "organize", "todo", "productivity", "outline"],
+  "keywords_not": []
+},
+{
+  "subreddits": "zenhabits",
+  "keywords_and": ["app", "android"],
+  "keywords_or": ["list", "organize", "todo", "productivity", "outline"],
   "keywords_not": []
 }
 ]}

@@ -23,8 +23,9 @@ A python command-line bot for automating promotion on social media. Scrape socia
 	- write all activity to log (log.txt)
  
 ## reddit initial setup
-- install praw python library dependency `pip install praw`
-- <a href="https://praw.readthedocs.io/en/v4.0.0/getting_started/configuration/prawini.html">update praw.ini</a> with <a href="http://pythonforengineers.com/build-a-reddit-bot-part-1/">your reddit app credentials</a>
+- install <a href="https://github.com/praw-dev/praw">praw</a> python library dependency `pip install praw`
+- <a href="https://praw.readthedocs.io/en/v4.0.0/getting_started/configuration/prawini.html">update 'praw.ini'</a> with <a href="https://www.reddit.com/prefs/apps/">your reddit app credentials</a>
+	- <a href="http://pythonforengineers.com/build-a-reddit-bot-part-1/">how to register a new reddit app</a>
 
 ## reddit usage
 ```
@@ -40,7 +41,7 @@ optional arguments:
 ``` 
 
 ## twitter initial setup
-- install tweepy dependency `pip install tweepy`
+- install <a href="https://github.com/tweepy/tweepy">tweepy</a> dependency `pip install tweepy`
 - create new 'credentials.py' file in main directory with your twitter credentials
 	- <a href="https://www.digitalocean.com/community/tutorials/how-to-create-a-twitterbot-with-python-3-and-the-tweepy-library">a good guide for how to get twitter credentials</a>
 
