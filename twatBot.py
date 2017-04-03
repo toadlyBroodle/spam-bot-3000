@@ -287,7 +287,7 @@ def replyReddit():
             except praw.errors.HTTPException as e:
                 log("Error: " + e.message)
 
-def scrapeReddit(scrape_limit):
+def scrapeReddit(scrape_limit, r_new, r_hot, r_ris):
     
     def scrape_log(i, k):
         log("Scraped: {total} submissions ({new} new) in {subs}".format(
@@ -302,8 +302,24 @@ def scrapeReddit(scrape_limit):
         
         subredstr = subkey["subreddits"]
         subreddits = reddit.subreddit(subredstr)
+        
+        # search new, hot, or rising categories?
+        category = None
+        if r_new:
+            category = subreddits.new(limit=int(scrape_limit))
+            print("Searching new " + str(subreddits))
+        elif r_hot:
+            category = subreddits.hot(limit=int(scrape_limit))
+            print("Searching hot " + str(subreddits))
+        elif r_ris:
+            category = subreddits.rising(limit=int(scrape_limit))
+            print("Searching rising " + str(subreddits))
+        else:
+            print("Which category would you like to scrape? [-n|-H|-r]")
+            sys.exit(1)
+        
         # indefinitely monitor new submissions with: subreddit.stream.submissions()
-        for submission in subreddits.new(limit=int(scrape_limit)):
+        for submission in category:
             done = False
             # process any submission with title/text fitting and/or/not keywords
             tit_txt = submission.title.lower() + submission.selftext.lower()
@@ -351,7 +367,11 @@ def main(argv):
     # Reddit arguments
     reddit_parser = subparsers.add_parser('reddit', help='Reddit: scrape subreddits, promote to results')
     reddit_parser.add_argument('-s', '--scrape', dest='N', help='scrape subreddits in subreddits.txt for keywords in red_keywords.txt; N = number of posts to scrape')
-    reddit_parser.add_argument('-r', '--reply', action='store_true', dest='r_rep', help='reply to posts in red_scrape_dump.txt not marked with a "-" prefix')
+    categories = reddit_parser.add_mutually_exclusive_group()
+    categories.add_argument('-n', '--new', action='store_true', dest='r_new', help='scrape new posts')
+    categories.add_argument('-H', '--hot', action='store_true', dest='r_hot', help='scrape hot posts')
+    categories.add_argument('-r', '--rising', action='store_true', dest='r_ris', help='scrape rising posts')
+    reddit_parser.add_argument('-p', '--promote', action='store_true', dest='r_pro', help='promote to posts in red_scrape_dump.txt not marked with a "-" prefix')
 
     executed = 0 # catches any command/args that fall through below tree
     args = parser.parse_args()
@@ -396,10 +416,10 @@ def main(argv):
         authReddit()
 
         if args.N:
-            scrapeReddit(args.N)
+            scrapeReddit(args.N, args.r_new, args.r_hot, args.r_ris)
             executed = 1
 
-        if args.r_rep:
+        if args.r_pro:
             replyReddit()
             executed = 1
     

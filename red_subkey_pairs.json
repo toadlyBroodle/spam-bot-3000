@@ -6,9 +6,9 @@
   "keywords_not": ["playlist", "listen"]
 },
 {
-  "subreddits": "adhd+getdisciplined+minimalism+organization",
+  "subreddits": "adhd+getdisciplined+minimalism+organization+productivity+getmotivated+declutter+zenhabits",
   "keywords_and": ["app", "android"],
-  "keywords_or": ["list", "organize", "todo"],
+  "keywords_or": ["list", "organize", "todo", "productivity", "outline"],
   "keywords_not": []
 },
 {

@@ -5,6 +5,7 @@ A python command-line bot for automating promotion on social media. Scrape socia
 - Reddit
 	- scrape subreddit(s) for lists of keyword, dump results in local file (red_scrape_dump.txt)
 		- seperate keyword lists for AND, OR, NOT search operations (red_subkey_pairs.json)
+		- search new, hot, or rising categories
 	- reply to posts in red_scrape_dump.txt with random promotion from red_promos.txt
 		- ignore posts by marking them in dump file with "-" prefix
 	- praw.errors.HTTPException handling
@@ -27,12 +28,15 @@ A python command-line bot for automating promotion on social media. Scrape socia
 
 ## reddit usage
 ```
-usage: twatBot.py reddit [-h] [-s N] [-r]
+usage: twatBot.py reddit [-h] [-s N] [-n | -H | -r] [-p]
 
 optional arguments:
- -h,	--help		show this help message and exit
- -s N,	--scrape N	scrape subreddits in subreddits.txt for keywords in red_keywords.txt; N = number of posts to scrape
- -r,	--reply		reply to posts in red_scrape_dump.txt not marked with a "-" prefix
+  -h,	--help		show this help message and exit
+  -s N,	--scrape N	scrape subreddits in subreddits.txt for keywords in red_keywords.txt; N = number of posts to scrape
+  -n,	--new		scrape new posts
+  -H,	--hot		scrape hot posts
+  -r,	--rising		scrape rising posts
+  -p,	--promote	promote to posts in red_scrape_dump.txt not marked with a "-" prefix
 ``` 
 
 ## twitter initial setup
