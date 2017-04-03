@@ -26,7 +26,37 @@ A python command-line bot for automating promotion on social media. Scrape socia
 - install <a href="https://github.com/praw-dev/praw">praw</a> python library dependency `pip install praw`
 - <a href="https://praw.readthedocs.io/en/v4.0.0/getting_started/configuration/prawini.html">update 'praw.ini'</a> with <a href="https://www.reddit.com/prefs/apps/">your reddit app credentials</a>
 	- <a href="http://pythonforengineers.com/build-a-reddit-bot-part-1/">how to register a new reddit app</a>
+- replace example promotions (red_promos.txt) with your own
+- replace example subreddits and keywords (red_subkey_pairs.json) with your own
+	- you'll have to follow the existing json format
+	- `keywords_and`: all keywords in this list must be present for positive matching result
+	- `keywords_or`: at least one keyword in this list must be present for positive match
+	- `keywords_not`: none of these keywords can be present in a positive match
+	- any of the three lists may be omitted by leaving it empty - e.g. `"keywords_not": []`
+	
+<praw.ini>
+```
+...
 
+[bot1]
+client_id=Y4PJOclpDQy3xZ
+client_secret=UkGLTe6oqsMk5nHCJTHLrwgvHpr
+password=pni9ubeht4wd50gk
+username=fakebot1
+```
+	
+<red_subkey_pairs.json>
+```
+{"sub_key_pairs": [
+{
+  "subreddits": "androidapps",
+  "keywords_and": ["list", "?"],
+  "keywords_or": ["todo", "app", "android"],
+  "keywords_not": ["playlist", "listen"]
+}
+]}
+```
+	
 ## reddit usage
 ```
 usage: twatBot.py reddit [-h] [-s N] [-n | -H | -r] [-p]
@@ -45,9 +75,8 @@ optional arguments:
 - create new 'credentials.py' file in main directory with your twitter credentials
 	- <a href="https://www.digitalocean.com/community/tutorials/how-to-create-a-twitterbot-with-python-3-and-the-tweepy-library">a good guide for how to get twitter credentials</a>
 
-
-```
 <credentials.py>
+```
 consumer_key = "your_consumer_key"
 consumer_secret = "your_consumer_secret"
 access_token = "your_access_token"
