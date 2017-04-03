@@ -35,7 +35,7 @@ optional arguments:
   -s N,	--scrape N	scrape subreddits in subreddits.txt for keywords in red_keywords.txt; N = number of posts to scrape
   -n,	--new		scrape new posts
   -H,	--hot		scrape hot posts
-  -r,	--rising		scrape rising posts
+  -r,	--rising	scrape rising posts
   -p,	--promote	promote to posts in red_scrape_dump.txt not marked with a "-" prefix
 ``` 
 
