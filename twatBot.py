@@ -225,7 +225,7 @@ def scrapeTwitter(con, fol, pro):
                 log("Error: " + e.reason)
                 
                 # wait for next request window to continue
-                time.sleep(60 * 15)
+                sleep(60 * 15)
                 continue
             except StopIteration:
                 scrape_log(i, k)
