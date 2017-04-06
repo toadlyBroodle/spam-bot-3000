@@ -284,7 +284,7 @@ def replyReddit():
                 
                 # wait for 3-6 secs to evade spamming flags
                 sleep(randint(3, 6))
-            except praw.errors.HTTPException as e:
+            except praw.exceptions.ClientException as e:
                 log("Error: " + e.message)
 
 def scrapeReddit(scrape_limit, r_new, r_top, r_hot, r_ris):
