@@ -222,7 +222,8 @@ def scrapeTwitter(con, fol, pro):
                 i += 1
             except tweepy.TweepError as e:
                 scrape_log(i, k)
-                log("Error: " + e.reason)
+                #log("Error: " + e.reason)
+				log(e.reason + "Reached API window limit: taking 15min smoke break...")
                 
                 # wait for next request window to continue
                 sleep(60 * 15)

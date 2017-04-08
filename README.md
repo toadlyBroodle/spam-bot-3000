@@ -23,7 +23,8 @@ A python command-line bot for automating promotion on social media. Scrape socia
 	- write all activity to log (log.txt)
  
 ## reddit initial setup
-- install <a href="https://github.com/praw-dev/praw">praw</a> python library dependency `pip install praw`
+- install pip3 `sudo apt install python3-pip`
+- install <a href="https://github.com/praw-dev/praw">praw</a> python library dependency `pip3 install praw`
 - <a href="https://praw.readthedocs.io/en/v4.0.0/getting_started/configuration/prawini.html">update 'praw.ini'</a> with <a href="https://www.reddit.com/prefs/apps/">your reddit app credentials</a>
 	- <a href="http://pythonforengineers.com/build-a-reddit-bot-part-1/">how to register a new reddit app</a>
 - replace example promotions (red_promos.txt) with your own
@@ -43,6 +44,7 @@ client_id=Y4PJOclpDQy3xZ
 client_secret=UkGLTe6oqsMk5nHCJTHLrwgvHpr
 password=pni9ubeht4wd50gk
 username=fakebot1
+user_agent=fakebot 0.1
 ```
 	
 <red_subkey_pairs.json>
@@ -71,7 +73,7 @@ optional arguments:
 ``` 
 
 ## twitter initial setup
-- install <a href="https://github.com/tweepy/tweepy">tweepy</a> dependency `pip install tweepy`
+- install <a href="https://github.com/tweepy/tweepy">tweepy</a> dependency `pip3 install tweepy`
 - create new 'credentials.py' file in main directory with your twitter credentials
 	- <a href="https://www.digitalocean.com/community/tutorials/how-to-create-a-twitterbot-with-python-3-and-the-tweepy-library">a good guide for how to get twitter credentials</a>
 
