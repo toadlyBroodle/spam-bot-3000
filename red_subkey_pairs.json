@@ -1,11 +1,5 @@
 {"sub_key_pairs": [
 {
-  "subreddits": "androidapps",
-  "keywords_and": ["list", "?"],
-  "keywords_or": ["todo", "app", "android"],
-  "keywords_not": ["playlist", "listen"]
-},
-{
   "subreddits": "bulletjournal",
   "keywords_and": ["android"],
   "keywords_or": [],

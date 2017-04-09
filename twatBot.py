@@ -122,8 +122,7 @@ def folTweeter(scrn_name):
         return
 
     log("Followed: " + scrn_name)
-
-
+    
 def spamOP(twt_id, scrn_name):
     try:
         # reply to op with random spam
@@ -223,8 +222,7 @@ def scrapeTwitter(con, fol, pro):
             except tweepy.TweepError as e:
                 scrape_log(i, k)
                 #log("Error: " + e.reason)
-				log(e.reason + "Reached API window limit: taking 15min smoke break...")
-                
+                log(e.reason + "Reached API window limit: taking 15min smoke break...")
                 # wait for next request window to continue
                 sleep(60 * 15)
                 continue
