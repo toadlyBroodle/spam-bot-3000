@@ -107,6 +107,7 @@ query:
 spam:
  -f, --follow			follow original tweeters in twit_scrape_dump.txt
  -p, --promote			favorite tweets and reply to tweeters in twit_scrape_dump.txt with random promo from twit_promos.txt
+ -d, --direct-message	direct message tweeters in twit_scrape_dump.txt with random promo from twit_promos.txt
 ```
 
 ## twitter workflows
