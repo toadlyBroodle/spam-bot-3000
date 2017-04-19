@@ -17,6 +17,7 @@ A python command-line bot for automating promotion on social media. Scrape socia
 	- promotion abilities
 		- follow original posters
 		- favorite relevant tweets
+		- direct message relevant tweets
 		- reply to relevant tweets with random promotional tweet from file (twit_promos.txt)
 		- ignore tweets by marking them in dump file with "-" prefix
 	- tweepy exception handling
