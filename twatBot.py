@@ -150,7 +150,17 @@ def replyToTweet(twt_id, scrn_name):
 
     log("Favorited: " + scrn_name + " [" + twt_id + "]")
 
+def directMessageTweet(scrn_name):
+    try:
+        # send direct message to tweeter
+        api.send_direct_message(screen_name=scrn_name, text=getRandPromo())
 
+    except tweepy.TweepError as e:
+        log("Error: " + e.reason)
+        return
+    
+    log("Direct Messaged: " + scrn_name)
+    
 def buildDumpLine(tweet):
     return (tweet.created_at.strftime("%b%d %H:%M")
                 + "TWT_ID" + str(tweet.id)
@@ -166,7 +176,7 @@ def parseDumpLine(dl):
     return [a1[0], a2[0], a3[0], a3[1]]
    
 
-def processTweet(tweet, pro, fol):
+def processTweet(tweet, pro, fol, dm):
 
     scrn_name = tweet.user.screen_name
     
@@ -190,12 +200,16 @@ def processTweet(tweet, pro, fol):
     # favorite and respond to op's tweet
     if pro:
         replyToTweet(tweet.id, scrn_name)
+        
+    # direct message op
+    if dm:
+        directMessageTweet(scrn_name)
     
     return 1 # return count of new tweets added to twit_scrape_dump.txt
 
 
 # continuously scrape for tweets matching all queries
-def scrapeTwitter(con, fol, pro):
+def scrapeTwitter(con, fol, pro, dm):
    
     def scrape_log(i, k):
         log(("Scraped: {total} tweets ({new} new) found with: {query}\n".format(
@@ -217,7 +231,7 @@ def scrapeTwitter(con, fol, pro):
                     if (keep_going != "Y"):
                         raise StopIteration()
                 # process next tweet
-                k += processTweet(c.next(), pro, fol)                    
+                k += processTweet(c.next(), pro, fol, dm)                    
                 i += 1
             except tweepy.TweepError as e:
                 scrape_log(i, k)
@@ -262,7 +276,7 @@ def getRandRedPromo():
         rp_lines = f.readlines()
         f_length = sum(1 for _ in rp_lines)
         return rp_lines[randint(0, f_length - 1)]
-
+        
 def replyReddit():
      # open dump file in read mode
     with open('red_scrape_dump.txt', 'r') as f:
@@ -365,6 +379,7 @@ def main(argv):
     group_promote = twit_parser.add_argument_group('spam')
     group_promote.add_argument('-f', '--follow', action='store_true', dest='t_fol', help='follow original tweeters in twit_scrape_dump.txt')
     group_promote.add_argument('-p', '--promote', action='store_true', dest='t_pro', help='favorite tweets and reply to tweeters in twit_scrape_dump.txt with random promo from twit_promos.txt')
+    group_promote.add_argument('-d', '--direct-message', action='store_true', dest='t_dm', help='direct message tweeters in twit_scrape_dump.txt with random promo from twit_promos.txt')
     
     # Reddit arguments
     reddit_parser = subparsers.add_parser('reddit', help='Reddit: scrape subreddits, promote to results')
@@ -391,7 +406,7 @@ def main(argv):
 
         # scrape twitter for all queries and favorite, follow, and/or promote OPs
         if args.t_scr:
-            scrapeTwitter(args.t_con, args.t_fol, args.t_pro)
+            scrapeTwitter(args.t_con, args.t_fol, args.t_pro, args.t_dm)
             executed = 1
         else: # otherwise promote to all entries in scrape_dump file
             with open('twit_scrape_dump.txt') as f:
@@ -412,6 +427,9 @@ def main(argv):
                     
                     if args.t_pro:
                         replyToTweet(twt_id, scrn_name)
+                        
+                    if args.t_dm:
+                        directMessageTweet(scrn_name)
             executed = 1
 
     # reddit handler
