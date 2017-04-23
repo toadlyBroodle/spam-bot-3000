@@ -104,7 +104,7 @@ optional arguments:
 query:
  -s, --scrape			scrape for tweets matching queries in twit_queries.txt
  -c, --continuous		scape continuously - suppress prompt to continue after 50 results per query
- -e, --english         return only tweets written in English
+ -e, --english         	return only tweets written in English
 
 spam:
  -f, --follow			follow original tweeters in twit_scrape_dump.txt
