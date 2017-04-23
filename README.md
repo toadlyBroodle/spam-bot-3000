@@ -112,16 +112,16 @@ spam:
 ```
 
 ## twitter workflows
-    1) continuous mode
-		- [-sp] scrape and promote to all tweets matching queries
-    2) overwatch mode
-		- [-s] scrape first
-		- manually edit scrapeDump.txt
-			- add '-' to beginning of line to ignore
-			- leave line unaltered to promote to
-		- [-p] then promote to remaining tweets in scrapeDump.txt
-	3) research new keywords from frequently scraped keywords
-		- `bash gleen_keywords_from_twit_scrape`
+1) continuous mode
+	- [-sp] scrape and promote to all tweets matching queries
+2) overwatch mode
+	- [-s] scrape first
+	- manually edit scrapeDump.txt
+		- add '-' to beginning of line to ignore
+		- leave line unaltered to promote to
+	- [-p] then promote to remaining tweets in scrapeDump.txt
+3) research new keywords from frequently scraped keywords
+	- `bash gleen_keywords_from_twit_scrape`
 
 ## notes
 Future updates will include modules for promoting to facebook, instagram, etc.
