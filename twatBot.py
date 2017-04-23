@@ -209,7 +209,7 @@ def processTweet(tweet, pro, fol, dm):
 
 
 # continuously scrape for tweets matching all queries
-def scrapeTwitter(con, fol, pro, dm):
+def scrapeTwitter(con, eng, fol, pro, dm):
    
     def scrape_log(i, k):
         log(("Scraped: {total} tweets ({new} new) found with: {query}\n".format(
@@ -218,8 +218,11 @@ def scrapeTwitter(con, fol, pro, dm):
         query=query.replace("\n", ""))))
    
     for query in q_lines:
-            
-        c = tweepy.Cursor(api.search, q=query).items()
+        c = None
+        if eng:
+            c = tweepy.Cursor(api.search, q=query, lang='en').items()
+        else:
+            c = tweepy.Cursor(api.search, q=query).items()
         i = 0 # total tweets scraped
         k = 0 # new tweets scraped
         while True:
@@ -236,7 +239,7 @@ def scrapeTwitter(con, fol, pro, dm):
             except tweepy.TweepError as e:
                 scrape_log(i, k)
                 #log("Error: " + e.reason)
-                log(e.reason + "Reached API window limit: taking 15min smoke break...")
+                log("Reached API window limit: taking 15min smoke break..." + e.reason)
                 # wait for next request window to continue
                 sleep(60 * 15)
                 continue
@@ -376,6 +379,8 @@ def main(argv):
     group_scrape = twit_parser.add_argument_group('query')
     group_scrape.add_argument('-s', '--scrape', action='store_true', dest='t_scr', help='scrape for tweets matching queries in twit_queries.txt')
     group_scrape.add_argument('-c', '--continuous', action='store_true', dest='t_con', help='scape continuously - suppress prompt to continue after 50 results per query')
+    group_scrape.add_argument('-e', '--english', action='store_true', dest='t_eng', help='return only tweets written in English')
+    
     group_promote = twit_parser.add_argument_group('spam')
     group_promote.add_argument('-f', '--follow', action='store_true', dest='t_fol', help='follow original tweeters in twit_scrape_dump.txt')
     group_promote.add_argument('-p', '--promote', action='store_true', dest='t_pro', help='favorite tweets and reply to tweeters in twit_scrape_dump.txt with random promo from twit_promos.txt')
@@ -406,7 +411,7 @@ def main(argv):
 
         # scrape twitter for all queries and favorite, follow, and/or promote OPs
         if args.t_scr:
-            scrapeTwitter(args.t_con, args.t_fol, args.t_pro, args.t_dm)
+            scrapeTwitter(args.t_con, args.t_eng, args.t_fol, args.t_pro, args.t_dm)
             executed = 1
         else: # otherwise promote to all entries in scrape_dump file
             with open('twit_scrape_dump.txt') as f:
