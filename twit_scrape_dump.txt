@@ -528,265 +528,420 @@
 -Apr25 14:07TWT_ID856872246115274756SCRN_NAMEloriskumoTWT_TXTSo @Microsoft is aiming to replace @Wunderlist with it's To-Do App but without a desktop client or am I mistaken? 🙁
 -Apr25 13:07TWT_ID856857094498209793SCRN_NAMEgeorgekronerTWT_TXTHas Microsoft really thought through its plan to retire Wunderlist for To-do? https://t.co/wIXop8RZSq #nope
 -Apr25 09:56TWT_ID856809011592802304SCRN_NAMEcprekopTWT_TXTA tragedy @wunderlist! @Microsoft To-do preview looks naff and cluttered! What other platforms have ppl found good? https://t.co/bSnUms8sB5
-Apr25 09:32TWT_ID856803193422061568SCRN_NAMEfarbodsarafTWT_TXT@Wunderlist and where's the to-do Mac desktop app btw?!
-Apr25 09:11TWT_ID856797771621445633SCRN_NAMEamix3kTWT_TXTRT @carl_pullein: Want to switch from #WUNDERLIST? Here's a really simple way to do it. #todoist  https://t.co/6xb3CXNSYa
-Apr25 08:38TWT_ID856789509870149633SCRN_NAMEApps4AppleTWT_TXT@getWeDo where is the WeDo manual? Need Applescript details to replicate existing script for Wunderlist.
-Apr25 06:46TWT_ID856761286230765568SCRN_NAMEManuelWeidmannTWT_TXTRT @_CodeGears_: #Microsoft introducing "To-Do" - the replacement for #Wunderlist? https://t.co/5DagsX9dQP https://t.co/g7SejX9EVt
-Apr25 05:50TWT_ID856747135320170497SCRN_NAMEfredrickhstnTWT_TXTRT @JoannaStern: Does a decent to-do list app exist?  Not asking for much: instant syncing, cross platform, good UI. (Have ditched Todoist…
-Apr25 02:59TWT_ID856704127002263556SCRN_NAMEMavericknavsTWT_TXT@Wunderlist Will you be discontinued once ToDo is generally available? I totally don't want to stop using Wunderlist; it's the Best 😫
-Apr25 02:39TWT_ID856699262578688001SCRN_NAMEmichaelssobolTWT_TXT@Wunderlist Still missing many wunderlist options in the new app. When is the next to-do update rollout?
-Apr24 23:40TWT_ID856654100712353792SCRN_NAMElelandp_fitzTWT_TXT@WunderlistHelp Just migrated 2 to-do. Dates aren't imported correctly FYI. Q: added files/pictures to Wunderlist won't be migrated 2 to-do?
+-Apr25 09:32TWT_ID856803193422061568SCRN_NAMEfarbodsarafTWT_TXT@Wunderlist and where's the to-do Mac desktop app btw?!
+-Apr25 09:11TWT_ID856797771621445633SCRN_NAMEamix3kTWT_TXTRT @carl_pullein: Want to switch from #WUNDERLIST? Here's a really simple way to do it. #todoist  https://t.co/6xb3CXNSYa
+-Apr25 08:38TWT_ID856789509870149633SCRN_NAMEApps4AppleTWT_TXT@getWeDo where is the WeDo manual? Need Applescript details to replicate existing script for Wunderlist.
+-Apr25 06:46TWT_ID856761286230765568SCRN_NAMEManuelWeidmannTWT_TXTRT @_CodeGears_: #Microsoft introducing "To-Do" - the replacement for #Wunderlist? https://t.co/5DagsX9dQP https://t.co/g7SejX9EVt
+-Apr25 05:50TWT_ID856747135320170497SCRN_NAMEfredrickhstnTWT_TXTRT @JoannaStern: Does a decent to-do list app exist?  Not asking for much: instant syncing, cross platform, good UI. (Have ditched Todoist…
+-Apr25 02:59TWT_ID856704127002263556SCRN_NAMEMavericknavsTWT_TXT@Wunderlist Will you be discontinued once ToDo is generally available? I totally don't want to stop using Wunderlist; it's the Best 😫
+-Apr25 02:39TWT_ID856699262578688001SCRN_NAMEmichaelssobolTWT_TXT@Wunderlist Still missing many wunderlist options in the new app. When is the next to-do update rollout?
+-Apr24 23:40TWT_ID856654100712353792SCRN_NAMElelandp_fitzTWT_TXT@WunderlistHelp Just migrated 2 to-do. Dates aren't imported correctly FYI. Q: added files/pictures to Wunderlist won't be migrated 2 to-do?
 -Apr24 21:45TWT_ID856625088384421888SCRN_NAMEbenba89TWT_TXT@Wunderlist @Jake_Beck I support 'Wunderlist Theme: classic backgrounds + square boxes' - what do you think? https://t.co/VN2AdaS5zc
-Apr25 19:10TWT_ID856948492023083008SCRN_NAMEzzarrilloTWT_TXT@danarndlr @jacobtender why not just like…Todoist, Wunderlist/To-Do, etc?
-Apr25 17:51TWT_ID856928728600936449SCRN_NAMEcaitlynmayersTWT_TXTLooking to replace Wunderlist with @culturedcode's Things app. Any users out there that have feedback?
-Apr25 17:01TWT_ID856916055100469249SCRN_NAMEitatvalpoTWT_TXTDo you have a favorite productivity or to-do app? Looks like Wunderlist will soon be no more. https://t.co/sfPrZj3F7z
-Apr23 21:33TWT_ID856259681412689923SCRN_NAMEbunshaftTWT_TXT@Wunderlist Will there be any team-functions with MS to-do like in wunderlist?
-Apr21 13:01TWT_ID855406230587805696SCRN_NAMEsobebrzTWT_TXTWhich to-do app will you use now than Wunderlist is going away? [Poll]  https://t.co/hSlemaGA7O
-Apr21 12:22TWT_ID855396294705238020SCRN_NAMEicorpoTWT_TXT@ToDoHelp What is the best way to report bugs? To @ToDoHelp or to @Wunderlist?And please answer other tweets 😛
-Apr21 08:18TWT_ID855334922671628288SCRN_NAMEJMSantolinTWT_TXTSo @wunderlist to die, don’t really like @todoist and @microsoft’s todo too young… Suggestions ?
-Apr21 06:26TWT_ID855306609915867136SCRN_NAMEMrs_STEMTWT_TXTRT @Wunderlist: Have you tried out Microsoft To-Do Preview yet? We'd love your feedback to help shape its future. https://t.co/zKGmzo2sLP h…
-Apr21 06:09TWT_ID855302470137823233SCRN_NAMEmrcalexandreTWT_TXT@AndrewDixonSo @Nivo0o0 I didn't try To-Do, do you think it will replace Wunderlist in your use ?
-Apr21 03:52TWT_ID855267882455805952SCRN_NAMEVeslyreTWT_TXTWhy am I late on the news? I didn't even realize Microsoft had acquired Wunderlist... 😯To-Do looks minimalistic &amp;… https://t.co/aqInvJZ4qj
-Apr20 21:09TWT_ID855166525610876929SCRN_NAMEBeepop_AgencyTWT_TXTMicrosoft To-Do Makes Its Way Into The App Store, Is It A Worthy Wunderlist Replacement?: https://t.co/0n0Tr17FIp
-Apr20 14:13TWT_ID855061796394237953SCRN_NAMELennieJarrattTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist     - CNET https://t.co/r4QlT1dbEZ
-Apr20 12:47TWT_ID855040210505224193SCRN_NAMEsavio_254TWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/wbV5Uib4Yp
-Apr20 12:16TWT_ID855032489940705280SCRN_NAMEMlckiNizhonifulTWT_TXTRT @charlesmilander: The first item in Microsoft`s new To-Do app? Retire Wunderlist - CNET https://t.co/Cll2nEVM5s https://t.co/2f8uHIHmQO
-Apr20 12:09TWT_ID855030571134664704SCRN_NAMElotusacctsTWT_TXTRT @Wunderlist: What will you accomplish today? Make a simple &amp; achievable daily to-do list with My Day, in Microsoft To-Do Preview https:/…
-Apr20 11:04TWT_ID855014212229353472SCRN_NAMEiamdamnsamTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist     - CNET https://t.co/zgqplpC8TN #wtfnews
-Apr20 10:58TWT_ID855012721670201345SCRN_NAMEAll_Trends_ITTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist     - CNET https://t.co/u19uf4Yshs via Richard Trenholm
-Apr20 10:58TWT_ID855012687905947649SCRN_NAMEcrucial_techTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist     - CNET https://t.co/aOdjYH1YxJ
-Apr20 10:57TWT_ID855012539142348800SCRN_NAMETheApple_FanBoyTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/rHtx8ppX89
-Apr20 10:57TWT_ID855012534822158337SCRN_NAMEselfie_memesTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/3FUFBZ26pw https://t.co/uuOhF6UNn6
-Apr20 10:57TWT_ID855012507882106880SCRN_NAMEtechnews6TWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/6UJUSo60Kp
-Apr20 10:57TWT_ID855012453465313280SCRN_NAMEBWIZZ75TWT_TXT[https://t.co/YGaMXtjJr4] The first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/nMIx8JCWQE
-Apr20 10:55TWT_ID855012135004491776SCRN_NAMEAM_MancorpTWT_TXTNew post: "The first item in Microsoft's new To-Do app? Retire Wunderlist     - CNET" https://t.co/ayULtuQjTU
-Apr20 10:55TWT_ID855011938408947712SCRN_NAMEliewkongyeeTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/NBFqyTopzW
-Apr20 10:55TWT_ID855011937641406465SCRN_NAMEdarylelockhartTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/E9VAKviTyY
-Apr20 10:54TWT_ID855011813347311616SCRN_NAMEJasonwilliams0TWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/XABc4GsbzI
-Apr20 10:54TWT_ID855011766249586688SCRN_NAMEkrunox123TWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist     - CNET https://t.co/IIRGzGOVEl
-Apr20 10:54TWT_ID855011759350050818SCRN_NAMEideep9TWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist     - CNET Try our app cost calculator :… https://t.co/FwF0Ix6Gql
-Apr20 10:53TWT_ID855011528151625729SCRN_NAMEwikidiczTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist https://t.co/P38DpYmHwR @CNET
-Apr20 10:53TWT_ID855011465291603968SCRN_NAMETechnologyDealzTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist     - CNET https://t.co/4SkEGyG4b0
-Apr20 10:53TWT_ID855011444915658753SCRN_NAMEbillballentineTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/7ZIGXKVYm6 via @billballentine… https://t.co/dReqaQj8He
-Apr20 10:51TWT_ID855010954958036992SCRN_NAMETechforallveyasTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist     - CNET https://t.co/Y85mw3OJSW
-Apr20 10:51TWT_ID855010939799777280SCRN_NAMEDjMrRogers04TWT_TXTRT @dotapp: The first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/uPJ6TBVHcp
-Apr20 10:50TWT_ID855010664737157120SCRN_NAMEscrollcomTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist https://t.co/UA2kxshmJU https://t.co/qyw9U0BBoK
-Apr20 10:50TWT_ID855010663709540352SCRN_NAMEScottHayden65TWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/r3jh77gI6u https://t.co/7Y1qykW8R7
-Apr20 10:49TWT_ID855010642402476032SCRN_NAMEtaj_sagayTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/lXk0fvb35c #MobileTechNews https://t.co/yHQzWOvgoy
-Apr20 10:49TWT_ID855010546990673920SCRN_NAMEjbkavungalTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist     - CNET https://t.co/mbQDT8CG50
-Apr20 10:49TWT_ID855010451251281920SCRN_NAMEWDaniel_M22TWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/2uhl0SalAy https://t.co/OTBol7686i
-Apr20 10:49TWT_ID855010450731220993SCRN_NAMExavitrendsTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/p2RRx69ju5 #election2016 https://t.co/09cM8qBWRy
-Apr20 10:49TWT_ID855010447451332608SCRN_NAMEmarsmellowspopTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/MLCjeZnts9 https://t.co/LwvRIS27P2
-Apr20 10:49TWT_ID855010443261206528SCRN_NAMEIbsenJGTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/0OlXdd8mmG https://t.co/2ezcTuCUsB
-Apr20 10:49TWT_ID855010437477187586SCRN_NAMEHakkapipTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/Xli9wAw8No via @CNET
-Apr20 10:48TWT_ID855010206023127040SCRN_NAMEgrejeentrendsTWT_TXTThe first item in Microsoft’s new To-Do app? Retire Wunderlist – CNET https://t.co/8Pjw0N1rxZ https://t.co/1t8V4hJBr6
-Apr20 10:47TWT_ID855010039190474753SCRN_NAMEprodboctTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist     - CNET https://t.co/oPC3PbxWP9
-Apr20 10:47TWT_ID855009912488960000SCRN_NAMEdarrenculbreathTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/IaoJhUbb9n https://t.co/Us3osYHj9h
-Apr20 10:47TWT_ID855009908613406720SCRN_NAMETechMashBangTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist     - CNET https://t.co/mnWbWRUBXF
-Apr20 10:46TWT_ID855009793576251392SCRN_NAMETechNewsDBTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist     - CNET - https://t.co/g9MlC9bOJy https://t.co/0QyFgPpSJ5
-Apr20 10:46TWT_ID855009753390383105SCRN_NAMEkevin_li_yaoTWT_TXT@Wunderlist since it is ms todo now, can it sync with onenote todo?
-Apr20 10:46TWT_ID855009705634275328SCRN_NAMEprimepromotionTWT_TXT#personaltech The first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/pXZH66IH42
-Apr20 10:46TWT_ID855009678635524096SCRN_NAMEBestInnovationTWT_TXTThanks @CNET - The first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/tixNFHzEwA
-Apr20 10:46TWT_ID855009677012332544SCRN_NAMEiProductFixTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/GQBe2wRPts
-Apr20 10:45TWT_ID855009633022488576SCRN_NAMEPrimeConcepts2KTWT_TXT#businesstech The first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/0kBKyoJp0P
-Apr20 10:45TWT_ID855009625867001856SCRN_NAMEJasonEMalmstromTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/KTrbSvy2CH
-Apr20 10:45TWT_ID855009590387367936SCRN_NAMEZyiteGadgetsTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/Z7QrF3iZF6
-Apr20 10:45TWT_ID855009541909610496SCRN_NAMEsamymohabTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET To-Do is integrated into Office 365 and powe… https://t.co/mQczvjplVU
-Apr20 10:45TWT_ID855009481381597184SCRN_NAMELGR_ReviewsTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist     - CNET https://t.co/UJN0HkHvxU
-Apr20 10:45TWT_ID855009431553277952SCRN_NAMEeqlia_nozomuTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist     - CNET https://t.co/n6tvKo7D9K
-Apr20 10:44TWT_ID855009233112375296SCRN_NAMEaasisvinayakTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/kRK9RWcRQK
-Apr20 10:44TWT_ID855009184160468992SCRN_NAMEekiSoftTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/SeTJv71Xof
-Apr20 10:43TWT_ID855009088190767104SCRN_NAMEazemarketingTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist – CNET https://t.co/slOpkUvwZ2
-Apr20 10:42TWT_ID855008664876228608SCRN_NAMEPerfect_PC_24_7TWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET: To-Do is integrated into Office 365 and… https://t.co/sULRULOL78
-Apr20 10:41TWT_ID855008486719148032SCRN_NAMEYusufchauhdryTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist     - CNET https://t.co/T3GyMIYUq0
-Apr20 10:39TWT_ID855007941119946752SCRN_NAMEMichael_VasanthTWT_TXT#The first item in Microsoft's new To-Do app? Retire Wunderlist     - CNET To-Do is integrated into Office 365 and… https://t.co/gQotatW4Oh
-Apr20 10:38TWT_ID855007726635819008SCRN_NAMEShawnJKBTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/2gubQWnNpD
-Apr20 10:37TWT_ID855007530430242816SCRN_NAMEdotappTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/uPJ6TBVHcp
-Apr20 10:37TWT_ID855007441486049280SCRN_NAMEmarkbscotusTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist     - CNET https://t.co/gm1y79TlTF
-Apr20 10:37TWT_ID855007417171619840SCRN_NAMEsamymohabTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET To-Do is integrated into Office 365 and... https://t.co/9uUNZy7hrT
-Apr20 10:33TWT_ID855006582563680256SCRN_NAMEAdeelMUddinTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/ALmaCNiCg0 https://t.co/rS9cLnixuG
-Apr20 10:33TWT_ID855006581406048256SCRN_NAMERandalWright55TWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/x6aJcF4yUD https://t.co/d9QclVWhEl
-Apr20 10:33TWT_ID855006576029061122SCRN_NAMEninafresamx88TWT_TXT#Tecnología  The first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/A56k413o1T https://t.co/EitP9OYXel
-Apr20 10:33TWT_ID855006575827734530SCRN_NAMEjohnso_hTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET
-Apr20 10:33TWT_ID855006562556944384SCRN_NAMERosalynDRoss1TWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET
-Apr20 10:33TWT_ID855006562548457472SCRN_NAMEMarieMJackso1TWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET
-Apr20 10:33TWT_ID855006560556208128SCRN_NAMEh_whistlTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET
-Apr20 10:33TWT_ID855006559172141057SCRN_NAMEbarmaley7777777TWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/EvlCUfCSYT https://t.co/qJoOhfmivn
-Apr20 10:33TWT_ID855006555841941505SCRN_NAMEjuliasbrown31TWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist     - CNET https://t.co/82ygESHxme
-Apr20 10:33TWT_ID855006554201890816SCRN_NAMEValerieJJackTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET
-Apr20 10:33TWT_ID855006552884785152SCRN_NAMEClaire__JamesTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET
-Apr20 10:33TWT_ID855006551051870209SCRN_NAMEDiana__BeckerTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET
-Apr20 10:33TWT_ID855006550850535424SCRN_NAMENorm_DavidsonTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET
-Apr20 10:33TWT_ID855006550527582208SCRN_NAMEKateSChowTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET
-Apr20 10:33TWT_ID855006550049472513SCRN_NAMEDianeBJacobs1TWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET
-Apr20 10:33TWT_ID855006540788506624SCRN_NAMEDickmaJTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET
-Apr20 10:33TWT_ID855006517568786433SCRN_NAMEllaverotecTWT_TXT#llaverotec The first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/LoiN2avTlE https://t.co/5tXUQJs8m1
-Apr20 10:33TWT_ID855006494831501314SCRN_NAMEMalcomKyleSaintTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/u125JTSYnQ https://t.co/wrPaH7uWVd
-Apr20 10:33TWT_ID855006488883937280SCRN_NAMEjamescarton001TWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/0IqeugMWKy https://t.co/REJrwSr3rB
-Apr20 10:33TWT_ID855006482324008960SCRN_NAMETechnology42dayTWT_TXTThe first item in #Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/4RcG53OXbq #TECH https://t.co/RUvVVpE2MP
-Apr20 10:33TWT_ID855006475650973696SCRN_NAMEChimex_SurvivorTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/37tcARtAOQ https://t.co/0L7eCMFAnE
-Apr20 10:33TWT_ID855006448413138946SCRN_NAMETRAJKOVICNEWSTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/jPYNXHfiOd https://t.co/FlZ71pBUBx
-Apr20 10:33TWT_ID855006441786163201SCRN_NAMEeagle_supremeTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/fUeLomgZD0 https://t.co/gdpopyq1VZ
-Apr20 10:33TWT_ID855006439525367808SCRN_NAMEAngelicaHill85TWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/SqQIyyIbQQ https://t.co/DVfZNjNgiy
-Apr20 10:33TWT_ID855006430784397313SCRN_NAMET61MaryTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET
-Apr20 10:33TWT_ID855006429421240321SCRN_NAMEAnthonyVenutoloTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/xiiiaxL1c1 #tech https://t.co/5ZLry2tJzq
-Apr20 10:32TWT_ID855006179277385728SCRN_NAMEsolacorpTWT_TXThttps://t.co/TUdDUDJEq7 : The first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/97n6VVGKdi
-Apr20 10:30TWT_ID855005827295567872SCRN_NAMEEmpireSecurityUTWT_TXT#CNET The first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/wDX5gDzZYU
-Apr20 10:30TWT_ID855005774606675968SCRN_NAMEmanolhsTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist     - CNET https://t.co/uUCIaIADIO
-Apr20 10:28TWT_ID855005270178766849SCRN_NAMEtech_politicsTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/HGFnktfGsV
-Apr20 10:28TWT_ID855005139329060864SCRN_NAMEmediat_techTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/JqWd8CIZxV #Technology US
-Apr20 10:21TWT_ID855003598606012416SCRN_NAMEstlistTWT_TXT@Wunderlist Hi, are there some instructions how to sync To-do and Outlook anywhere? TIA
-Apr20 10:21TWT_ID855003420167622656SCRN_NAMEHelpTechSupportTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/O65AfJYCAu
-Apr20 10:21TWT_ID855003407546957824SCRN_NAMEElephantTechnoTWT_TXTCNET -  The first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/GCxofk7R0f
-Apr20 10:21TWT_ID855003406095728640SCRN_NAMEjuniorfresh02TWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET
-Apr20 10:21TWT_ID855003398499737600SCRN_NAMEtechnews122TWT_TXTCnet The first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/4wUDo68jaA
-Apr20 10:21TWT_ID855003390924828672SCRN_NAMEDaily_TechNewsTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/4Mvp43UqV0
-Apr20 10:19TWT_ID855002974363553793SCRN_NAMEFrostbiteTrendsTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/yXUaz5trUR
-Apr20 10:18TWT_ID855002675221594112SCRN_NAMEFrostbite_UKTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/rHQqC7vK4D
-Apr20 10:17TWT_ID855002378067730432SCRN_NAMEBeroNacciTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist https://t.co/crwckPbcL7
-Apr20 10:13TWT_ID855001479534587904SCRN_NAMEFrostbiteCanadaTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/7y6fd2Y8L1
-Apr20 10:13TWT_ID855001417005891584SCRN_NAMEcrucial_techTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/0LsKuYH825
-Apr20 10:10TWT_ID855000812891893764SCRN_NAMEGeordi3B0yTWT_TXT#geordi3B0y The first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/47eY1GnMMq
-Apr20 10:10TWT_ID855000675750735873SCRN_NAMEFlabinAlertTWT_TXTTech: The first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/wCAxAKLdWH
-Apr20 10:10TWT_ID855000659086725120SCRN_NAMEWJscitechTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/QT6BYJ9dri
-Apr20 10:09TWT_ID855000493113913344SCRN_NAMETrending_GlobalTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/8v7rbkcr1G
-Apr20 10:09TWT_ID855000398201008128SCRN_NAMEnews2tweetsTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/oPbs7mllRR
-Apr20 10:08TWT_ID855000158513360896SCRN_NAMEJahangeermTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist https://t.co/ZxDxRudEaQ
-Apr20 10:07TWT_ID855000084341239809SCRN_NAMEvrai777TWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/mh0zzTiTOU #technology
-Apr20 10:07TWT_ID854999979030609920SCRN_NAMEchrisholvoetTWT_TXTRT @CNET: The first item in Microsoft's new To-Do app? Retire Wunderlist https://t.co/RssWkw88Wa
-Apr20 10:07TWT_ID854999955110596608SCRN_NAMEttolga87TWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/z5lLKDv8UE
-Apr20 10:06TWT_ID854999721194205187SCRN_NAMEmobicyberdevTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET: CNET The first item in Microsoft's new To-Do…
-Apr20 10:06TWT_ID854999645000486912SCRN_NAMEjustseenthistecTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/0qc0XTW1un
-Apr20 10:05TWT_ID854999570790703104SCRN_NAMEMSDTechNewsTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist https://t.co/owKcdfttYK
-Apr20 10:05TWT_ID854999482743783424SCRN_NAMEggtechmyTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/rfFglpZFRV
-Apr20 10:05TWT_ID854999477685440512SCRN_NAMEThomasWillnerTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist https://t.co/hwJdn1OG6C
-Apr20 10:04TWT_ID854999138529923072SCRN_NAMEwinklhawkTWT_TXTRT @CNET: The first item in Microsoft's new To-Do app? Retire Wunderlist https://t.co/RssWkw88Wa
-Apr20 10:03TWT_ID854998954324369409SCRN_NAMESmartPhones12TWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/dviAIXbKR6
-Apr20 10:03TWT_ID854998863140331520SCRN_NAMEtizaiTWT_TXTCNET : The first item in Microsoft's new To-Do app? Retire Wunderlist https://t.co/QiyXcD41hL (via Twitter… https://t.co/HdOJj8JPnr
-Apr20 10:02TWT_ID854998661821939713SCRN_NAMEtechfriendpakTWT_TXTRT @CNET: The first item in Microsoft's new To-Do app? Retire Wunderlist https://t.co/RssWkw88Wa
-Apr20 10:01TWT_ID854998475615993857SCRN_NAMETGVIATWT_TXT#TECH The first item in Microsoft's new To-Do app? Retire Wunderlist https://t.co/EkjzFXIrw2 #News #Technology #aws #startup
-Apr20 10:01TWT_ID854998327309611008SCRN_NAMECNETTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist https://t.co/RssWkw88Wa
-Apr20 09:33TWT_ID854991480670142464SCRN_NAMEJebaTWT_TXT@MPAndy @Microsoft @Wunderlist they have to ruin everything.. They want to replace wunderlist with that shit app of… https://t.co/OfAxqKGyVS
-Apr20 09:21TWT_ID854988494707372032SCRN_NAMEsamnangchhunTWT_TXT"Microsoft to shut down Wunderlist”, it’s time to find another app, what’s your favorite? https://t.co/KDcXsOGftl #WUNDERLIST #todo
-Apr20 09:09TWT_ID854985472782852096SCRN_NAMEmikeywilTWT_TXT"To-Do comes from the team behind the Wunderlist app" - interested to know from Wunderlist users whether this appea… https://t.co/cGoenrIPvI
-Apr20 08:53TWT_ID854981318748274688SCRN_NAMEvladastojanovicTWT_TXT@Wunderlist Is this new ToDo app killing Wunderlist?
-Apr20 08:49TWT_ID854980275612286976SCRN_NAMEFraLNGTWT_TXT@ToDoHelp @Wunderlist Are you looking at the uservoice for feedback suggestions? https://t.co/VQkEF1PDhW
-Apr20 08:48TWT_ID854980072238927872SCRN_NAMEJim_EdwardsTWT_TXTWunderlist users - are you annoyed that Microsoft is getting rid of your app in favour of "To-Do"?
-Apr20 08:46TWT_ID854979580213555200SCRN_NAMEnicgibbTWT_TXT@MummyBarrow @OmniFocus @todoist @Wunderlist @asana @alicej_t Ooh Alice, what was conclusion? I like @todoist but k… https://t.co/ox3D6kYcvi
-Apr20 08:42TWT_ID854978675615432704SCRN_NAMESimbakisTWT_TXT🙈😩🙈 what?Why? It's the best to do list ever. It's the one I use and when I say the best I mean it.I tried dozens… https://t.co/Dczh9mAoMW
-Apr20 08:34TWT_ID854976524432420864SCRN_NAMEnicgibbTWT_TXTDeciding between @OmniFocus @todoist @Wunderlist and @asana - anyone have experience to share that might be helpful? #sortingmyshitout
-Apr20 08:29TWT_ID854975322294452224SCRN_NAMEstrebel_manuelTWT_TXTHi @jeffrey_way, you are my Todo app guy😂 Already tested Microsoft’s Wunderlist replacement? https://t.co/5dYsafhNWT https://t.co/lxckgXOU7h
-Apr20 07:41TWT_ID854963226567741440SCRN_NAMEbhavanrTWT_TXTOh man I love #Wunderlist..,,,,Which to-do app will you use now than Wunderlist is going away? [Poll] (9to5Google) https://t.co/Pc4T3SEY26
-Apr20 07:25TWT_ID854959103445266434SCRN_NAMEmishakarpenkoTWT_TXTRT @backlon: Hey @google, don’t look now but @Microsoft has a coherent To-Do app strategy. Weird, right? It’s not impossible! https://t.co/…
-Apr20 07:25TWT_ID854959083861966848SCRN_NAMEpidybiTWT_TXTWhich to-do app will you use now than Wunderlist is going away?... https://t.co/4S7T0K52ns
-Apr20 07:18TWT_ID854957458271461377SCRN_NAMErubenspmTWT_TXT@Wunderlist when you finally include subtasks and I import them to To-do, will it be imported completely? I mean, completed elements too
-Apr20 06:40TWT_ID854947989428875264SCRN_NAMEqueislerTWT_TXTWhy does the new To-Do use sooooooo much screen real estate for a useless image? Farewell, #Wunderlist https://t.co/PWYnbOdH8J
-Apr20 06:39TWT_ID854947563182706688SCRN_NAMEDigitalAmoebaTWT_TXT@ToDoHelp @ljpuk #ToDo's non-auto #MyDay does seem main philosophy difference vs #Wunderlist. More effort but pro-active choice vs reactive?
-Apr20 06:24TWT_ID854943898283778048SCRN_NAMEsmicaelTWT_TXTSo anyone started using to-do instead of wunderlist?
-Apr20 04:49TWT_ID854920051920646144SCRN_NAMETechnableTWT_TXTWhich to-do app will you use now than Wunderlist is going away? [Poll] - https://t.co/Jyf4QPbIOr https://t.co/JCAmtmzIqf
-Apr20 04:43TWT_ID854918486207934464SCRN_NAMEmaybeacoolguyTWT_TXT@Wunderlist @ToDoHelp May I suggest you update your app descriptions to make it clear that this is in preview and t… https://t.co/ZRpGKavfn5
-Apr20 04:18TWT_ID854912237424836608SCRN_NAMEobsmexcrisisTWT_TXTRT @uohanalilly: Which to-do app will you use now than Wunderlist is going away? [Poll] https://t.co/dzEISnJi0J
-Apr20 04:18TWT_ID854912043069177857SCRN_NAMEliatmordTWT_TXTRT @my24me: Need a replacement for Wunderlist ?@CompleteToDo is a new to do that fixes what other to-dos got wrong https://t.co/uL736YaVrM
-Apr20 04:16TWT_ID854911648527773696SCRN_NAMEmy24meTWT_TXTNeed a replacement for Wunderlist ?@CompleteToDo is a new to do that fixes what other to-dos got wrong https://t.co/uL736YaVrM
-Apr20 03:47TWT_ID854904408705912832SCRN_NAMEcymumtazTWT_TXT@Wunderlist How can I get access to this? Will this replace @wunderlist?
-Apr20 03:43TWT_ID854903233910853632SCRN_NAMEIAMShaneTurnerTWT_TXTWhy'd you sell @Wunderlist ?? Tried importing my lists into @Microsoft 's to-do - and just hangs... a sign of things to come :(
-Apr20 03:41TWT_ID854902878028406785SCRN_NAMEarchiecoderTWT_TXT@Wunderlist Is the importer to Ms To-Do currently broken?
-Apr20 03:19TWT_ID854897211427229698SCRN_NAMEuohanalillyTWT_TXTWhich to-do app will you use now than Wunderlist is going away? [Poll] https://t.co/dzEISnJi0J
-Apr20 02:40TWT_ID854887586833219584SCRN_NAMEsarahatsangTWT_TXTRT @Wunderlist: Have you tried out Microsoft To-Do Preview yet? We'd love your feedback to help shape its future. https://t.co/zKGmzo2sLP h…
-Apr20 02:23TWT_ID854883204767109121SCRN_NAMEganeshkulkarniTWT_TXTWunderlist will become To-Do. What else could happen when Microsoft has taken over? No wunder, only list. Plain.
-Apr20 01:54TWT_ID854875930451476480SCRN_NAMEItsMadsonTWT_TXTRT @backlon: Hey @google, don’t look now but @Microsoft has a coherent To-Do app strategy. Weird, right? It’s not impossible! https://t.co/…
-Apr20 01:46TWT_ID854873911279865857SCRN_NAME_SEMTWT_TXTWhich to-do app will you use now than Wunderlist is going away? [Poll]: Whenever a company is…… https://t.co/pVJznaLijB
-Apr20 01:44TWT_ID854873490649829376SCRN_NAMEQxNewsTWT_TXTRT @9to5Google: Which to-do app will you use now than Wunderlist is going away? [Poll] https://t.co/QgvfpaSBh1 https://t.co/OGUnl1N8S4
-Apr20 01:42TWT_ID854872770294849536SCRN_NAMEApp_sw_TWT_TXTWhich to-do app will you use now than #Wunderlist is going away? [Poll]. Read more: https://t.co/up9YGXQwcy
-Apr20 01:16TWT_ID854866224148361216SCRN_NAMEarifnoorjehanTWT_TXTRT @Wunderlist: Have you tried out Microsoft To-Do Preview yet? We'd love your feedback to help shape its future. https://t.co/zKGmzo2sLP h…
-Apr20 01:10TWT_ID854864754359382016SCRN_NAMEricardowecTWT_TXTWhich to-do app will you use now than Wunderlist is going away? [Poll] https://t.co/8cl1H9cV1J #925Google
-Apr20 01:09TWT_ID854864489258164224SCRN_NAMEwillianspTWT_TXTWhich to-do app will you use now than Wunderlist is going away? [Poll] https://t.co/QVkHKB9BZW https://t.co/RbwVM5lS1I
-Apr20 01:07TWT_ID854863998449324032SCRN_NAMEOh_PleasuresTWT_TXTWhat do you use to help you with tasks/ to-do lists? Wunderlist is going away and I almost want to DIE! Lol I am... https://t.co/92qmp2UuHe
-Apr20 01:06TWT_ID854863766567124993SCRN_NAMECliffWadeTWT_TXTRT: 9to5Google: Which to-do app will you use now than Wunderlist is going away? [Poll] https://t.co/049FaF02Qu … https://t.co/v5DukEV8Bj
-Apr20 01:06TWT_ID854863711311417344SCRN_NAMEMartinGuayOTTTWT_TXTRT AndroidColiseum: RT 9to5Google: Which to-do app will you use now than Wunderlist is going away? [Poll] … https://t.co/g76MYrKCFK
-Apr20 01:05TWT_ID854863605887619072SCRN_NAMEMartinGuayOTTTWT_TXTRT 9to5Google : Which to-do app will you use now than Wunderlist is going away? [Poll] https://t.co/QI3P5LOKbd … https://t.co/UyppvHyUES
-Apr20 01:05TWT_ID854863519015206912SCRN_NAMEFrostbite_UKTWT_TXTWhich to-do app will you use now than Wunderlist is going away? [Poll] https://t.co/NDW7VHNZWR #technology
-Apr20 01:04TWT_ID854863371597991936SCRN_NAMEricardowecTWT_TXTWhich to-do app will you use now than Wunderlist is going away? [Poll] https://t.co/8cl1H9cV1J #925 https://t.co/hylQH6IAeU
-Apr20 01:04TWT_ID854863291524558848SCRN_NAMEAndroidColiseumTWT_TXTRT 9to5Google: Which to-do app will you use now than Wunderlist is going away? [Poll] https://t.co/nQ2cMB3bOI … https://t.co/5JIfkkltfk
-Apr20 01:03TWT_ID854863029711888384SCRN_NAMETechNewsRTTWT_TXTWhich to-do app will you use now than Wunderlist is going away? [Poll] https://t.co/jFgVytock6 #technology
-Apr20 01:02TWT_ID854862768121548800SCRN_NAMEMACSCORPIONTWT_TXT9to5Google: Which to-do app will you use now than Wunderlist is going away? [Poll] https://t.co/r8HP03Nhi9 https://t.co/dwlO3cw1LH
-Apr20 01:02TWT_ID854862713809510400SCRN_NAME9to5GoogleTWT_TXTWhich to-do app will you use now than Wunderlist is going away? [Poll] https://t.co/QgvfpaSBh1 https://t.co/OGUnl1N8S4
-Apr20 00:58TWT_ID854861900219396096SCRN_NAMEnearcticfaunaTWT_TXTRIP @Wunderlist the only list app I've been able to keep up with and enjoyed using. Will ToDo have the  emoji support? #bagsofmicrosoftmoney
-Apr20 00:38TWT_ID854856651785895936SCRN_NAMEakkubuleTWT_TXTRT @Wunderlist: Have you tried out Microsoft To-Do Preview yet? We'd love your feedback to help shape its future. https://t.co/zKGmzo2sLP h…
-Apr20 00:27TWT_ID854854116220297216SCRN_NAMEBoaterSmittyTWT_TXT@OfficeNews @Wunderlist Interesting. Will it be possible to use To-Do without an Office365 account?
-Apr20 00:22TWT_ID854852830070530048SCRN_NAME_iErikTWT_TXTRT @backlon: Hey @google, don’t look now but @Microsoft has a coherent To-Do app strategy. Weird, right? It’s not impossible! https://t.co/…
-Apr20 00:08TWT_ID854849108871401473SCRN_NAMEpedro_joseTWT_TXTRT @Wunderlist: Have you tried out Microsoft To-Do Preview yet? We'd love your feedback to help shape its future. https://t.co/zKGmzo2sLP h…
-Apr19 23:56TWT_ID854846170522419201SCRN_NAMEjonathanwylieTWT_TXT@lifehacker With Wunderlist on its way out &amp; barely recognizable in the MS replacement, can we have a new top 5 todo list article for 2017?
-Apr19 23:50TWT_ID854844748997283841SCRN_NAMEkriegsTWT_TXTInteresting To-Do app from Microsoft came out today (windows, ios, android). Basically the new Wunderlist?  https://t.co/Ssye9Indjv
-Apr19 23:47TWT_ID854843921360277504SCRN_NAMEgetWeDoTWT_TXT@Cafeine @Anydo @Wunderlist You + WeDo = Productivity. We got the best @todoist features... for free. Who wants to pay for Reminders?
-Apr19 23:28TWT_ID854839204668473344SCRN_NAMEchris_raganTWT_TXT@Wunderlist - love Microsoft To-Do so far, but where are sub-tasks?!
-Apr19 23:26TWT_ID854838700789846016SCRN_NAMEeikohansTWT_TXTRT @Wunderlist: Have you tried out Microsoft To-Do Preview yet? We'd love your feedback to help shape its future. https://t.co/zKGmzo2sLP h…
-Apr19 23:13TWT_ID854835489014259716SCRN_NAMEShpigfordTWT_TXTGood Wunderlist alternarive? Primarily need shared to-do lists (ex. grocery lists that both my wife and I can edit)
-Apr19 22:44TWT_ID854828032095379456SCRN_NAMEjonathanwylieTWT_TXTRT @jonathanwylie: Hmmmm. Looks like I need a new task list manager. Suggestions for a free or low cost cross platform #gtd compatible tool…
-Apr19 22:12TWT_ID854820117447880705SCRN_NAMEaowd25TWT_TXTMeet the new Wunderlist: Microsoft's To-Do task manager takes over: Itâ??s been almost two years since Microsoft https://t.co/cvBhcWrvCD
-Apr19 22:12TWT_ID854820023939907586SCRN_NAMEaowd25TWT_TXT#قسم_التقنية Meet the new Wunderlist: Microsoft's To-Do task manager takes over: Itâ??s been almost two years…... https://t.co/VllH7OlyRq
-Apr19 22:12TWT_ID854819977374777344SCRN_NAMEaowd25TWT_TXT#قسم_التقنية Meet the new Wunderlist: Microsoft's To-Do task manager takes over: Itâ??s been almost two years… https://t.co/O5rmZtmN0k
-Apr19 21:54TWT_ID854815542850576385SCRN_NAMEjmart2189TWT_TXT#Microsoft To-Do to replace #Wunderlist? As #WL user: great! As #mac user: another nail in the coffin.  https://t.co/20TMRpaJGm via @Verge
-Apr19 21:53TWT_ID854815140088303621SCRN_NAMEjdcsocialTWT_TXTIs ‘Microsoft To-Do’ the successor to Wunderlist and Project Cheshire? https://t.co/s1fNDXfNaB via @onmsft
-Apr19 21:49TWT_ID854814123913293825SCRN_NAMEdhhTWT_TXT@chadfowler The "What's Next" part of Microsoft's announcement of Todo about retiring Wunderlist is false? https://t.co/nO5F5N9VvP
-Apr19 21:34TWT_ID854810361366708226SCRN_NAMEgregalbrechtTWT_TXTWait but why? #wunderlist #todo #eol https://t.co/XYdO8fv7j1
-Apr19 21:20TWT_ID854807053340209152SCRN_NAMEtwitserraTWT_TXTRT @Wunderlist: Have you tried out Microsoft To-Do Preview yet? We'd love your feedback to help shape its future. https://t.co/zKGmzo2sLP h…
-Apr19 21:17TWT_ID854806066940477447SCRN_NAMEErnOppTWT_TXTAnyone have a good alternative to wunderlist they would recommend? I run my life in there and msft will soon deprec… https://t.co/DBLfdYYOG1
-Apr19 21:06TWT_ID854803336125718529SCRN_NAMEskullboyguyTWT_TXT@Anydo @Wunderlist Because my favourite app (Next to @PowerampApp) is going to be discontinued. Do you need more reasons?
-Apr19 21:00TWT_ID854801985345867777SCRN_NAMEsharifi123TWT_TXT@Wunderlist Are you guys really going to shut down wunderlist? I haven't liked To-Do so far cause it doesn't support folders.
-Apr19 20:32TWT_ID854794744463020036SCRN_NAMEfrancoissouyriTWT_TXTChasing #wunderlist lovers ? now Introducing Microsoft To-Do. The end of old SharePoint tasks??  https://t.co/B7LxZEur5O
-Apr19 20:22TWT_ID854792451286061056SCRN_NAMEjoshvcTWT_TXTSo, anybody have a good iOS to-do list that allows sharing lists? This new microsoft ruination of Wunderlist doesn't have sharing.
-Apr19 20:19TWT_ID854791654670258176SCRN_NAMEthijskramerTWT_TXT@marckohlbrugge since Wunderlist will be discontinued, do you recommend any comparable alternatives, working on both macOS and Android?
-Apr19 20:09TWT_ID854788990918164483SCRN_NAMESniederreiterTWT_TXT@Wunderlist Do you plan to integrate a “week view” for To-Do as we have in Wunderlist?“Day view” is just not enough most of the time
-Apr19 20:06TWT_ID854788220919459841SCRN_NAMEjbstevensTWT_TXT@Wunderlist Where are recurring tasks and list groups in the new To-Do?
-Apr19 20:03TWT_ID854787683029143552SCRN_NAME21tigermikeTWT_TXTUm, Yay....? 😔😢Microsoft to shut down Wunderlist in favor of its new app, To-Do #acquisition https://t.co/ViGvrnHYzY
-Apr19 19:46TWT_ID854783307086802946SCRN_NAMEiamelliotTWT_TXTWunderlist is closing 😩 https://t.co/Dt4R3QVBs3any to-do app recommendations then?
-Apr19 19:44TWT_ID854782850381611008SCRN_NAMEmrdanielschwarzTWT_TXT@deezel @Microsoft Is that to-do app @Wunderlist?
-Apr19 19:31TWT_ID854779398649593856SCRN_NAMEarangoTWT_TXTMicrosoft killing Wunderlist for a MS-account controlled copy cat?! Time to find a new to-do app (after actually using/liking WL for yrs) ☹️
-Apr19 19:18TWT_ID854776315081359361SCRN_NAMEkwlothropTWT_TXTRT @robinmanuelt: Oh, why didn't they just asked? I have hundreds of cloud-syncing, cross-platform To-Do List samples from my evangelism ti…
-Apr19 19:14TWT_ID854775344141881347SCRN_NAMEcarlosrebatoTWT_TXT@Wunderlist Will this app replace the old one?
-Apr19 19:01TWT_ID854771876601577472SCRN_NAMECaseyNewtonTWT_TXT@Wunderlist @Stammy @chrismessina why start completely over? You had a good thing going! To-Do looks generic as hell
-Apr19 18:55TWT_ID854770483119575040SCRN_NAMEhboonTWT_TXTSo there’s Microsoft To-Do and Wunderlist now?
-Apr19 18:50TWT_ID854769183321731073SCRN_NAMEjonathanwylieTWT_TXTHmmmm. Looks like I need a new task list manager. Suggestions for a free or low cost cross platform #gtd compatible… https://t.co/wzE2uoUmu4
-Apr19 18:42TWT_ID854767086266175488SCRN_NAMEtwistioTWT_TXTAny @Wunderlist fans out there?  What's your favorite to-do list app? 📱🖥️ #productivity https://t.co/NG66QiB5cF
-Apr19 18:38TWT_ID854766241675792385SCRN_NAMEcrouhanaTWT_TXT@Outlook outlook app currently has wunderlist as calendar "app". are you switching this to To-Do soon?
-Apr19 18:32TWT_ID854764555834150912SCRN_NAMEpaja84_nlTWT_TXT@Wunderlist Why is it @Microsoft is killing all the best apps? First Sunrise Calendar and now you.. #hatethis
-Apr19 18:25TWT_ID854762795505680384SCRN_NAMEmichaeltefulaTWT_TXTTrello or Wunderlist? Need to decide where to place all my todos. My scrappy notebooks are so cumbersome
-Apr19 18:24TWT_ID854762584511320065SCRN_NAMErobinmanueltTWT_TXTOh, why didn't they just asked? I have hundreds of cloud-syncing, cross-platform To-Do List samples from my evangel… https://t.co/elkvY6jWtL
-Apr19 18:21TWT_ID854761807331938304SCRN_NAMEryf_feedTWT_TXTAsk HN: What is the best alternative now that Wunderlist will be gone? https://t.co/mVQwOF6PXB
-Apr19 18:17TWT_ID854760888120770566SCRN_NAMESecNewsBotTWT_TXTHacker News - Ask HN: What is the best alternative now that Wunderlist will be gone? https://t.co/SeV17SyTOQ
-Apr19 18:08TWT_ID854758569593516035SCRN_NAME_monishkumarTWT_TXTAlthough To-Do is near, Microsoft could have transitioned Wunderlist into To-Do, but why do they need a separate app?
-Apr19 18:03TWT_ID854757466109652993SCRN_NAMETypingPixelsTWT_TXTRT @backlon: Hey @google, don’t look now but @Microsoft has a coherent To-Do app strategy. Weird, right? It’s not impossible! https://t.co/…
-Apr19 17:41TWT_ID854751805242318848SCRN_NAMEfarid56TWT_TXTMicrosoft's Wunderlist Replacement, To-Do Is Now Available - So can I say goodbye to one of my best apps? https://t.co/vnT47sCWcE
-Apr19 17:37TWT_ID854750896370135040SCRN_NAMEFotoTobiTWT_TXTRT @backlon: Hey @google, don’t look now but @Microsoft has a coherent To-Do app strategy. Weird, right? It’s not impossible! https://t.co/…
-Apr19 17:34TWT_ID854750122680483840SCRN_NAMEbsglaserTWT_TXT@Wunderlist Honestly don't get the My Day workflow; if I've created &amp; dated a to-do, why is it good to have another… https://t.co/6cf3gYGWC0
-Apr19 17:26TWT_ID854748105056583680SCRN_NAMEherrmayrTWT_TXTRT @backlon: Hey @google, don’t look now but @Microsoft has a coherent To-Do app strategy. Weird, right? It’s not impossible! https://t.co/…
-Apr19 17:25TWT_ID854747753477492736SCRN_NAMEiamjulienbilgerTWT_TXT@ToDoHelp any plans to release a To-Do Mac app? Among the wunderlist apps (📱,💻, ...) I use the mac app most often. Many Thanks ✌️
-Apr19 17:23TWT_ID854747291374190595SCRN_NAMELisaLeysenTWT_TXTRT @backlon: Hey @google, don’t look now but @Microsoft has a coherent To-Do app strategy. Weird, right? It’s not impossible! https://t.co/…
-Apr19 17:22TWT_ID854746937718919170SCRN_NAMEMzr7_TWT_TXTRT @backlon: Hey @google, don’t look now but @Microsoft has a coherent To-Do app strategy. Weird, right? It’s not impossible! https://t.co/…
-Apr19 17:22TWT_ID854746918769090560SCRN_NAMEjake_kTWT_TXTRT @backlon: Hey @google, don’t look now but @Microsoft has a coherent To-Do app strategy. Weird, right? It’s not impossible! https://t.co/…
-Apr19 17:21TWT_ID854746726904856577SCRN_NAMEseanschraederTWT_TXTRT @backlon: Hey @google, don’t look now but @Microsoft has a coherent To-Do app strategy. Weird, right? It’s not impossible! https://t.co/…
-Apr19 17:18TWT_ID854746135960981505SCRN_NAMEtrino_asTWT_TXTRT @backlon: Hey @google, don’t look now but @Microsoft has a coherent To-Do app strategy. Weird, right? It’s not impossible! https://t.co/…
-Apr19 17:18TWT_ID854746060333428737SCRN_NAMEJetBlkTWT_TXTRT @backlon: Hey @google, don’t look now but @Microsoft has a coherent To-Do app strategy. Weird, right? It’s not impossible! https://t.co/…
-Apr19 17:18TWT_ID854746057657417731SCRN_NAMEOliverJWTWT_TXTRT @backlon: Hey @google, don’t look now but @Microsoft has a coherent To-Do app strategy. Weird, right? It’s not impossible! https://t.co/…
-Apr19 17:17TWT_ID854745896692498432SCRN_NAMEbacklonTWT_TXTHey @google, don’t look now but @Microsoft has a coherent To-Do app strategy. Weird, right? It’s not impossible! https://t.co/j6Jc0t52no
-Apr19 17:12TWT_ID854744482754945024SCRN_NAMEmunggurTWT_TXTTo Do List App - Microsoft To-Do Preview https://t.co/ZaVgLbCJ4athen how about wunderlist that bought my Microsoft?
-Apr19 17:03TWT_ID854742382260170752SCRN_NAMEDigitalAmoebaTWT_TXT@JenMsft Definitely interested in #Microsoft #ToDo but unsure of advantages &amp; effort to move across from my family'… https://t.co/6HJ71bxt6f
-Apr19 16:58TWT_ID854741106084511749SCRN_NAMEmnkypeteTWT_TXTHow often can you rewrite a to-do app? #wunderlist #microsoft
-Apr19 16:56TWT_ID854740445070589952SCRN_NAMEAndyOdom7TWT_TXTDid anyone ask @Microsoft to replace @Wunderlist ?
-Apr19 16:55TWT_ID854740131697356801SCRN_NAMEMLilley29TWT_TXT@Wunderlist Does "evolution" mean the name Wunderlist is going away? Is To Do a separate product? Do I really need 2 apps???
-Apr19 16:47TWT_ID854738212841041921SCRN_NAMEdcbahrTWT_TXT@Wunderlist Need to make sure it's #screenreaderaccessible and no use without shared lists for me. So is the wunder… https://t.co/cZRzkNrWIo
-Apr19 16:40TWT_ID854736451187208192SCRN_NAMEHelloLudgerTWT_TXTLook: @Microsoft @Office releases #OneList, but decides to name it uninspired and generic #ToDo. Why have they boug… https://t.co/AqZutjkNYa
-Apr19 16:34TWT_ID854734894349643777SCRN_NAMEvitna91TWT_TXT@Daniel_Rubino The question is: why to do a new todo app and  not just update wunderlist?
-Apr19 16:28TWT_ID854733531758702593SCRN_NAMEphillmrkTWT_TXT@ToDoHelp is there something planned to switch to "todo" from wunderlist and integrate all tasks?
-Apr19 16:27TWT_ID854733305878638592SCRN_NAMEgokhankurtTWT_TXT@christianreber @Wunderlist do we need to create a new account as a wunderlist users? or will you keep the data and merge it somehow?
-Apr19 16:25TWT_ID854732635855360000SCRN_NAMEpeterfootTWT_TXTInteresting fact - new Microsoft To-do app doesn't use Exchange ActiveSync. Perhaps because of historical roots in Wunderlist...?
-Apr19 16:21TWT_ID854731572972584964SCRN_NAMEmichaeljthomTWT_TXT@maryjofoley One other thought -- I have sub-tasks in Wunderlist (which the tool says To-Do doesn't support but wou… https://t.co/w1xjM54yNn
-Apr19 16:08TWT_ID854728368339681283SCRN_NAMEgenso84TWT_TXTSo @Wunderlist is kinda dead...but ToDo is a rebirth then?
-Apr19 16:01TWT_ID854726676067999744SCRN_NAMEDallinCrumpTWT_TXT@Daniel_Rubino doesn't Microsoft already own @Wunderlist? And don't they have some to-do and reminder features built into OneNote?
-Apr19 15:24TWT_ID854717299143712768SCRN_NAMEserglotzTWT_TXT@mishakarpenko https://t.co/SGFi6Vbbot is this based on @Wunderlist and are you and your team even working on this right now?
-Apr19 13:13TWT_ID854684459215597569SCRN_NAMExalebii1965TWT_TXTRT @Wunderlist: Have you got exams coming up? 😱 #TopTip: Break your study down into bite-sized chunks, and don't forget to add a "Take a br…
-Apr18 11:34TWT_ID854297111466213377SCRN_NAMEjelkoarndsTWT_TXT@WunderlistHelp How can I share a list publicly? I cant find this button. https://t.co/hvp6vklyrS
-Apr17 19:37TWT_ID854056164551688193SCRN_NAMEKeilaKirkTWT_TXTWhen ive checked off something on Wunderlist RT @MyBlackMatters: When do you feel the best about yourself?
-Apr16 12:37TWT_ID853588254251249664SCRN_NAMEMsFinancierTWT_TXTHow do you keep track of your money to-do's?✅💵  I've been using @Wunderlist for &gt;1 yr and it is life changing! Make a list - check it twice.
-Apr16 12:30TWT_ID853586469818175489SCRN_NAMEPropertyGoToGrlTWT_TXTHey Ladies - what's up?!  My friend Rupal wanted to share a couple of her favourite things for getting her... https://t.co/0i91gHUqeU
+-Apr25 19:10TWT_ID856948492023083008SCRN_NAMEzzarrilloTWT_TXT@danarndlr @jacobtender why not just like…Todoist, Wunderlist/To-Do, etc?
+-Apr25 17:51TWT_ID856928728600936449SCRN_NAMEcaitlynmayersTWT_TXTLooking to replace Wunderlist with @culturedcode's Things app. Any users out there that have feedback?
+-Apr25 17:01TWT_ID856916055100469249SCRN_NAMEitatvalpoTWT_TXTDo you have a favorite productivity or to-do app? Looks like Wunderlist will soon be no more. https://t.co/sfPrZj3F7z
+-Apr23 21:33TWT_ID856259681412689923SCRN_NAMEbunshaftTWT_TXT@Wunderlist Will there be any team-functions with MS to-do like in wunderlist?
+-Apr21 13:01TWT_ID855406230587805696SCRN_NAMEsobebrzTWT_TXTWhich to-do app will you use now than Wunderlist is going away? [Poll]  https://t.co/hSlemaGA7O
+-Apr21 12:22TWT_ID855396294705238020SCRN_NAMEicorpoTWT_TXT@ToDoHelp What is the best way to report bugs? To @ToDoHelp or to @Wunderlist?And please answer other tweets 😛
+-Apr21 08:18TWT_ID855334922671628288SCRN_NAMEJMSantolinTWT_TXTSo @wunderlist to die, don’t really like @todoist and @microsoft’s todo too young… Suggestions ?
+-Apr21 06:26TWT_ID855306609915867136SCRN_NAMEMrs_STEMTWT_TXTRT @Wunderlist: Have you tried out Microsoft To-Do Preview yet? We'd love your feedback to help shape its future. https://t.co/zKGmzo2sLP h…
+-Apr21 06:09TWT_ID855302470137823233SCRN_NAMEmrcalexandreTWT_TXT@AndrewDixonSo @Nivo0o0 I didn't try To-Do, do you think it will replace Wunderlist in your use ?
+-Apr21 03:52TWT_ID855267882455805952SCRN_NAMEVeslyreTWT_TXTWhy am I late on the news? I didn't even realize Microsoft had acquired Wunderlist... 😯To-Do looks minimalistic &amp;… https://t.co/aqInvJZ4qj
+-Apr20 21:09TWT_ID855166525610876929SCRN_NAMEBeepop_AgencyTWT_TXTMicrosoft To-Do Makes Its Way Into The App Store, Is It A Worthy Wunderlist Replacement?: https://t.co/0n0Tr17FIp
+-Apr20 14:13TWT_ID855061796394237953SCRN_NAMELennieJarrattTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist     - CNET https://t.co/r4QlT1dbEZ
+-Apr20 12:47TWT_ID855040210505224193SCRN_NAMEsavio_254TWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/wbV5Uib4Yp
+-Apr20 12:16TWT_ID855032489940705280SCRN_NAMEMlckiNizhonifulTWT_TXTRT @charlesmilander: The first item in Microsoft`s new To-Do app? Retire Wunderlist - CNET https://t.co/Cll2nEVM5s https://t.co/2f8uHIHmQO
+-Apr20 12:09TWT_ID855030571134664704SCRN_NAMElotusacctsTWT_TXTRT @Wunderlist: What will you accomplish today? Make a simple &amp; achievable daily to-do list with My Day, in Microsoft To-Do Preview https:/…
+-Apr20 11:04TWT_ID855014212229353472SCRN_NAMEiamdamnsamTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist     - CNET https://t.co/zgqplpC8TN #wtfnews
+-Apr20 10:58TWT_ID855012721670201345SCRN_NAMEAll_Trends_ITTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist     - CNET https://t.co/u19uf4Yshs via Richard Trenholm
+-Apr20 10:58TWT_ID855012687905947649SCRN_NAMEcrucial_techTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist     - CNET https://t.co/aOdjYH1YxJ
+-Apr20 10:57TWT_ID855012539142348800SCRN_NAMETheApple_FanBoyTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/rHtx8ppX89
+-Apr20 10:57TWT_ID855012534822158337SCRN_NAMEselfie_memesTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/3FUFBZ26pw https://t.co/uuOhF6UNn6
+-Apr20 10:57TWT_ID855012507882106880SCRN_NAMEtechnews6TWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/6UJUSo60Kp
+-Apr20 10:57TWT_ID855012453465313280SCRN_NAMEBWIZZ75TWT_TXT[https://t.co/YGaMXtjJr4] The first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/nMIx8JCWQE
+-Apr20 10:55TWT_ID855012135004491776SCRN_NAMEAM_MancorpTWT_TXTNew post: "The first item in Microsoft's new To-Do app? Retire Wunderlist     - CNET" https://t.co/ayULtuQjTU
+-Apr20 10:55TWT_ID855011938408947712SCRN_NAMEliewkongyeeTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/NBFqyTopzW
+-Apr20 10:55TWT_ID855011937641406465SCRN_NAMEdarylelockhartTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/E9VAKviTyY
+-Apr20 10:54TWT_ID855011813347311616SCRN_NAMEJasonwilliams0TWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/XABc4GsbzI
+-Apr20 10:54TWT_ID855011766249586688SCRN_NAMEkrunox123TWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist     - CNET https://t.co/IIRGzGOVEl
+-Apr20 10:54TWT_ID855011759350050818SCRN_NAMEideep9TWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist     - CNET Try our app cost calculator :… https://t.co/FwF0Ix6Gql
+-Apr20 10:53TWT_ID855011528151625729SCRN_NAMEwikidiczTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist https://t.co/P38DpYmHwR @CNET
+-Apr20 10:53TWT_ID855011465291603968SCRN_NAMETechnologyDealzTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist     - CNET https://t.co/4SkEGyG4b0
+-Apr20 10:53TWT_ID855011444915658753SCRN_NAMEbillballentineTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/7ZIGXKVYm6 via @billballentine… https://t.co/dReqaQj8He
+-Apr20 10:51TWT_ID855010954958036992SCRN_NAMETechforallveyasTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist     - CNET https://t.co/Y85mw3OJSW
+-Apr20 10:51TWT_ID855010939799777280SCRN_NAMEDjMrRogers04TWT_TXTRT @dotapp: The first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/uPJ6TBVHcp
+-Apr20 10:50TWT_ID855010664737157120SCRN_NAMEscrollcomTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist https://t.co/UA2kxshmJU https://t.co/qyw9U0BBoK
+-Apr20 10:50TWT_ID855010663709540352SCRN_NAMEScottHayden65TWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/r3jh77gI6u https://t.co/7Y1qykW8R7
+-Apr20 10:49TWT_ID855010642402476032SCRN_NAMEtaj_sagayTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/lXk0fvb35c #MobileTechNews https://t.co/yHQzWOvgoy
+-Apr20 10:49TWT_ID855010546990673920SCRN_NAMEjbkavungalTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist     - CNET https://t.co/mbQDT8CG50
+-Apr20 10:49TWT_ID855010451251281920SCRN_NAMEWDaniel_M22TWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/2uhl0SalAy https://t.co/OTBol7686i
+-Apr20 10:49TWT_ID855010450731220993SCRN_NAMExavitrendsTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/p2RRx69ju5 #election2016 https://t.co/09cM8qBWRy
+-Apr20 10:49TWT_ID855010447451332608SCRN_NAMEmarsmellowspopTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/MLCjeZnts9 https://t.co/LwvRIS27P2
+-Apr20 10:49TWT_ID855010443261206528SCRN_NAMEIbsenJGTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/0OlXdd8mmG https://t.co/2ezcTuCUsB
+-Apr20 10:49TWT_ID855010437477187586SCRN_NAMEHakkapipTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/Xli9wAw8No via @CNET
+-Apr20 10:48TWT_ID855010206023127040SCRN_NAMEgrejeentrendsTWT_TXTThe first item in Microsoft’s new To-Do app? Retire Wunderlist – CNET https://t.co/8Pjw0N1rxZ https://t.co/1t8V4hJBr6
+-Apr20 10:47TWT_ID855010039190474753SCRN_NAMEprodboctTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist     - CNET https://t.co/oPC3PbxWP9
+-Apr20 10:47TWT_ID855009912488960000SCRN_NAMEdarrenculbreathTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/IaoJhUbb9n https://t.co/Us3osYHj9h
+-Apr20 10:47TWT_ID855009908613406720SCRN_NAMETechMashBangTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist     - CNET https://t.co/mnWbWRUBXF
+-Apr20 10:46TWT_ID855009793576251392SCRN_NAMETechNewsDBTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist     - CNET - https://t.co/g9MlC9bOJy https://t.co/0QyFgPpSJ5
+-Apr20 10:46TWT_ID855009753390383105SCRN_NAMEkevin_li_yaoTWT_TXT@Wunderlist since it is ms todo now, can it sync with onenote todo?
+-Apr20 10:46TWT_ID855009705634275328SCRN_NAMEprimepromotionTWT_TXT#personaltech The first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/pXZH66IH42
+-Apr20 10:46TWT_ID855009678635524096SCRN_NAMEBestInnovationTWT_TXTThanks @CNET - The first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/tixNFHzEwA
+-Apr20 10:46TWT_ID855009677012332544SCRN_NAMEiProductFixTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/GQBe2wRPts
+-Apr20 10:45TWT_ID855009633022488576SCRN_NAMEPrimeConcepts2KTWT_TXT#businesstech The first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/0kBKyoJp0P
+-Apr20 10:45TWT_ID855009625867001856SCRN_NAMEJasonEMalmstromTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/KTrbSvy2CH
+-Apr20 10:45TWT_ID855009590387367936SCRN_NAMEZyiteGadgetsTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/Z7QrF3iZF6
+-Apr20 10:45TWT_ID855009541909610496SCRN_NAMEsamymohabTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET To-Do is integrated into Office 365 and powe… https://t.co/mQczvjplVU
+-Apr20 10:45TWT_ID855009481381597184SCRN_NAMELGR_ReviewsTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist     - CNET https://t.co/UJN0HkHvxU
+-Apr20 10:45TWT_ID855009431553277952SCRN_NAMEeqlia_nozomuTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist     - CNET https://t.co/n6tvKo7D9K
+-Apr20 10:44TWT_ID855009233112375296SCRN_NAMEaasisvinayakTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/kRK9RWcRQK
+-Apr20 10:44TWT_ID855009184160468992SCRN_NAMEekiSoftTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/SeTJv71Xof
+-Apr20 10:43TWT_ID855009088190767104SCRN_NAMEazemarketingTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist – CNET https://t.co/slOpkUvwZ2
+-Apr20 10:42TWT_ID855008664876228608SCRN_NAMEPerfect_PC_24_7TWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET: To-Do is integrated into Office 365 and… https://t.co/sULRULOL78
+-Apr20 10:41TWT_ID855008486719148032SCRN_NAMEYusufchauhdryTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist     - CNET https://t.co/T3GyMIYUq0
+-Apr20 10:39TWT_ID855007941119946752SCRN_NAMEMichael_VasanthTWT_TXT#The first item in Microsoft's new To-Do app? Retire Wunderlist     - CNET To-Do is integrated into Office 365 and… https://t.co/gQotatW4Oh
+-Apr20 10:38TWT_ID855007726635819008SCRN_NAMEShawnJKBTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/2gubQWnNpD
+-Apr20 10:37TWT_ID855007530430242816SCRN_NAMEdotappTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/uPJ6TBVHcp
+-Apr20 10:37TWT_ID855007441486049280SCRN_NAMEmarkbscotusTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist     - CNET https://t.co/gm1y79TlTF
+-Apr20 10:37TWT_ID855007417171619840SCRN_NAMEsamymohabTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET To-Do is integrated into Office 365 and... https://t.co/9uUNZy7hrT
+-Apr20 10:33TWT_ID855006582563680256SCRN_NAMEAdeelMUddinTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/ALmaCNiCg0 https://t.co/rS9cLnixuG
+-Apr20 10:33TWT_ID855006581406048256SCRN_NAMERandalWright55TWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/x6aJcF4yUD https://t.co/d9QclVWhEl
+-Apr20 10:33TWT_ID855006576029061122SCRN_NAMEninafresamx88TWT_TXT#Tecnología  The first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/A56k413o1T https://t.co/EitP9OYXel
+-Apr20 10:33TWT_ID855006575827734530SCRN_NAMEjohnso_hTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET
+-Apr20 10:33TWT_ID855006562556944384SCRN_NAMERosalynDRoss1TWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET
+-Apr20 10:33TWT_ID855006562548457472SCRN_NAMEMarieMJackso1TWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET
+-Apr20 10:33TWT_ID855006560556208128SCRN_NAMEh_whistlTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET
+-Apr20 10:33TWT_ID855006559172141057SCRN_NAMEbarmaley7777777TWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/EvlCUfCSYT https://t.co/qJoOhfmivn
+-Apr20 10:33TWT_ID855006555841941505SCRN_NAMEjuliasbrown31TWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist     - CNET https://t.co/82ygESHxme
+-Apr20 10:33TWT_ID855006554201890816SCRN_NAMEValerieJJackTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET
+-Apr20 10:33TWT_ID855006552884785152SCRN_NAMEClaire__JamesTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET
+-Apr20 10:33TWT_ID855006551051870209SCRN_NAMEDiana__BeckerTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET
+-Apr20 10:33TWT_ID855006550850535424SCRN_NAMENorm_DavidsonTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET
+-Apr20 10:33TWT_ID855006550527582208SCRN_NAMEKateSChowTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET
+-Apr20 10:33TWT_ID855006550049472513SCRN_NAMEDianeBJacobs1TWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET
+-Apr20 10:33TWT_ID855006540788506624SCRN_NAMEDickmaJTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET
+-Apr20 10:33TWT_ID855006517568786433SCRN_NAMEllaverotecTWT_TXT#llaverotec The first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/LoiN2avTlE https://t.co/5tXUQJs8m1
+-Apr20 10:33TWT_ID855006494831501314SCRN_NAMEMalcomKyleSaintTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/u125JTSYnQ https://t.co/wrPaH7uWVd
+-Apr20 10:33TWT_ID855006488883937280SCRN_NAMEjamescarton001TWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/0IqeugMWKy https://t.co/REJrwSr3rB
+-Apr20 10:33TWT_ID855006482324008960SCRN_NAMETechnology42dayTWT_TXTThe first item in #Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/4RcG53OXbq #TECH https://t.co/RUvVVpE2MP
+-Apr20 10:33TWT_ID855006475650973696SCRN_NAMEChimex_SurvivorTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/37tcARtAOQ https://t.co/0L7eCMFAnE
+-Apr20 10:33TWT_ID855006448413138946SCRN_NAMETRAJKOVICNEWSTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/jPYNXHfiOd https://t.co/FlZ71pBUBx
+-Apr20 10:33TWT_ID855006441786163201SCRN_NAMEeagle_supremeTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/fUeLomgZD0 https://t.co/gdpopyq1VZ
+-Apr20 10:33TWT_ID855006439525367808SCRN_NAMEAngelicaHill85TWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/SqQIyyIbQQ https://t.co/DVfZNjNgiy
+-Apr20 10:33TWT_ID855006430784397313SCRN_NAMET61MaryTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET
+-Apr20 10:33TWT_ID855006429421240321SCRN_NAMEAnthonyVenutoloTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/xiiiaxL1c1 #tech https://t.co/5ZLry2tJzq
+-Apr20 10:32TWT_ID855006179277385728SCRN_NAMEsolacorpTWT_TXThttps://t.co/TUdDUDJEq7 : The first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/97n6VVGKdi
+-Apr20 10:30TWT_ID855005827295567872SCRN_NAMEEmpireSecurityUTWT_TXT#CNET The first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/wDX5gDzZYU
+-Apr20 10:30TWT_ID855005774606675968SCRN_NAMEmanolhsTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist     - CNET https://t.co/uUCIaIADIO
+-Apr20 10:28TWT_ID855005270178766849SCRN_NAMEtech_politicsTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/HGFnktfGsV
+-Apr20 10:28TWT_ID855005139329060864SCRN_NAMEmediat_techTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/JqWd8CIZxV #Technology US
+-Apr20 10:21TWT_ID855003598606012416SCRN_NAMEstlistTWT_TXT@Wunderlist Hi, are there some instructions how to sync To-do and Outlook anywhere? TIA
+-Apr20 10:21TWT_ID855003420167622656SCRN_NAMEHelpTechSupportTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/O65AfJYCAu
+-Apr20 10:21TWT_ID855003407546957824SCRN_NAMEElephantTechnoTWT_TXTCNET -  The first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/GCxofk7R0f
+-Apr20 10:21TWT_ID855003406095728640SCRN_NAMEjuniorfresh02TWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET
+-Apr20 10:21TWT_ID855003398499737600SCRN_NAMEtechnews122TWT_TXTCnet The first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/4wUDo68jaA
+-Apr20 10:21TWT_ID855003390924828672SCRN_NAMEDaily_TechNewsTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/4Mvp43UqV0
+-Apr20 10:19TWT_ID855002974363553793SCRN_NAMEFrostbiteTrendsTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/yXUaz5trUR
+-Apr20 10:18TWT_ID855002675221594112SCRN_NAMEFrostbite_UKTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/rHQqC7vK4D
+-Apr20 10:17TWT_ID855002378067730432SCRN_NAMEBeroNacciTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist https://t.co/crwckPbcL7
+-Apr20 10:13TWT_ID855001479534587904SCRN_NAMEFrostbiteCanadaTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/7y6fd2Y8L1
+-Apr20 10:13TWT_ID855001417005891584SCRN_NAMEcrucial_techTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/0LsKuYH825
+-Apr20 10:10TWT_ID855000812891893764SCRN_NAMEGeordi3B0yTWT_TXT#geordi3B0y The first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/47eY1GnMMq
+-Apr20 10:10TWT_ID855000675750735873SCRN_NAMEFlabinAlertTWT_TXTTech: The first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/wCAxAKLdWH
+-Apr20 10:10TWT_ID855000659086725120SCRN_NAMEWJscitechTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/QT6BYJ9dri
+-Apr20 10:09TWT_ID855000493113913344SCRN_NAMETrending_GlobalTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/8v7rbkcr1G
+-Apr20 10:09TWT_ID855000398201008128SCRN_NAMEnews2tweetsTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/oPbs7mllRR
+-Apr20 10:08TWT_ID855000158513360896SCRN_NAMEJahangeermTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist https://t.co/ZxDxRudEaQ
+-Apr20 10:07TWT_ID855000084341239809SCRN_NAMEvrai777TWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/mh0zzTiTOU #technology
+-Apr20 10:07TWT_ID854999979030609920SCRN_NAMEchrisholvoetTWT_TXTRT @CNET: The first item in Microsoft's new To-Do app? Retire Wunderlist https://t.co/RssWkw88Wa
+-Apr20 10:07TWT_ID854999955110596608SCRN_NAMEttolga87TWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/z5lLKDv8UE
+-Apr20 10:06TWT_ID854999721194205187SCRN_NAMEmobicyberdevTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET: CNET The first item in Microsoft's new To-Do…
+-Apr20 10:06TWT_ID854999645000486912SCRN_NAMEjustseenthistecTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/0qc0XTW1un
+-Apr20 10:05TWT_ID854999570790703104SCRN_NAMEMSDTechNewsTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist https://t.co/owKcdfttYK
+-Apr20 10:05TWT_ID854999482743783424SCRN_NAMEggtechmyTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/rfFglpZFRV
+-Apr20 10:05TWT_ID854999477685440512SCRN_NAMEThomasWillnerTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist https://t.co/hwJdn1OG6C
+-Apr20 10:04TWT_ID854999138529923072SCRN_NAMEwinklhawkTWT_TXTRT @CNET: The first item in Microsoft's new To-Do app? Retire Wunderlist https://t.co/RssWkw88Wa
+-Apr20 10:03TWT_ID854998954324369409SCRN_NAMESmartPhones12TWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/dviAIXbKR6
+-Apr20 10:03TWT_ID854998863140331520SCRN_NAMEtizaiTWT_TXTCNET : The first item in Microsoft's new To-Do app? Retire Wunderlist https://t.co/QiyXcD41hL (via Twitter… https://t.co/HdOJj8JPnr
+-Apr20 10:02TWT_ID854998661821939713SCRN_NAMEtechfriendpakTWT_TXTRT @CNET: The first item in Microsoft's new To-Do app? Retire Wunderlist https://t.co/RssWkw88Wa
+-Apr20 10:01TWT_ID854998475615993857SCRN_NAMETGVIATWT_TXT#TECH The first item in Microsoft's new To-Do app? Retire Wunderlist https://t.co/EkjzFXIrw2 #News #Technology #aws #startup
+-Apr20 10:01TWT_ID854998327309611008SCRN_NAMECNETTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist https://t.co/RssWkw88Wa
+-Apr20 09:33TWT_ID854991480670142464SCRN_NAMEJebaTWT_TXT@MPAndy @Microsoft @Wunderlist they have to ruin everything.. They want to replace wunderlist with that shit app of… https://t.co/OfAxqKGyVS
+-Apr20 09:21TWT_ID854988494707372032SCRN_NAMEsamnangchhunTWT_TXT"Microsoft to shut down Wunderlist”, it’s time to find another app, what’s your favorite? https://t.co/KDcXsOGftl #WUNDERLIST #todo
+-Apr20 09:09TWT_ID854985472782852096SCRN_NAMEmikeywilTWT_TXT"To-Do comes from the team behind the Wunderlist app" - interested to know from Wunderlist users whether this appea… https://t.co/cGoenrIPvI
+-Apr20 08:53TWT_ID854981318748274688SCRN_NAMEvladastojanovicTWT_TXT@Wunderlist Is this new ToDo app killing Wunderlist?
+-Apr20 08:49TWT_ID854980275612286976SCRN_NAMEFraLNGTWT_TXT@ToDoHelp @Wunderlist Are you looking at the uservoice for feedback suggestions? https://t.co/VQkEF1PDhW
+-Apr20 08:48TWT_ID854980072238927872SCRN_NAMEJim_EdwardsTWT_TXTWunderlist users - are you annoyed that Microsoft is getting rid of your app in favour of "To-Do"?
+-Apr20 08:46TWT_ID854979580213555200SCRN_NAMEnicgibbTWT_TXT@MummyBarrow @OmniFocus @todoist @Wunderlist @asana @alicej_t Ooh Alice, what was conclusion? I like @todoist but k… https://t.co/ox3D6kYcvi
+-Apr20 08:42TWT_ID854978675615432704SCRN_NAMESimbakisTWT_TXT🙈😩🙈 what?Why? It's the best to do list ever. It's the one I use and when I say the best I mean it.I tried dozens… https://t.co/Dczh9mAoMW
+-Apr20 08:34TWT_ID854976524432420864SCRN_NAMEnicgibbTWT_TXTDeciding between @OmniFocus @todoist @Wunderlist and @asana - anyone have experience to share that might be helpful? #sortingmyshitout
+-Apr20 08:29TWT_ID854975322294452224SCRN_NAMEstrebel_manuelTWT_TXTHi @jeffrey_way, you are my Todo app guy😂 Already tested Microsoft’s Wunderlist replacement? https://t.co/5dYsafhNWT https://t.co/lxckgXOU7h
+-Apr20 07:41TWT_ID854963226567741440SCRN_NAMEbhavanrTWT_TXTOh man I love #Wunderlist..,,,,Which to-do app will you use now than Wunderlist is going away? [Poll] (9to5Google) https://t.co/Pc4T3SEY26
+-Apr20 07:25TWT_ID854959103445266434SCRN_NAMEmishakarpenkoTWT_TXTRT @backlon: Hey @google, don’t look now but @Microsoft has a coherent To-Do app strategy. Weird, right? It’s not impossible! https://t.co/…
+-Apr20 07:25TWT_ID854959083861966848SCRN_NAMEpidybiTWT_TXTWhich to-do app will you use now than Wunderlist is going away?... https://t.co/4S7T0K52ns
+-Apr20 07:18TWT_ID854957458271461377SCRN_NAMErubenspmTWT_TXT@Wunderlist when you finally include subtasks and I import them to To-do, will it be imported completely? I mean, completed elements too
+-Apr20 06:40TWT_ID854947989428875264SCRN_NAMEqueislerTWT_TXTWhy does the new To-Do use sooooooo much screen real estate for a useless image? Farewell, #Wunderlist https://t.co/PWYnbOdH8J
+-Apr20 06:39TWT_ID854947563182706688SCRN_NAMEDigitalAmoebaTWT_TXT@ToDoHelp @ljpuk #ToDo's non-auto #MyDay does seem main philosophy difference vs #Wunderlist. More effort but pro-active choice vs reactive?
+-Apr20 06:24TWT_ID854943898283778048SCRN_NAMEsmicaelTWT_TXTSo anyone started using to-do instead of wunderlist?
+-Apr20 04:49TWT_ID854920051920646144SCRN_NAMETechnableTWT_TXTWhich to-do app will you use now than Wunderlist is going away? [Poll] - https://t.co/Jyf4QPbIOr https://t.co/JCAmtmzIqf
+-Apr20 04:43TWT_ID854918486207934464SCRN_NAMEmaybeacoolguyTWT_TXT@Wunderlist @ToDoHelp May I suggest you update your app descriptions to make it clear that this is in preview and t… https://t.co/ZRpGKavfn5
+-Apr20 04:18TWT_ID854912237424836608SCRN_NAMEobsmexcrisisTWT_TXTRT @uohanalilly: Which to-do app will you use now than Wunderlist is going away? [Poll] https://t.co/dzEISnJi0J
+-Apr20 04:18TWT_ID854912043069177857SCRN_NAMEliatmordTWT_TXTRT @my24me: Need a replacement for Wunderlist ?@CompleteToDo is a new to do that fixes what other to-dos got wrong https://t.co/uL736YaVrM
+-Apr20 04:16TWT_ID854911648527773696SCRN_NAMEmy24meTWT_TXTNeed a replacement for Wunderlist ?@CompleteToDo is a new to do that fixes what other to-dos got wrong https://t.co/uL736YaVrM
+-Apr20 03:47TWT_ID854904408705912832SCRN_NAMEcymumtazTWT_TXT@Wunderlist How can I get access to this? Will this replace @wunderlist?
+-Apr20 03:43TWT_ID854903233910853632SCRN_NAMEIAMShaneTurnerTWT_TXTWhy'd you sell @Wunderlist ?? Tried importing my lists into @Microsoft 's to-do - and just hangs... a sign of things to come :(
+-Apr20 03:41TWT_ID854902878028406785SCRN_NAMEarchiecoderTWT_TXT@Wunderlist Is the importer to Ms To-Do currently broken?
+-Apr20 03:19TWT_ID854897211427229698SCRN_NAMEuohanalillyTWT_TXTWhich to-do app will you use now than Wunderlist is going away? [Poll] https://t.co/dzEISnJi0J
+-Apr20 02:40TWT_ID854887586833219584SCRN_NAMEsarahatsangTWT_TXTRT @Wunderlist: Have you tried out Microsoft To-Do Preview yet? We'd love your feedback to help shape its future. https://t.co/zKGmzo2sLP h…
+-Apr20 02:23TWT_ID854883204767109121SCRN_NAMEganeshkulkarniTWT_TXTWunderlist will become To-Do. What else could happen when Microsoft has taken over? No wunder, only list. Plain.
+-Apr20 01:54TWT_ID854875930451476480SCRN_NAMEItsMadsonTWT_TXTRT @backlon: Hey @google, don’t look now but @Microsoft has a coherent To-Do app strategy. Weird, right? It’s not impossible! https://t.co/…
+-Apr20 01:46TWT_ID854873911279865857SCRN_NAME_SEMTWT_TXTWhich to-do app will you use now than Wunderlist is going away? [Poll]: Whenever a company is…… https://t.co/pVJznaLijB
+-Apr20 01:44TWT_ID854873490649829376SCRN_NAMEQxNewsTWT_TXTRT @9to5Google: Which to-do app will you use now than Wunderlist is going away? [Poll] https://t.co/QgvfpaSBh1 https://t.co/OGUnl1N8S4
+-Apr20 01:42TWT_ID854872770294849536SCRN_NAMEApp_sw_TWT_TXTWhich to-do app will you use now than #Wunderlist is going away? [Poll]. Read more: https://t.co/up9YGXQwcy
+-Apr20 01:16TWT_ID854866224148361216SCRN_NAMEarifnoorjehanTWT_TXTRT @Wunderlist: Have you tried out Microsoft To-Do Preview yet? We'd love your feedback to help shape its future. https://t.co/zKGmzo2sLP h…
+-Apr20 01:10TWT_ID854864754359382016SCRN_NAMEricardowecTWT_TXTWhich to-do app will you use now than Wunderlist is going away? [Poll] https://t.co/8cl1H9cV1J #925Google
+-Apr20 01:09TWT_ID854864489258164224SCRN_NAMEwillianspTWT_TXTWhich to-do app will you use now than Wunderlist is going away? [Poll] https://t.co/QVkHKB9BZW https://t.co/RbwVM5lS1I
+-Apr20 01:07TWT_ID854863998449324032SCRN_NAMEOh_PleasuresTWT_TXTWhat do you use to help you with tasks/ to-do lists? Wunderlist is going away and I almost want to DIE! Lol I am... https://t.co/92qmp2UuHe
+-Apr20 01:06TWT_ID854863766567124993SCRN_NAMECliffWadeTWT_TXTRT: 9to5Google: Which to-do app will you use now than Wunderlist is going away? [Poll] https://t.co/049FaF02Qu … https://t.co/v5DukEV8Bj
+-Apr20 01:06TWT_ID854863711311417344SCRN_NAMEMartinGuayOTTTWT_TXTRT AndroidColiseum: RT 9to5Google: Which to-do app will you use now than Wunderlist is going away? [Poll] … https://t.co/g76MYrKCFK
+-Apr20 01:05TWT_ID854863605887619072SCRN_NAMEMartinGuayOTTTWT_TXTRT 9to5Google : Which to-do app will you use now than Wunderlist is going away? [Poll] https://t.co/QI3P5LOKbd … https://t.co/UyppvHyUES
+-Apr20 01:05TWT_ID854863519015206912SCRN_NAMEFrostbite_UKTWT_TXTWhich to-do app will you use now than Wunderlist is going away? [Poll] https://t.co/NDW7VHNZWR #technology
+-Apr20 01:04TWT_ID854863371597991936SCRN_NAMEricardowecTWT_TXTWhich to-do app will you use now than Wunderlist is going away? [Poll] https://t.co/8cl1H9cV1J #925 https://t.co/hylQH6IAeU
+-Apr20 01:04TWT_ID854863291524558848SCRN_NAMEAndroidColiseumTWT_TXTRT 9to5Google: Which to-do app will you use now than Wunderlist is going away? [Poll] https://t.co/nQ2cMB3bOI … https://t.co/5JIfkkltfk
+-Apr20 01:03TWT_ID854863029711888384SCRN_NAMETechNewsRTTWT_TXTWhich to-do app will you use now than Wunderlist is going away? [Poll] https://t.co/jFgVytock6 #technology
+-Apr20 01:02TWT_ID854862768121548800SCRN_NAMEMACSCORPIONTWT_TXT9to5Google: Which to-do app will you use now than Wunderlist is going away? [Poll] https://t.co/r8HP03Nhi9 https://t.co/dwlO3cw1LH
+-Apr20 01:02TWT_ID854862713809510400SCRN_NAME9to5GoogleTWT_TXTWhich to-do app will you use now than Wunderlist is going away? [Poll] https://t.co/QgvfpaSBh1 https://t.co/OGUnl1N8S4
+-Apr20 00:58TWT_ID854861900219396096SCRN_NAMEnearcticfaunaTWT_TXTRIP @Wunderlist the only list app I've been able to keep up with and enjoyed using. Will ToDo have the  emoji support? #bagsofmicrosoftmoney
+-Apr20 00:38TWT_ID854856651785895936SCRN_NAMEakkubuleTWT_TXTRT @Wunderlist: Have you tried out Microsoft To-Do Preview yet? We'd love your feedback to help shape its future. https://t.co/zKGmzo2sLP h…
+-Apr20 00:27TWT_ID854854116220297216SCRN_NAMEBoaterSmittyTWT_TXT@OfficeNews @Wunderlist Interesting. Will it be possible to use To-Do without an Office365 account?
+-Apr20 00:22TWT_ID854852830070530048SCRN_NAME_iErikTWT_TXTRT @backlon: Hey @google, don’t look now but @Microsoft has a coherent To-Do app strategy. Weird, right? It’s not impossible! https://t.co/…
+-Apr20 00:08TWT_ID854849108871401473SCRN_NAMEpedro_joseTWT_TXTRT @Wunderlist: Have you tried out Microsoft To-Do Preview yet? We'd love your feedback to help shape its future. https://t.co/zKGmzo2sLP h…
+-Apr19 23:56TWT_ID854846170522419201SCRN_NAMEjonathanwylieTWT_TXT@lifehacker With Wunderlist on its way out &amp; barely recognizable in the MS replacement, can we have a new top 5 todo list article for 2017?
+-Apr19 23:50TWT_ID854844748997283841SCRN_NAMEkriegsTWT_TXTInteresting To-Do app from Microsoft came out today (windows, ios, android). Basically the new Wunderlist?  https://t.co/Ssye9Indjv
+-Apr19 23:47TWT_ID854843921360277504SCRN_NAMEgetWeDoTWT_TXT@Cafeine @Anydo @Wunderlist You + WeDo = Productivity. We got the best @todoist features... for free. Who wants to pay for Reminders?
+-Apr19 23:28TWT_ID854839204668473344SCRN_NAMEchris_raganTWT_TXT@Wunderlist - love Microsoft To-Do so far, but where are sub-tasks?!
+-Apr19 23:26TWT_ID854838700789846016SCRN_NAMEeikohansTWT_TXTRT @Wunderlist: Have you tried out Microsoft To-Do Preview yet? We'd love your feedback to help shape its future. https://t.co/zKGmzo2sLP h…
+-Apr19 23:13TWT_ID854835489014259716SCRN_NAMEShpigfordTWT_TXTGood Wunderlist alternarive? Primarily need shared to-do lists (ex. grocery lists that both my wife and I can edit)
+-Apr19 22:44TWT_ID854828032095379456SCRN_NAMEjonathanwylieTWT_TXTRT @jonathanwylie: Hmmmm. Looks like I need a new task list manager. Suggestions for a free or low cost cross platform #gtd compatible tool…
+-Apr19 22:12TWT_ID854820117447880705SCRN_NAMEaowd25TWT_TXTMeet the new Wunderlist: Microsoft's To-Do task manager takes over: Itâ??s been almost two years since Microsoft https://t.co/cvBhcWrvCD
+-Apr19 22:12TWT_ID854820023939907586SCRN_NAMEaowd25TWT_TXT#قسم_التقنية Meet the new Wunderlist: Microsoft's To-Do task manager takes over: Itâ??s been almost two years…... https://t.co/VllH7OlyRq
+-Apr19 22:12TWT_ID854819977374777344SCRN_NAMEaowd25TWT_TXT#قسم_التقنية Meet the new Wunderlist: Microsoft's To-Do task manager takes over: Itâ??s been almost two years… https://t.co/O5rmZtmN0k
+-Apr19 21:54TWT_ID854815542850576385SCRN_NAMEjmart2189TWT_TXT#Microsoft To-Do to replace #Wunderlist? As #WL user: great! As #mac user: another nail in the coffin.  https://t.co/20TMRpaJGm via @Verge
+-Apr19 21:53TWT_ID854815140088303621SCRN_NAMEjdcsocialTWT_TXTIs ‘Microsoft To-Do’ the successor to Wunderlist and Project Cheshire? https://t.co/s1fNDXfNaB via @onmsft
+-Apr19 21:49TWT_ID854814123913293825SCRN_NAMEdhhTWT_TXT@chadfowler The "What's Next" part of Microsoft's announcement of Todo about retiring Wunderlist is false? https://t.co/nO5F5N9VvP
+-Apr19 21:34TWT_ID854810361366708226SCRN_NAMEgregalbrechtTWT_TXTWait but why? #wunderlist #todo #eol https://t.co/XYdO8fv7j1
+-Apr19 21:20TWT_ID854807053340209152SCRN_NAMEtwitserraTWT_TXTRT @Wunderlist: Have you tried out Microsoft To-Do Preview yet? We'd love your feedback to help shape its future. https://t.co/zKGmzo2sLP h…
+-Apr19 21:17TWT_ID854806066940477447SCRN_NAMEErnOppTWT_TXTAnyone have a good alternative to wunderlist they would recommend? I run my life in there and msft will soon deprec… https://t.co/DBLfdYYOG1
+-Apr19 21:06TWT_ID854803336125718529SCRN_NAMEskullboyguyTWT_TXT@Anydo @Wunderlist Because my favourite app (Next to @PowerampApp) is going to be discontinued. Do you need more reasons?
+-Apr19 21:00TWT_ID854801985345867777SCRN_NAMEsharifi123TWT_TXT@Wunderlist Are you guys really going to shut down wunderlist? I haven't liked To-Do so far cause it doesn't support folders.
+-Apr19 20:32TWT_ID854794744463020036SCRN_NAMEfrancoissouyriTWT_TXTChasing #wunderlist lovers ? now Introducing Microsoft To-Do. The end of old SharePoint tasks??  https://t.co/B7LxZEur5O
+-Apr19 20:22TWT_ID854792451286061056SCRN_NAMEjoshvcTWT_TXTSo, anybody have a good iOS to-do list that allows sharing lists? This new microsoft ruination of Wunderlist doesn't have sharing.
+-Apr19 20:19TWT_ID854791654670258176SCRN_NAMEthijskramerTWT_TXT@marckohlbrugge since Wunderlist will be discontinued, do you recommend any comparable alternatives, working on both macOS and Android?
+-Apr19 20:09TWT_ID854788990918164483SCRN_NAMESniederreiterTWT_TXT@Wunderlist Do you plan to integrate a “week view” for To-Do as we have in Wunderlist?“Day view” is just not enough most of the time
+-Apr19 20:06TWT_ID854788220919459841SCRN_NAMEjbstevensTWT_TXT@Wunderlist Where are recurring tasks and list groups in the new To-Do?
+-Apr19 20:03TWT_ID854787683029143552SCRN_NAME21tigermikeTWT_TXTUm, Yay....? 😔😢Microsoft to shut down Wunderlist in favor of its new app, To-Do #acquisition https://t.co/ViGvrnHYzY
+-Apr19 19:46TWT_ID854783307086802946SCRN_NAMEiamelliotTWT_TXTWunderlist is closing 😩 https://t.co/Dt4R3QVBs3any to-do app recommendations then?
+-Apr19 19:44TWT_ID854782850381611008SCRN_NAMEmrdanielschwarzTWT_TXT@deezel @Microsoft Is that to-do app @Wunderlist?
+-Apr19 19:31TWT_ID854779398649593856SCRN_NAMEarangoTWT_TXTMicrosoft killing Wunderlist for a MS-account controlled copy cat?! Time to find a new to-do app (after actually using/liking WL for yrs) ☹️
+-Apr19 19:18TWT_ID854776315081359361SCRN_NAMEkwlothropTWT_TXTRT @robinmanuelt: Oh, why didn't they just asked? I have hundreds of cloud-syncing, cross-platform To-Do List samples from my evangelism ti…
+-Apr19 19:14TWT_ID854775344141881347SCRN_NAMEcarlosrebatoTWT_TXT@Wunderlist Will this app replace the old one?
+-Apr19 19:01TWT_ID854771876601577472SCRN_NAMECaseyNewtonTWT_TXT@Wunderlist @Stammy @chrismessina why start completely over? You had a good thing going! To-Do looks generic as hell
+-Apr19 18:55TWT_ID854770483119575040SCRN_NAMEhboonTWT_TXTSo there’s Microsoft To-Do and Wunderlist now?
+-Apr19 18:50TWT_ID854769183321731073SCRN_NAMEjonathanwylieTWT_TXTHmmmm. Looks like I need a new task list manager. Suggestions for a free or low cost cross platform #gtd compatible… https://t.co/wzE2uoUmu4
+-Apr19 18:42TWT_ID854767086266175488SCRN_NAMEtwistioTWT_TXTAny @Wunderlist fans out there?  What's your favorite to-do list app? 📱🖥️ #productivity https://t.co/NG66QiB5cF
+-Apr19 18:38TWT_ID854766241675792385SCRN_NAMEcrouhanaTWT_TXT@Outlook outlook app currently has wunderlist as calendar "app". are you switching this to To-Do soon?
+-Apr19 18:32TWT_ID854764555834150912SCRN_NAMEpaja84_nlTWT_TXT@Wunderlist Why is it @Microsoft is killing all the best apps? First Sunrise Calendar and now you.. #hatethis
+-Apr19 18:25TWT_ID854762795505680384SCRN_NAMEmichaeltefulaTWT_TXTTrello or Wunderlist? Need to decide where to place all my todos. My scrappy notebooks are so cumbersome
+-Apr19 18:24TWT_ID854762584511320065SCRN_NAMErobinmanueltTWT_TXTOh, why didn't they just asked? I have hundreds of cloud-syncing, cross-platform To-Do List samples from my evangel… https://t.co/elkvY6jWtL
+-Apr19 18:21TWT_ID854761807331938304SCRN_NAMEryf_feedTWT_TXTAsk HN: What is the best alternative now that Wunderlist will be gone? https://t.co/mVQwOF6PXB
+-Apr19 18:17TWT_ID854760888120770566SCRN_NAMESecNewsBotTWT_TXTHacker News - Ask HN: What is the best alternative now that Wunderlist will be gone? https://t.co/SeV17SyTOQ
+-Apr19 18:08TWT_ID854758569593516035SCRN_NAME_monishkumarTWT_TXTAlthough To-Do is near, Microsoft could have transitioned Wunderlist into To-Do, but why do they need a separate app?
+-Apr19 18:03TWT_ID854757466109652993SCRN_NAMETypingPixelsTWT_TXTRT @backlon: Hey @google, don’t look now but @Microsoft has a coherent To-Do app strategy. Weird, right? It’s not impossible! https://t.co/…
+-Apr19 17:41TWT_ID854751805242318848SCRN_NAMEfarid56TWT_TXTMicrosoft's Wunderlist Replacement, To-Do Is Now Available - So can I say goodbye to one of my best apps? https://t.co/vnT47sCWcE
+-Apr19 17:37TWT_ID854750896370135040SCRN_NAMEFotoTobiTWT_TXTRT @backlon: Hey @google, don’t look now but @Microsoft has a coherent To-Do app strategy. Weird, right? It’s not impossible! https://t.co/…
+-Apr19 17:34TWT_ID854750122680483840SCRN_NAMEbsglaserTWT_TXT@Wunderlist Honestly don't get the My Day workflow; if I've created &amp; dated a to-do, why is it good to have another… https://t.co/6cf3gYGWC0
+-Apr19 17:26TWT_ID854748105056583680SCRN_NAMEherrmayrTWT_TXTRT @backlon: Hey @google, don’t look now but @Microsoft has a coherent To-Do app strategy. Weird, right? It’s not impossible! https://t.co/…
+-Apr19 17:25TWT_ID854747753477492736SCRN_NAMEiamjulienbilgerTWT_TXT@ToDoHelp any plans to release a To-Do Mac app? Among the wunderlist apps (📱,💻, ...) I use the mac app most often. Many Thanks ✌️
+-Apr19 17:23TWT_ID854747291374190595SCRN_NAMELisaLeysenTWT_TXTRT @backlon: Hey @google, don’t look now but @Microsoft has a coherent To-Do app strategy. Weird, right? It’s not impossible! https://t.co/…
+-Apr19 17:22TWT_ID854746937718919170SCRN_NAMEMzr7_TWT_TXTRT @backlon: Hey @google, don’t look now but @Microsoft has a coherent To-Do app strategy. Weird, right? It’s not impossible! https://t.co/…
+-Apr19 17:22TWT_ID854746918769090560SCRN_NAMEjake_kTWT_TXTRT @backlon: Hey @google, don’t look now but @Microsoft has a coherent To-Do app strategy. Weird, right? It’s not impossible! https://t.co/…
+-Apr19 17:21TWT_ID854746726904856577SCRN_NAMEseanschraederTWT_TXTRT @backlon: Hey @google, don’t look now but @Microsoft has a coherent To-Do app strategy. Weird, right? It’s not impossible! https://t.co/…
+-Apr19 17:18TWT_ID854746135960981505SCRN_NAMEtrino_asTWT_TXTRT @backlon: Hey @google, don’t look now but @Microsoft has a coherent To-Do app strategy. Weird, right? It’s not impossible! https://t.co/…
+-Apr19 17:18TWT_ID854746060333428737SCRN_NAMEJetBlkTWT_TXTRT @backlon: Hey @google, don’t look now but @Microsoft has a coherent To-Do app strategy. Weird, right? It’s not impossible! https://t.co/…
+-Apr19 17:18TWT_ID854746057657417731SCRN_NAMEOliverJWTWT_TXTRT @backlon: Hey @google, don’t look now but @Microsoft has a coherent To-Do app strategy. Weird, right? It’s not impossible! https://t.co/…
+-Apr19 17:17TWT_ID854745896692498432SCRN_NAMEbacklonTWT_TXTHey @google, don’t look now but @Microsoft has a coherent To-Do app strategy. Weird, right? It’s not impossible! https://t.co/j6Jc0t52no
+-Apr19 17:12TWT_ID854744482754945024SCRN_NAMEmunggurTWT_TXTTo Do List App - Microsoft To-Do Preview https://t.co/ZaVgLbCJ4athen how about wunderlist that bought my Microsoft?
+-Apr19 17:03TWT_ID854742382260170752SCRN_NAMEDigitalAmoebaTWT_TXT@JenMsft Definitely interested in #Microsoft #ToDo but unsure of advantages &amp; effort to move across from my family'… https://t.co/6HJ71bxt6f
+-Apr19 16:58TWT_ID854741106084511749SCRN_NAMEmnkypeteTWT_TXTHow often can you rewrite a to-do app? #wunderlist #microsoft
+-Apr19 16:56TWT_ID854740445070589952SCRN_NAMEAndyOdom7TWT_TXTDid anyone ask @Microsoft to replace @Wunderlist ?
+-Apr19 16:55TWT_ID854740131697356801SCRN_NAMEMLilley29TWT_TXT@Wunderlist Does "evolution" mean the name Wunderlist is going away? Is To Do a separate product? Do I really need 2 apps???
+-Apr19 16:47TWT_ID854738212841041921SCRN_NAMEdcbahrTWT_TXT@Wunderlist Need to make sure it's #screenreaderaccessible and no use without shared lists for me. So is the wunder… https://t.co/cZRzkNrWIo
+-Apr19 16:40TWT_ID854736451187208192SCRN_NAMEHelloLudgerTWT_TXTLook: @Microsoft @Office releases #OneList, but decides to name it uninspired and generic #ToDo. Why have they boug… https://t.co/AqZutjkNYa
+-Apr19 16:34TWT_ID854734894349643777SCRN_NAMEvitna91TWT_TXT@Daniel_Rubino The question is: why to do a new todo app and  not just update wunderlist?
+-Apr19 16:28TWT_ID854733531758702593SCRN_NAMEphillmrkTWT_TXT@ToDoHelp is there something planned to switch to "todo" from wunderlist and integrate all tasks?
+-Apr19 16:27TWT_ID854733305878638592SCRN_NAMEgokhankurtTWT_TXT@christianreber @Wunderlist do we need to create a new account as a wunderlist users? or will you keep the data and merge it somehow?
+-Apr19 16:25TWT_ID854732635855360000SCRN_NAMEpeterfootTWT_TXTInteresting fact - new Microsoft To-do app doesn't use Exchange ActiveSync. Perhaps because of historical roots in Wunderlist...?
+-Apr19 16:21TWT_ID854731572972584964SCRN_NAMEmichaeljthomTWT_TXT@maryjofoley One other thought -- I have sub-tasks in Wunderlist (which the tool says To-Do doesn't support but wou… https://t.co/w1xjM54yNn
+-Apr19 16:08TWT_ID854728368339681283SCRN_NAMEgenso84TWT_TXTSo @Wunderlist is kinda dead...but ToDo is a rebirth then?
+-Apr19 16:01TWT_ID854726676067999744SCRN_NAMEDallinCrumpTWT_TXT@Daniel_Rubino doesn't Microsoft already own @Wunderlist? And don't they have some to-do and reminder features built into OneNote?
+-Apr19 15:24TWT_ID854717299143712768SCRN_NAMEserglotzTWT_TXT@mishakarpenko https://t.co/SGFi6Vbbot is this based on @Wunderlist and are you and your team even working on this right now?
+-Apr19 13:13TWT_ID854684459215597569SCRN_NAMExalebii1965TWT_TXTRT @Wunderlist: Have you got exams coming up? 😱 #TopTip: Break your study down into bite-sized chunks, and don't forget to add a "Take a br…
+-Apr18 11:34TWT_ID854297111466213377SCRN_NAMEjelkoarndsTWT_TXT@WunderlistHelp How can I share a list publicly? I cant find this button. https://t.co/hvp6vklyrS
+-Apr17 19:37TWT_ID854056164551688193SCRN_NAMEKeilaKirkTWT_TXTWhen ive checked off something on Wunderlist RT @MyBlackMatters: When do you feel the best about yourself?
+-Apr16 12:37TWT_ID853588254251249664SCRN_NAMEMsFinancierTWT_TXTHow do you keep track of your money to-do's?✅💵  I've been using @Wunderlist for &gt;1 yr and it is life changing! Make a list - check it twice.
+-Apr16 12:30TWT_ID853586469818175489SCRN_NAMEPropertyGoToGrlTWT_TXTHey Ladies - what's up?!  My friend Rupal wanted to share a couple of her favourite things for getting her... https://t.co/0i91gHUqeU
+-Apr26 02:15TWT_ID857055619853012993SCRN_NAMEwcnagpurTWT_TXTRT @WordPressKC: DYK there's a #WordCamp Android app? Choose your city &amp; you can access the schedule &amp; speakers list!  https://t.co/xDS1UdA…
+-Apr26 02:03TWT_ID857052512221790208SCRN_NAMEWordCampUSTWT_TXTRT @WordPressKC: DYK there's a #WordCamp Android app? Choose your city &amp; you can access the schedule &amp; speakers list!  https://t.co/xDS1UdA…
+-Apr26 01:25TWT_ID857042797685346304SCRN_NAMEWordPressKCTWT_TXTDYK there's a #WordCamp Android app? Choose your city &amp; you can access the schedule &amp; speakers list!  https://t.co/xDS1UdA34x #wckc #wpkc
+-Apr24 20:03TWT_ID856599537032495105SCRN_NAMEcurrentsunsTWT_TXT@plex Hey, did you know that "Add to Queue" has been broken on the Android app forever? It plays selection next instead of at end of list.
+Apr25 19:00TWT_ID856946010785972224SCRN_NAMEIntentionalSprkTWT_TXTThere's an app for that! 20 Best Productivity Apps List: https://t.co/ESGu4S1BT4 on @dailymuse #productivity
+-Apr26 06:26TWT_ID857118686540443651SCRN_NAMELiorSteinbergTWT_TXT@Wunderlist Will Wunderlist be retired before To-Do will have a Mac app? That would be terrible :p
+Apr20 11:07TWT_ID855014998380355585SCRN_NAMEguzmanadrianTWT_TXT"The first item in Microsoft's new To-Do app? Retire Wunderlist     - CNET" https://t.co/qt9rOpZbS0
+Apr20 10:41TWT_ID855008603044024321SCRN_NAMEVectorBusinessTWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist     - CNET - https://t.co/XQ0ZDlBT49
+Apr20 01:06TWT_ID854863844988121088SCRN_NAME9to5allTWT_TXTWhich to-do app will you use now than Wunderlist is going away? [Poll] https://t.co/hj0kNETWVd
+-Apr19 15:46TWT_ID854722814976421888SCRN_NAMEpradeepviswavTWT_TXT@ToDoHelp Will there be an option to import Wunderlist tasks to Microsoft To-Do?
+Apr26 09:34TWT_ID857166007714099200SCRN_NAMEhuma99_TWT_TXTRT @hxlina: you: bullet journal, diaryme, an intellectual: write everything down in notes app with no apparent organisation or structure
+Apr26 13:42TWT_ID857228369016049666SCRN_NAMEgetridofcrapTWT_TXTRT @NewSpaceSTL: "Several handy mobile apps that can help you reorganize your home and possibly your life..." #app #declutter #spring https…
+Apr26 13:40TWT_ID857227830177955840SCRN_NAMENewSpaceSTLTWT_TXT"Several handy mobile apps that can help you reorganize your home and possibly your life..." #app #declutter… https://t.co/EtnF3821y7
+Apr25 22:52TWT_ID857004351121838080SCRN_NAMEh_c_servicesTWT_TXT#iCliniq The App Categories to Help Employees Declutter and Lead a Productive Technology Induce... Read Blog: https://t.co/SJsukVN0gw
+Apr26 13:18TWT_ID857222415696482304SCRN_NAMEmartinpeckTWT_TXT@ToDoHelp It did work, eventually. One other question...iPad app. When can I expect to see one to replace the Wunderlist iPad app?
+Apr26 12:55TWT_ID857216496505901057SCRN_NAMEJenniferRichey5TWT_TXTHave you checked out Microsoft To-Do? https://t.co/uFB8dp07JI #gettingthingsdone #microsofttodo #productivity #wunderlist
+Apr26 07:58TWT_ID857141749751435265SCRN_NAMEg13nTWT_TXTRT @Wunderlist: What will you accomplish today? Make a simple &amp; achievable daily to-do list with My Day, in Microsoft To-Do Preview https:/…
+Apr20 10:48TWT_ID855010386176876544SCRN_NAMEisearch247TWT_TXThttps://t.co/LqI9wCxuha The first item in Microsoft's new To-Do app? Retire Wunderlist – CNET: To-Do is… https://t.co/50aaHRXYHn
+Apr20 10:13TWT_ID855001421032370177SCRN_NAMEfreshsalisTWT_TXTggtechmy: The first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/KdGpfiAxSq
+Apr20 10:07TWT_ID854999863100092416SCRN_NAMEpeterjunior111TWT_TXTThe first item in Microsoft's new To-Do app? Retire Wunderlist - CNET https://t.co/rWxkdlmImd ggtechmy
+Apr20 02:24TWT_ID854883423898488832SCRN_NAMEBejahNEWSTWT_TXT#WorldGoogleNews Which to-do app will you use now than Wunderlist is going away? .. https://t.co/OuY5qbE0eY https://t.co/VfEQnEFhh2
+Apr17 07:13TWT_ID853869090661904384SCRN_NAMEDJGIGOTWT_TXTWhats the best app to share "to-do list" on two phones, one iOS one Android? So when I update on one phone it refreshes on another? Tnx :)
+Apr25 21:11TWT_ID856978973909299200SCRN_NAMEEnricoNahlerTWT_TXT@todoist We need to push our boundaries, daily. Don't we?
+Apr24 15:47TWT_ID856535107548487680SCRN_NAMEnealungerTWT_TXTRT @almost_millions: Todoist vs Microsoft To-Do: Which is the better productivity app? https://t.co/X619Aq0iIA
+Apr24 15:45TWT_ID856534474485637120SCRN_NAMEalmost_millionsTWT_TXTTodoist vs Microsoft To-Do: Which is the better productivity app? https://t.co/X619Aq0iIA
+Apr23 15:40TWT_ID856170908561494018SCRN_NAMEdanawanzerTWT_TXT@todoist Ahhh, maybe we can have it so the ":" hides itself on our to-do list? I see I can't complete it now but co… https://t.co/8LYl1zeD8S
+Apr22 23:48TWT_ID855931232756084736SCRN_NAMEfranciscosouzaTWT_TXTEvery time I travel to a different time zone @todoist messes up my tasks. I'm sick and tired. Can someone recommend me a good alternative?
+Apr22 15:08TWT_ID855800494958166018SCRN_NAMEAlexPuticiTWT_TXT@MichaelHyatt How would you say this best fits in/works when your team uses additional software such as Basecamp, Asana, or Todoist?
+Apr22 10:28TWT_ID855729906256408577SCRN_NAMEKatWczesniakTWT_TXT@todoist halo, I need support with todoist, but can't find your number. How can I call you?
+Apr22 07:39TWT_ID855687370951151616SCRN_NAMEjasonnitzTWT_TXT@todoist Would really like to try out the premium features to see if they are what I need before subscribing for a year. Is that possible?
+Apr21 16:21TWT_ID855456510549282816SCRN_NAMErickyaz4TWT_TXT@todoist Man you guys nailed this one! How can they be trusted with their new to-do app? They do have a history of getting rid of stuff.
+Apr20 15:56TWT_ID855087713233453056SCRN_NAMERichJDSmithTWT_TXTAnyone know if Microsoft's new ToDo app has Gmail calendar integration? Getting tired of the "Soon" ™️ response from @todoist  🙃
+Apr20 09:54TWT_ID854996691291963392SCRN_NAMElarsschuetzeTWT_TXT@smarr Maybe @todoist will do it for you? You can set todo's. Maybe you can use the comments for your lists that belong to a todo.
+Apr19 21:30TWT_ID854809393866579968SCRN_NAMEPurelyScottTWT_TXT@todoist remember the flack you took when you went from checkboxes to circles? I guess you were trendsettters, Microsoft To-do has them too
+Apr19 17:51TWT_ID854754413604372488SCRN_NAMEcarmenmangionTWT_TXTRT @school_tales: anybody out there use todoist or something similar ?  I really need a better system for workflow and staying on top of th…
+Apr19 17:14TWT_ID854745119462801408SCRN_NAMEasecretgateTWT_TXT@zheano But the question is: can it replace @Todoist?
+Apr19 14:45TWT_ID854707646569615360SCRN_NAMEschool_talesTWT_TXTanybody out there use todoist or something similar ?  I really need a better system for workflow and staying on top of things...suggestions?
+Apr19 09:07TWT_ID854622503351791617SCRN_NAMErobvredTWT_TXT.@todoist Hi, I'm not sure about switching to the premium version, can I test? #todo #promo
+Apr18 21:49TWT_ID854451804817547269SCRN_NAMEShandiyaBTWT_TXT@RallidaeRule @todoist Would you mind sharing how you lay them out in @todoist? I'm a relative newbie and trying to… https://t.co/3ywRFeARXM
+Apr17 12:20TWT_ID853946197681340418SCRN_NAMEMyEleventureTWT_TXTNeed some inspiration? https://t.co/hdvvN6YPJF
+Apr25 15:42TWT_ID856896115832217600SCRN_NAMEwincentTWT_TXT@todoist Is it intentional that clicking the "Add Task" button when creating a task will scroll to the top of the current project?
+Apr24 21:30TWT_ID856621324197781504SCRN_NAMEjpodcasterTWT_TXT@todoist Is there any way to add a task to the top of a project list rather than the bottom?
+Apr24 13:19TWT_ID856497805891964928SCRN_NAMEadamconderTWT_TXT@todoist Thanks! I’m liking the recurring events already :D @leegrant87 Any top tips outside of that guide?
+Apr21 21:01TWT_ID855526972423852033SCRN_NAMELiterallyJeremyTWT_TXT@todoist How do I add an item to top of list without sliding it all the way up? What if I want to move an item from a parent to a peer?
+Apr21 11:02TWT_ID855376168232603648SCRN_NAMEAdamOneConcertsTWT_TXT@todoist any feature planed for sorting tasks automatically in a project? e.g. P1 always at the top. Would be extremely helpful! 🙏 #todoist
+Apr19 21:14TWT_ID854805467310239744SCRN_NAMEmlabowiczTWT_TXT@todoist is there any way to have a priority filter at the top level of your menu structure? I'm looking for a way to "star" certain tasks
+Apr20 08:20TWT_ID854972950813876224SCRN_NAMEdanserifTWT_TXT@ow Do you use / share to do lists in Todoist? If so, what does it not do well?
+Apr20 05:35TWT_ID854931517600137216SCRN_NAME1337bgTWT_TXTHey guys, I'm very curious to see your Projects structure. Can you share it? #todoist
+Apr26 17:24TWT_ID857284139052974080SCRN_NAMEkbranchTWT_TXTRT @kevinrose: With Wunderlist is going away, what’s your favorite/simple todo app w/desktop support &amp; shared lists? Thank you :)
+Apr26 17:23TWT_ID857284064406945792SCRN_NAMEkevinroseTWT_TXTWith Wunderlist is going away, what’s your favorite/simple todo app w/desktop support &amp; shared lists? Thank you :)
+Apr25 05:22TWT_ID856740143285366784SCRN_NAMEBrandonJCarrollTWT_TXT@TickTickTeam @Wunderlist @Microsoft Do you have the ability to have sub tasks at the top of the right panel? It sh… https://t.co/SwNdtGZDlZ
+Apr21 18:18TWT_ID855485914566590464SCRN_NAMEMckinleyTGriggsTWT_TXT#FollowFriday @ChickfilA @AustinNull @Wunderlist top Influencers this week! Have a great weekend :) &gt;&gt; Want this 🆓? https://t.co/ARsi9nenJ2
+Apr20 13:33TWT_ID855051817591468032SCRN_NAMEXmasRightsTWT_TXTI wonder who will be the first to make a "Top 5 Alternatives to @Wunderlist" video?
+Apr26 15:03TWT_ID857248687902396418SCRN_NAMEwebsTWT_TXT#SmallBiz Simplicity: Which Is best for your biz - @evernote or @msonenote? via @BNDarticles #Productivity #Tech… https://t.co/9zWV5iDtBn
+Apr26 14:04TWT_ID857233928972886017SCRN_NAMEARMS4RIMTWT_TXTEvernote vs. OneNote: Which Is Best for Your Business? https://t.co/x9fZ5qbrVO https://t.co/lq9zHndsRS
+Apr26 07:03TWT_ID857128080732815360SCRN_NAMEtecbizzTWT_TXT#iPHONE Evernote vs. OneNote: Which Is Best for Your Business? https://t.co/5aKp2lRYi7 #iPHONE
+Apr26 02:00TWT_ID857051610895138816SCRN_NAMEBNDarticlesTWT_TXTNeed a note taking app? We compared Evernote vs. OneNote, here's what we found: https://t.co/a8vLoTGUUo
+Apr25 23:23TWT_ID857012221510942720SCRN_NAMEOne_EducationTWT_TXT@stevesingapore @samuelmcneill @msonenote @mtholfsen @MSNZEducation Have you gone to OneNote Online, INSERT&gt;Office… https://t.co/rZABAeeIcp
+Apr25 19:00TWT_ID856945923921813504SCRN_NAMEerpicaesTWT_TXTEvernote vs. OneNote: Which Is Best for Your Business? https://t.co/zW5ZLldsTi
+Apr25 13:22TWT_ID856861058241265664SCRN_NAMEGoogleExpertEGTWT_TXTRT @SociallySavvyVA: Evernote vs. OneNote: Which Is Best for Your Small Business? https://t.co/DfMRnHXhP2 #productiveceo
+Apr25 13:00TWT_ID856855442131124224SCRN_NAMESociallySavvyVATWT_TXTEvernote vs. OneNote: Which Is Best for Your Small Business? https://t.co/DfMRnHXhP2 #productiveceo
+Apr25 12:44TWT_ID856851458813181952SCRN_NAMETammyDunbarTWT_TXT@mibra_mio @zelfstudie Wonderful! Can you post that in our OneNote, please? If you need help, let me know! Can't wa… https://t.co/ThRCqCTKfp
+Apr25 12:32TWT_ID856848302033293312SCRN_NAMEseandfeeneyTWT_TXT@Microsoft any plans to integrate onenote with todo?
+Apr24 22:42TWT_ID856639636600479746SCRN_NAMESkoolerUKTWT_TXTSkooler simplifies work flows for O365, OneNote &amp; ClassNotebook. Need help? Get in touch https://t.co/vqyprdLOBQ #training #NQT #IT #msftedu
+Apr24 19:42TWT_ID856594130650017793SCRN_NAMESpeekit2TWT_TXTRT @BNDarticles: Need a note taking app? We compared Evernote vs. OneNote, here's what we found: https://t.co/a8vLoTGUUo
+Apr24 19:30TWT_ID856591114022924292SCRN_NAMEdimitriwTWT_TXTEvernote vs. OneNote: Which Is Best for Your Business? #in
+Apr24 18:03TWT_ID856569248289665024SCRN_NAMEmegahochTWT_TXT@QofH_fantastic4 May I suggest a character named "Duchess Megan" and her faithful steed "OneNote"?👑🐎
+Apr24 18:00TWT_ID856568438159851520SCRN_NAMEBNDarticlesTWT_TXTNeed a note taking app? We compared Evernote vs. OneNote, here's what we found: https://t.co/a8vLoTGUUo
+Apr24 17:59TWT_ID856568360846344193SCRN_NAMEderekwalterTWT_TXTRT @NicoleMFallon: #Evernote vs. #OneNote: Which Is Best for Your Business? https://t.co/E2rXnlRK4F @derekwalter for @BNDarticles #apps
+Apr24 15:27TWT_ID856529966992936961SCRN_NAMEVan_SlazerTWT_TXThttps://t.co/44yiNrrs2r Evernote vs. OneNote: Which Is Best for Your Business? - Business News Daily
+Apr24 15:26TWT_ID856529692223995904SCRN_NAMEuohanalillyTWT_TXTEvernote vs. OneNote: Which Is Best for Your Business? https://t.co/vG9EgVkc7C
+Apr24 15:16TWT_ID856527312623251457SCRN_NAMECustDrivenTWT_TXTEvernote vs. OneNote: Which Is Best for Your Business? https://t.co/gXkQ0qZ6Gi https://t.co/HoPLR7zMU6
+Apr24 15:04TWT_ID856524337930801152SCRN_NAMEApexTimeTWT_TXTEvernote vs. OneNote: Which Is Best for Your Business? https://t.co/DZUe2D43pV  @BNDarticles
+Apr24 14:33TWT_ID856516353037094912SCRN_NAMEjmgast75TWT_TXTEvernote vs. OneNote: Which Is Best for Your Business? https://t.co/fqs6AKBL3Q
+Apr24 12:51TWT_ID856490694663217152SCRN_NAMEBusinessnewscaTWT_TXTEvernote vs. OneNote: Which Is Best for Your Business?: Deciding between Evernote and OneNote for your note-taking… https://t.co/FM9cj8HAVv
+Apr24 12:48TWT_ID856490070416564224SCRN_NAMEApp_sw_TWT_TXT#Evernote vs. OneNote: Which Is Best for Your Business?. Read more: https://t.co/B4GAg8hTyw
+Apr24 12:47TWT_ID856489697073397761SCRN_NAMEThomasMcEvoyTWT_TXT#SmallBiz Evernote vs. OneNote: Which Is Best for Your Business? https://t.co/bQjug3HVO9
+Apr24 12:40TWT_ID856487916045860864SCRN_NAMEsara_angelesTWT_TXTEvernote vs. OneNote: Which Is Best for Your Business? https://t.co/FX0e5PIkBJ
+Apr24 12:37TWT_ID856487286854123520SCRN_NAMEBNDarticlesTWT_TXTEvernote vs. OneNote: Which Is Best for Your Business? https://t.co/Vrqadv599N https://t.co/rwDezYzwp9
+Apr24 12:25TWT_ID856484132599332868SCRN_NAMENicoleMFallonTWT_TXT#Evernote vs. #OneNote: Which Is Best for Your Business? https://t.co/E2rXnlRK4F @derekwalter for @BNDarticles #apps
+Apr24 09:56TWT_ID856446620367429632SCRN_NAMEpipcleavesTWT_TXT@debimoa @townesy77 maybe you changed your portal password lately? is there a yellow strip across the top of your onenote?
+Apr22 16:39TWT_ID855823303977476096SCRN_NAMEnico_caselTWT_TXTRT @magnanfrancois: Evernote vs. OneNote - Which Is Best for Your Note-Taking Needs? - Make Tech Easier https://t.co/AY5b2eCTiZ https://t.c…
+Apr22 13:51TWT_ID855781124232163329SCRN_NAMEmagnanfrancoisTWT_TXTEvernote vs. OneNote - Which Is Best for Your Note-Taking Needs? - Make Tech Easier https://t.co/AY5b2eCTiZ https://t.co/YHgNFFXRMq
+Apr20 18:40TWT_ID855129179469250560SCRN_NAMEyinkaTWT_TXT@mtholfsen @msonenote OneNote is superb. Will you be integrating with Microsoft To-Do?Please implement a 2-way… https://t.co/GdK2gvyW6Q
+Apr20 16:54TWT_ID855102391842217985SCRN_NAMEDale_MundayTWT_TXTOne for @My_e_learning to share here?! #Onenote #edtech #canvas #teaching #assessment https://t.co/nDrA9el4gi
+Apr20 09:41TWT_ID854993412046508032SCRN_NAMEnoura_hamdy2TWT_TXTRT @OneNoteC: Need to export #OneNote pages containing images to Microsoft Word? This macro resizes the images:https://t.co/hNRCfvuK0Dby…
+Apr19 22:56TWT_ID854831105354215425SCRN_NAMEcallkathyTWT_TXTHow do I create a notebook in OneNote on my iPhone? Nothing I try work… https://t.co/MuGFsv4GBR
+Apr19 07:58TWT_ID854605028232974337SCRN_NAMEAmethyst_TrainTWT_TXTNeed a little help with OneNote? Join our open schedule course on 11th May to learn more about this clever digital notebook. Register now.
+Apr19 00:52TWT_ID854497998352523264SCRN_NAMETimNoonanTWT_TXTRT @steveofmaine: Many things claim to be the best thing since sliced bread, but know what truly is? OneNote. It's accessible and, less cal…
+Apr19 00:45TWT_ID854496015604359169SCRN_NAMEAppleAlliTWT_TXTRT @steveofmaine: Many things claim to be the best thing since sliced bread, but know what truly is? OneNote. It's accessible and, less cal…
+Apr18 23:18TWT_ID854474222890086400SCRN_NAMElmrankhanTWT_TXTRT @MatGilbertson: @noisyteacher @OneNote anyone? 😊  best program in the world I'm my opinion... Turns digital ink into productivity. #MSFT…
+Apr18 23:16TWT_ID854473768172896256SCRN_NAMEMatGilbertsonTWT_TXT@noisyteacher @OneNote anyone? 😊  best program in the world I'm my opinion... Turns digital ink into productivity. #MSFTEduChat
+Apr18 17:27TWT_ID854386014856650755SCRN_NAMEsteveofmaineTWT_TXTMany things claim to be the best thing since sliced bread, but know what truly is? OneNote. It's accessible and, less calories. @MSFTEnable
+Apr18 01:29TWT_ID854144706120359936SCRN_NAMEarbar13TWT_TXT@JennMorganSTS @OneNoteEDU Knew it! Why email them? You can share a page with #OneNote for @Windows 10 now! Click Share  "this page" 4 link!
+Apr17 12:43TWT_ID853952108239966208SCRN_NAMEeziell13TWT_TXTTeachers, is keeping up with your admin a headache? Here's how one education expert uses #OneNote to stay on top htt https://t.co/DnFezzRlIp
+Apr17 11:38TWT_ID853935821128253440SCRN_NAMEpipcleavesTWT_TXTRT @MissGEnrique: Is keeping up with your admin a headache? Here's how @pipcleaves uses #OneNote to stay on top https://t.co/BscP224jVD #Mi…
+Apr17 11:26TWT_ID853932706631122944SCRN_NAMEterry_ebdonTWT_TXTRT @MissGEnrique: Is keeping up with your admin a headache? Here's how @pipcleaves uses #OneNote to stay on top https://t.co/BscP224jVD #Mi…
+Apr17 11:02TWT_ID853926635774586881SCRN_NAMEMissGEnriqueTWT_TXTIs keeping up with your admin a headache? Here's how @pipcleaves uses #OneNote to stay on top https://t.co/BscP224jVD #MicrosoftEdu #edtech
+Apr16 18:46TWT_ID853680960998694913SCRN_NAMEmrallanmathsTWT_TXT@canning_mrmaths @clairesaintee @mathsjem Have I shared my Higher OneNote with you yet? I built it up this year as… https://t.co/WENxIt1bj9
+Apr26 09:53TWT_ID857170785286447104SCRN_NAMEatomobiancoTWT_TXT@al3xandru @evernote still not working for me either, any resolution to suggest?
+Apr26 08:45TWT_ID857153593903861764SCRN_NAMEvupineTWT_TXTI clearly need a new notetaking/cataloguing tool, to store and organise all my work notes/photos etc. Any ideas? Evernote didn't work for me
+Apr25 21:00TWT_ID856976146671521793SCRN_NAMESSVDesign17TWT_TXTNeed a place to keep all your notes for your event? #Evernote is always a good option! https://t.co/14DXVJIUn4 https://t.co/qarFI1D1QR
+Apr25 19:57TWT_ID856960456816242689SCRN_NAMEafoegelleTWT_TXTRT @BrainTraffic: Need some #ContentStrategy listening? Our own @halvorson was a guest on the @evernote podcast. You can listen here: https…
+Apr25 19:38TWT_ID856955540336803840SCRN_NAMEjenniferjeffreyTWT_TXTRT @BrainTraffic: Need some #ContentStrategy listening? Our own @halvorson was a guest on the @evernote podcast. You can listen here: https…
+Apr25 19:36TWT_ID856955101067571201SCRN_NAMEBrainTrafficTWT_TXTNeed some #ContentStrategy listening? Our own @halvorson was a guest on the @evernote podcast. You can listen here: https://t.co/r0aFn1FJY7
+Apr25 09:50TWT_ID856807623701790720SCRN_NAMEdawnmarrsTWT_TXTNeed a better way to organize your #directsales business? #camscanner with #Evernote!  #WAHM #Directsales https://t.co/roGfMxQvfd
+Apr25 06:53TWT_ID856763033233887233SCRN_NAMEMrMacvosTWT_TXT@evernote @evernotehelps Why in the world haven't your programmers been able to implement 'search &amp; replace' within a note?
+Apr24 21:27TWT_ID856620720557887488SCRN_NAMEnerdetteTWT_TXT@ClimbingTreesTs @cayden @ForbesPodcasts it's bad, y'all. So bad. I need to get better at using Evernote? or someth… https://t.co/OhIZURjUAS
+Apr24 20:51TWT_ID856611566250315779SCRN_NAMEysamjoTWT_TXT.@raindrop_io seems like the perfect service to replace my visual boomarks in Evernote. You have an importer?
+Apr24 15:20TWT_ID856528346624249856SCRN_NAMEDCLiterateTWT_TXT@JoannaStern Todo.txt maybe? I am trying to just use Evernote for everything, which has been pretty good.
+Apr23 22:50TWT_ID856279217235001344SCRN_NAMEnowsciTWT_TXT@Brian_Enders @Nextclouders Wow! Haven't touched ODM in a while. Know anyone up for maintaining https://t.co/Eak1s2jTZ1 to replace Evernote?
+Apr23 15:04TWT_ID856161756514746369SCRN_NAMENicksWanderingsTWT_TXTEvernote is one of my favourite blogging tools, but what are my other top 4 tools? https://t.co/tGWpn9nAgP #blog https://t.co/KteuZx3ePd
+Apr23 12:40TWT_ID856125551064612864SCRN_NAMEKashooOnlineTWT_TXTNeed to record and expense multi-page receipts? Check out how @Amrik_Randhawa uses @ENScannable by @evernote https://t.co/BKZ1kJvYVN
+Apr22 17:43TWT_ID855839459551694849SCRN_NAMEgsazzaTWT_TXT@GinaCuomo2 METALLIC ONES WHAAAAAA omg I need this?? I'm using Emerald atm!! BuJo + Evernote saves me from absolute chaos tbh
+Apr22 12:42TWT_ID855763775634505729SCRN_NAMEWangXia73481561TWT_TXTWhat the Best Anti Aging Treatment should have in Store for You? https://t.co/ptUKMvRkw5
+Apr22 12:42TWT_ID855763719665537024SCRN_NAMEWangXia73481561TWT_TXTWhat the Best Anti Aging Treatment should have in Store for You? #fromEvernote https://t.co/FSYraWnfYN
+Apr22 10:06TWT_ID855724380571258880SCRN_NAMENicksWanderingsTWT_TXTI never set off on a #blogging trip without #Evernote. Why? My top 5 tools - https://t.co/tGWpn9nAgP #blog #travel https://t.co/h2x60Eb5VW
+Apr21 18:12TWT_ID855484366641700864SCRN_NAMEnicolestockdaleTWT_TXTCan I just say that writing my to-do lists and notes in @evernote has been pretty game changing?
+Apr21 17:23TWT_ID855472057445896192SCRN_NAMEPeppermint7GemsTWT_TXTRT @NicksWanderings: #Evernote is one of my top 5 #blogging tools - but why? - And the other 4? https://t.co/tGWpn9nAgP #blog #travel https…
+Apr21 17:13TWT_ID855469439189471235SCRN_NAMENicksWanderingsTWT_TXT#Evernote is one of my top 5 #blogging tools - but why? - And the other 4? https://t.co/tGWpn9nAgP #blog #travel https://t.co/eHCjJsvq7s
+Apr21 16:39TWT_ID855460947795869697SCRN_NAMETheSocialFixTWT_TXTNeed help with Evernote? Here are 7 resources that can help no matter no matter what stage you're at. #Evernote… https://t.co/lpSXuAek2W
+Apr21 08:50TWT_ID855342921087930369SCRN_NAMEdawnmarrsTWT_TXTHow can you have everything you need in your office organized? #Evernote #DirectSales #Mompreneur #MomBiz https://t.co/3MkZlmUd6V
+Apr20 23:53TWT_ID855207865182810112SCRN_NAMEMichael_BarronsTWT_TXTRT @InfowareGroup: Evernote, 1Password, GoToMeeting - some of the top tools for #legal professionals. Did yours make the list? https://t.co…
+Apr20 22:02TWT_ID855179844262522880SCRN_NAME5LINX_MikeTWT_TXT@kristiwillis I watched a video you did with Stacey Harmon a couple years ago. Do you still recommend FastPencil to publish from Evernote?
+Apr20 21:02TWT_ID855164833091665920SCRN_NAMEAndersSporringTWT_TXTTop story: What's mobilizing museums? https://t.co/l3hCF7roqL, see more https://t.co/YyGTDPAgHS
+Apr20 20:15TWT_ID855152878599553024SCRN_NAMEbriangrthacndTWT_TXTWe Have Tinnitus. So What Now Do I Need To Do? #fromEvernote https://t.co/wnjfL6GnL0
+Apr20 15:55TWT_ID855087446404542464SCRN_NAMEFutureSlfTWT_TXT#GoalSetting in 2017? You need to read this now. @evernote https://t.co/eqYAxIwiP4 https://t.co/bU2uKDhAMj
+Apr20 10:05TWT_ID854999443275476993SCRN_NAMEMaxthonTWT_TXTWhat is the best note taking app in Andriod? Thanks Jingyuan's mention on @Quora! Evernote is a respectable rival.🤠… https://t.co/IyywLvT4jW
+Apr20 00:07TWT_ID854848931578036224SCRN_NAMESpeedySpiteriTWT_TXTBest note taking apps... I'm a prolific curator of information!!! (Is this a horder?!)  I love evernote because... https://t.co/6ayTQWuiBL
+Apr19 22:12TWT_ID854820046539042817SCRN_NAMEpanaceasaurusTWT_TXTWhy does @evernote app need @GooglePlay to have all these permissions!?
+Apr19 19:50TWT_ID854784172560220160SCRN_NAMEKristyTTWT_TXTWhat are the best alternatives to Evernote?
+Apr19 15:05TWT_ID854712488423694341SCRN_NAMEjacobdevezaTWT_TXTdo i need evernote?
+Apr19 06:36TWT_ID854584504861696001SCRN_NAMEtop_seoguideTWT_TXTRT @WarrenWhitlock: Evernote?s New App Is More Than an Update?It?s a Reboot   https://t.co/zAtBakyO4a
+Apr19 03:38TWT_ID854539551594991616SCRN_NAMEhealthygreensafTWT_TXTNeed help with #EVERNOTE? follow @evernotehelps - crack team from TX answer  questions from 7am-4pm CST.  https://t.co/rHklzuL152
+Apr19 00:22TWT_ID854490262848065538SCRN_NAMEStratNarrativeTWT_TXT@evernotehelps I wrote a few months ago about need to sign in EVERY TIME I want to use evernote clipper on MacBook. Any fix yet? Thanks.
+Apr19 00:00TWT_ID854484871267446784SCRN_NAMEMorningstar_VATWT_TXTNeed a tool to help you plan your content? Here's some great tips on how to plan your content using Evernote:… https://t.co/OUkUiJ91fc
+Apr18 21:44TWT_ID854450465639206914SCRN_NAMEtracireuterTWT_TXTHow can you have everything you need in your office organized? #Evernote #entrepreneur #Mompreneur #MomBiz https://t.co/bdcVqU6PYD
+Apr18 20:46TWT_ID854435913664823296SCRN_NAMElawlittaTWT_TXTA top 10 list of my favorite movies of all time. Can you spot the theme? 🎬 https://t.co/MWx5LUTl1T #NoteOfTheDay https://t.co/X360YVLeRR
+Apr18 17:20TWT_ID854384258663800833SCRN_NAMEjptotoTWT_TXT@chrisbowler How does that compare to like, Evernote. Is it more of a todo?
+Apr18 15:35TWT_ID854357689018834944SCRN_NAMEirishtaraTWT_TXT@CardozaGab @evernote I NEED IT!!! Where do I find this magical wizardry!?!!? #ContentWritingChat
+Apr18 08:47TWT_ID854254985575399425SCRN_NAMEfifaurfaniTWT_TXTAnyone recommend me to go manual with spreadsheet or GCal? Or go deeply with evernote? I prefer not to purchase any apps.
+Apr18 01:25TWT_ID854143757268209664SCRN_NAMEandresgilercTWT_TXTRT @a_hevia: Which are the best chatbot frameworks? ��� Chatbot���s Life https://t.co/Ytrq287fAA
+Apr17 23:36TWT_ID854116494484963328SCRN_NAMEQASHarisTWT_TXTRT @QuickReferences: @FromPhDtoLife @evernote what's your top preference for reference/article managers? I've been using Mendeley but want…
+Apr17 17:01TWT_ID854017057616261122SCRN_NAMEFromPhDtoLifeTWT_TXTRT @QuickReferences: @FromPhDtoLife @evernote what's your top preference for reference/article managers? I've been using Mendeley but want…
+Apr17 16:59TWT_ID854016547169476608SCRN_NAMEkorkykathmanTWT_TXT@evernotehelps @evernote:  I need to import files from a Dropbox folder to a notebook on my iPad Pro Can this be done?
+Apr17 16:17TWT_ID854005784296001537SCRN_NAMEa_heviaTWT_TXTWhich are the best chatbot frameworks? ��� Chatbot���s Life https://t.co/Ytrq287fAA
+Apr17 14:33TWT_ID853979679082074112SCRN_NAMEQuickReferencesTWT_TXT@FromPhDtoLife @evernote what's your top preference for reference/article managers? I've been using Mendeley but wa… https://t.co/hAcQyx1tyl
+Apr17 14:06TWT_ID853972875082158081SCRN_NAMEBlendedLrnHubTWT_TXTNeed some #productivity inspiration? Check out @PsychToday's interview: https://t.co/zVyaAkrmIZ What tool will you use? We love Evernote!
+Apr17 04:23TWT_ID853826179392049152SCRN_NAMEtracireuterTWT_TXTNeed a better way to organize your #business? #camscanner with #Evernote! #WAHM #onlinemarketing https://t.co/uM7yFmRbKp
+Apr17 02:32TWT_ID853798358485528576SCRN_NAMEalaudahTWT_TXT@evernotehelps I can’t believe this, I’m a long time Evernote fan, but no search and replace??
+Apr21 21:57TWT_ID855541113922433028SCRN_NAMEClubeDoDinheiroTWT_TXT@WorkFlowy Is there any way to shrink my list, by GET parameter? I really need to access my list! :-( #Urgent
+Apr26 07:57TWT_ID857141661750710273SCRN_NAMEThatOnlineStuffTWT_TXTLooking for a new to-do app? Why not check out #GoogleKeep? Learn how to master it with the unofficial guide… https://t.co/337weUx0D8
+Apr22 15:21TWT_ID855803812384210945SCRN_NAMELCarterdasTWT_TXTRT @wshultz0001: Google KEEP is going to replace my student agendas! Is it MONDAY yet?! Excellent session @efitz_edtech #edtechteam
+Apr22 14:59TWT_ID855798214431305730SCRN_NAMEwshultz0001TWT_TXTGoogle KEEP is going to replace my student agendas! Is it MONDAY yet?! Excellent session @efitz_edtech #edtechteam
+Apr19 17:28TWT_ID854748551301214214SCRN_NAMEjason13539796TWT_TXT@bdsams Do you use Google Keep? If so, any idea on how this compares? If good and I can get this on Windows AND And… https://t.co/G30YRnRQ0m
