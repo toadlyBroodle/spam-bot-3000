@@ -47,7 +47,7 @@ def authReddit():
 
     reddit = praw.Reddit('twatBot')
 
-    print("Authenticated as: " + str(reddit.user.me()));
+    log("Authenticated as: " + str(reddit.user.me()));
 
     # get subreddits, e.g.: androidapps+androiddev+all
     with open('red_subkey_pairs.json') as json_data:
@@ -73,7 +73,7 @@ def authTwitter():
     
     # ensure authentication was successful
     try:
-        print("Authenticated as: " + api.me().screen_name)
+        log("Authenticated as: " + api.me().screen_name)
     except tweepy.TweepError as e:
         log("Failed Twitter auth: " + e.reason)
         sys.exit(1)
@@ -133,9 +133,8 @@ def spamOP(twt_id, scrn_name):
         
     log("Spammed: " + scrn_name)
     
-    # wait 60-120 seconds between spam tweets
-    slp_time = randint(60, 120)
-    print("sleeping for " + str(slp_time) + "s...")
+    # wait 6-12 seconds between spam tweets
+    slp_time = randint(6, 12)
     sleep(slp_time)
 
 
@@ -149,9 +148,10 @@ def replyToTweet(twt_id, scrn_name):
 
     except tweepy.TweepError as e:
         log("Error: " + e.reason)
-        return
+        return 0
 
     log("Favorited: " + scrn_name + " [" + twt_id + "]")
+    return 1
 
 def directMessageTweet(scrn_name):
     try:
@@ -301,8 +301,8 @@ def replyReddit():
                 submission.reply(getRandRedPromo())
                 log('Replied: ' + pd[1])
                 
-                # wait for 3-6 secs to evade spamming flags
-                sleep(randint(3, 6))
+                # wait for 45-75 secs to evade spamming flags
+                sleep(randint(45, 75))
             except praw.exceptions.ClientException as e:
                 log("Error: " + e.message)
 
@@ -420,6 +420,8 @@ def main(argv):
             with open('twit_scrape_dump.txt') as f:
                 t_lines = f.readlines()
 
+                reply_count = 0
+                
                 for t in t_lines:
                     pd = parseDumpLine(t)
 
@@ -427,6 +429,11 @@ def main(argv):
                     if pd[0][0] == '-':
                         continue
 
+                    # reply limit is 34 within >13hrs
+                    if reply_count is 34:
+                        log("Reached reply limit: sleeping for 4hrs...")
+                        sleep(14400)
+                        
                     twt_id = pd[1]
                     scrn_name = pd[2]
                     
@@ -434,7 +441,7 @@ def main(argv):
                         folTweeter(scrn_name)
                     
                     if args.t_pro:
-                        replyToTweet(twt_id, scrn_name)
+                        reply_count += replyToTweet(twt_id, scrn_name)
                         
                     if args.t_dm:
                         directMessageTweet(scrn_name)
