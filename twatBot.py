@@ -1,6 +1,7 @@
 #! /usr/bin/env python3
 
 import sys
+import signal
 import argparse
 import pprint
 import json
@@ -382,6 +383,13 @@ def scrapeTwitter(con, eng, fol, pro, dm):
 
 # get command line arguments and execute appropriate functions
 def main(argv):
+
+    # catch SIGINTs and KeyboardInterrupts
+    def signal_handler(signal, frame):
+            log("Current job terminated: received KeyboardInterrupt kill signal.")
+            sys.exit(0)
+    # set SIGNINT listener to catch kill signals
+    signal.signal(signal.SIGINT, signal_handler)
 
     parser = argparse.ArgumentParser(description="Beep, boop.. I'm a social media promotion bot - Let's get spammy!")
 
