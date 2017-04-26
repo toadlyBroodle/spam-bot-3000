@@ -383,9 +383,12 @@ def scrapeTwitter(con, eng, fol, pro, dm):
 
 # get command line arguments and execute appropriate functions
 def main(argv):
-
+    # keep count of replies for logging purposes
+    reply_count = 0
+    
     # catch SIGINTs and KeyboardInterrupts
     def signal_handler(signal, frame):
+            log("Replied to {rep} tweets.".format(rep=str(reply_count)))
             log("Current job terminated: received KeyboardInterrupt kill signal.")
             sys.exit(0)
     # set SIGNINT listener to catch kill signals
@@ -438,8 +441,6 @@ def main(argv):
         else: # otherwise promote to all entries in scrape_dump file
             with open('twit_scrape_dump.txt') as f:
                 t_lines = f.readlines()
-
-                reply_count = 0
                 
                 for t in t_lines:
                     pd = parseDumpLine(t)

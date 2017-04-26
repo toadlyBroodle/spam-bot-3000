@@ -1,0 +1,4 @@
+-from:Wunderlist wunderlist ? To-Do OR top OR best OR todo OR replace OR alternat OR worthy OR loooking OR need OR recommend OR suggest OR vs OR better OR using OR use OR other OR compare OR similar OR anyone OR anybody
+-from:msonenote -from:onenotec onenote ? top OR best OR to-do OR todo OR replace OR alternat OR worthy OR loooking OR need OR recommend OR suggest OR vs OR better OR using OR use OR other OR compare OR similar OR anyone OR anybody
+-from:evernote -from:evernotehelps evernote ? top OR best OR to-do OR todo OR replace OR alternat OR worthy OR loooking OR need OR recommend OR suggest OR vs OR better OR using OR use OR other OR compare OR similar OR anyone OR anybody
+-from:todoist todoist ? top OR best OR to-do OR todo OR replace OR alternat OR worthy OR loooking OR need OR recommend OR suggest OR vs OR better OR using OR use OR other OR compare OR similar OR anyone OR anybody
