@@ -1,4 +1,5 @@
--from:Wunderlist wunderlist ? To-Do OR top OR best OR todo OR replace OR alternat OR worthy OR loooking OR need OR recommend OR suggest OR vs OR better OR using OR use OR other OR compare OR similar OR anyone OR anybody
--from:msonenote -from:onenotec onenote ? top OR best OR to-do OR todo OR replace OR alternat OR worthy OR loooking OR need OR recommend OR suggest OR vs OR better OR using OR use OR other OR compare OR similar OR anyone OR anybody
--from:evernote -from:evernotehelps evernote ? top OR best OR to-do OR todo OR replace OR alternat OR worthy OR loooking OR need OR recommend OR suggest OR vs OR better OR using OR use OR other OR compare OR similar OR anyone OR anybody
--from:todoist todoist ? top OR best OR to-do OR todo OR replace OR alternat OR worthy OR loooking OR need OR recommend OR suggest OR vs OR better OR using OR use OR other OR compare OR similar OR anyone OR anybody
+-from:minimalistTB studfinder OR "stud finder" OR "stud detector" OR "stud locator" OR "nail finder" OR 根太 OR "remodel tool" OR "stud sensor" OR "wood detector" OR "beam finder" app OR iOS OR iPhone OR Android OR "mobile device" OR phone
+-from:minimalistTB @Ryobi_Canada app OR iOS OR iPhone OR Android OR "mobile device" OR phone
+-from:minimalistTB renovation OR "home improvement" app iOS OR Android
+-from:minimalistTB best  studfinder OR "stud finder" OR "stud detector" OR "stud locator" OR "nail finder" OR "remodel tool" OR "stud sensor" OR "wood detector" OR "beam finder"
+app stud OR wall OR metal OR nail OR wood OR joist finder OR detect OR sensor OR locator
