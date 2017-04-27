@@ -268,7 +268,10 @@ def replyToTweet(twt_id, scrn_name):
             
     except tweepy.TweepError as e:
         if '139' in e.reason:
-            log("Already favorited/spammed " + scrn_name + ": " + e.reason)
+            log("Skipped " + twt_id + ": Already favorited/spammed " + scrn_name + " - " + e.reason)
+            return 0
+        if '136' in e.reason:
+            log("Skipped " + twt_id + ": Blocked from favoriting " + scrn_name + "'s tweets - " + e.reason)
             return 0
         elif '226' in e.reason:
             log(e.reason)
@@ -276,7 +279,7 @@ def replyToTweet(twt_id, scrn_name):
             # wait for next 15m window to throw anti-spam bots off the scent
             sleep(randint(900, 1000))
             return 2
-        else:
+        elif ('326' in e.reason) or ('261' in e.reason) or ('cannot POST' in e.reason):
             log(e.reason)
             log("Terminal API Error returned: exiting, see log.txt for details.")
             return 3
@@ -347,6 +350,8 @@ def scrapeTwitter(con, eng, fol, pro, dm):
         total=str(i), 
         new=str(k), 
         query=query.replace("\n", ""))))
+    
+    print("Scraping...")
    
     for query in q_lines:
         c = None
@@ -388,9 +393,10 @@ def main(argv):
     
     # catch SIGINTs and KeyboardInterrupts
     def signal_handler(signal, frame):
+        if args.t_pro:
             log("Replied to {rep} tweets.".format(rep=str(reply_count)))
-            log("Current job terminated: received KeyboardInterrupt kill signal.")
-            sys.exit(0)
+        log("Current job terminated: received KeyboardInterrupt kill signal.")
+        sys.exit(0)
     # set SIGNINT listener to catch kill signals
     signal.signal(signal.SIGINT, signal_handler)
 
