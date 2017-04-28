@@ -21,8 +21,8 @@ A python command-line bot for automating promotion on popular social media sites
 		- direct message relevant tweets
 		- reply to relevant tweets with random promotional tweet from file (twit_promos.txt)
 		- ignore tweets by marking them in dump file with "-" prefix
-	- automated new keyword and hashtag research and gleening from scraped results
-	- automated filtering out of irrelevant keywords/hashtags
+	- script for new keyword and hashtag research and gleening from scraped results
+	- script for filtering out of irrelevant keywords/hashtags
 	- tweepy exception handling
 	- write all activity to log (log.txt)
  
