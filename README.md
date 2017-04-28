@@ -1,5 +1,5 @@
 # twatBot
-A python command-line bot for automating promotion on popular social media sites (reddit, twitter, in progress: instagram, facebook). Scrape social media with custom queries and promote your product to all relevant results with a single command. 
+A python command-line (CLI) bot for automating promotion on popular social media sites (reddit, twitter, in progress: instagram, facebook). Scrape social media with custom queries and promote your product to all relevant results with a single command. 
 <b>Use at your own risk:</b> depending on how specific your custom queries are, your bot could find itself (and likely it's associated accounts) banned from social media sites very quickly ;)
 
 ## features
@@ -117,7 +117,7 @@ spam:
 
 ## twitter workflows
 1) continuous mode
-	- `-sp` scrape and promote to all tweets matching queries
+	- `-csp` scrape and promote to all tweets matching queries
 2) overwatch mode
 	- `-s` scrape first
 	- manually edit twit_scrape_dump.txt
@@ -137,4 +137,4 @@ spam:
 		- output file: extras/twit_scrp_dmp_filtd.txt
 
 ## notes
-Future updates will include modules for promoting to facebook, instagram, etc.
+Future updates will include modules for promoting to instagram, facebook, etc.
