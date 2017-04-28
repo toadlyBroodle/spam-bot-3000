@@ -250,7 +250,7 @@ def spamOP(twt_id, scrn_name):
     log("Spammed: " + scrn_name)
     
     # wait 45-75 seconds between spam tweets
-    wt = randint(45, 75)
+    wt = randint(6, 15)
     print("waiting " + str(wt) + "s...")
     sleep(wt)
 
@@ -259,11 +259,10 @@ def replyToTweet(twt_id, scrn_name):
     try:
         # favorite tweet, will throw error if tweet already favorited so as to avoid double spamming
         api.create_favorite(twt_id)
-
+        log("Favorited: " + scrn_name + " [" + twt_id + "]")
+        
         # try spamming op with random promo line
         spamOP(twt_id, scrn_name)
-
-        log("Favorited: " + scrn_name + " [" + twt_id + "]")
         return 1
             
     except tweepy.TweepError as e:
