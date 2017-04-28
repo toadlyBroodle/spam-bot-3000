@@ -1,5 +1,6 @@
 # twatBot
-A python command-line bot for automating promotion on social media. Scrape social media with custom queries and promote your product to all relevant results with a single command. <b>Use at your own risk:</b> depending on how specific your custom queries are, your bot could find itself banned from associated social media sites very quickly ;)
+A python command-line bot for automating promotion on popular social media sites (reddit, twitter, in progress: instagram, facebook). Scrape social media with custom queries and promote your product to all relevant results with a single command. 
+<b>Use at your own risk:</b> depending on how specific your custom queries are, your bot could find itself (and likely it's associated accounts) banned from social media sites very quickly ;)
 
 ## features
 - Reddit
@@ -20,6 +21,8 @@ A python command-line bot for automating promotion on social media. Scrape socia
 		- direct message relevant tweets
 		- reply to relevant tweets with random promotional tweet from file (twit_promos.txt)
 		- ignore tweets by marking them in dump file with "-" prefix
+	- automated new keyword and hashtag research and gleening from scraped results
+	- automated filtering out of irrelevant keywords/hashtags
 	- tweepy exception handling
 	- write all activity to log (log.txt)
  
@@ -117,14 +120,21 @@ spam:
 	- `-sp` scrape and promote to all tweets matching queries
 2) overwatch mode
 	- `-s` scrape first
-	- manually edit scrapeDump.txt
+	- manually edit twit_scrape_dump.txt
 		- add '-' to beginning of line to ignore
 		- leave line unaltered to promote to
-	- `-p` then promote to remaining tweets in scrapeDump.txt
-3) research new keywords from frequently scraped keywords
-	- `bash gleen_keywords_from_twit_scrape`
+	- `-p` then promote to remaining tweets in twit_scrape_dump.txt
+3) gleen new keywords and hashtags from scrape dumps
+	- `bash gleen_keywords_from_twit_scrape.bash`
 		- input file: twit_scrape_dump.txt
-		- output file: gleened_keywords.txt
+		- output file: extras/gleened_keywords.txt
+	- `bash gleen_hashtags_from_twit_scrape.bash`
+		- input file: twit_scrape_dump.txt
+		- output file: extras/gleened_hashtags.txt
+4) filter out keywords/hashtags from scrape dump
+	- 'filter_out_strings_from_twit_scrape.bash'
+		- input file: twit_scrape_dump.txt
+		- output file: extras/twit_scrp_dmp_filtd.txt
 
 ## notes
 Future updates will include modules for promoting to facebook, instagram, etc.

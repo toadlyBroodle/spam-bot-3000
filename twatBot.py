@@ -250,7 +250,7 @@ def spamOP(twt_id, scrn_name):
     log("Spammed: " + scrn_name)
     
     # wait 45-75 seconds between spam tweets
-    wt = randint(6, 15)
+    wt = randint(45, 75)
     print("waiting " + str(wt) + "s...")
     sleep(wt)
 
