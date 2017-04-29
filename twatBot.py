@@ -311,6 +311,9 @@ def folTweeter(scrn_name):
             return 0
     except tweepy.TweepError as e:
         log("Error: " + e.reason)
+        if ('326' in e.reason) or ('261' in e.reason) or ('cannot POST' in e.reason):
+            log("Terminal API Error returned: exiting, see log.txt for details.")
+            sys.exit(1)
         return 0
     
 def spamOP(twt_id, scrn_name):
