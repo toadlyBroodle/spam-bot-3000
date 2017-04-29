@@ -45,6 +45,11 @@ def log(s):
     p = t[:90] + (t[90:] and '..')
     print(p)
 
+def wait(min, max):
+    wt = randint(min, max)
+    print("sleeping " + str(wt) + "s...")
+    sleep(wt)
+    
 def authReddit():
     global reddit
     global reddit_subkeys
@@ -121,7 +126,7 @@ def replyReddit():
                 log('Replied: ' + pd[1])
                 
                 # wait for 45-75 secs to evade spamming flags
-                sleep(randint(45, 75))
+                wait(45, 75)
             except praw.exceptions.ClientException as e:
                 log("Error: " + e.message)
 
@@ -190,7 +195,7 @@ def scrapeReddit(scrape_limit, r_new, r_top, r_hot, r_ris):
 
 
 # get authentication credentials and tweepy api object
-def authTwitter(job):
+def authTwitter(job_dir):
     
     global path_scrp_dmp
     global path_queries
@@ -203,12 +208,12 @@ def authTwitter(job):
     global api
     
     # get correct paths to files for current job
-    if job:
-        cred_path = os.path.join(twatbot_abs_dir, job + '/credentials.txt')    
-        path_scrp_dmp = os.path.join(twatbot_abs_dir, job + '/twit_scrape_dump.txt')
-        path_queries = os.path.join(twatbot_abs_dir, job + '/twit_queries.txt')
-        path_promos = os.path.join(twatbot_abs_dir, job + '/twit_promos.txt')
-        path_log = os.path.join(twatbot_abs_dir, job + '/log.txt')
+    if job_dir:
+        cred_path = os.path.join(twatbot_abs_dir, job_dir + 'credentials.txt')    
+        path_scrp_dmp = os.path.join(twatbot_abs_dir, job_dir + 'twit_scrape_dump.txt')
+        path_queries = os.path.join(twatbot_abs_dir, job_dir + 'twit_queries.txt')
+        path_promos = os.path.join(twatbot_abs_dir, job_dir + 'twit_promos.txt')
+        path_log = os.path.join(twatbot_abs_dir, job_dir + 'log.txt')
     else:
         cred_path = os.path.join(twatbot_abs_dir, 'credentials.txt')
         path_scrp_dmp = os.path.join(twatbot_abs_dir, 'twit_scrape_dump.txt')
@@ -265,7 +270,7 @@ def updateStatus():
         if promo != '\n':
             # send tweet
             api.update_status(promo)
-            log(" Tweeted: " + promo)
+            log("Tweeted: " + promo)
     except tweepy.TweepError as e:
         log(e.reason)
 
@@ -276,27 +281,24 @@ def folTweeter(scrn_name):
         friends = api.get_user(scrn_name).following
         if not friends:
             api.create_friendship(scrn_name)
+            log("Followed: " + scrn_name)
+            # sleep for 30-60s
+            wait(30, 60)
+            return 1
         else:
             log("Already following: " + scrn_name)
-            return
+            return 0
     except tweepy.TweepError as e:
         log("Error: " + e.reason)
-        return
-
-    log("Followed: " + scrn_name)
+        return 0
     
 def spamOP(twt_id, scrn_name):
     # reply to op with random spam
     spamPost = getRandPromo()
     api.update_status('@' + scrn_name + ' ' + spamPost, twt_id)
-
     log("Spammed: " + scrn_name)
-    
     # wait 45-75 seconds between spam tweets
-    wt = randint(3, 6)
-    print("waiting " + str(wt) + "s...")
-    sleep(wt)
-
+    wait(45, 75)
 
 def replyToTweet(twt_id, scrn_name):
     try:
@@ -319,7 +321,7 @@ def replyToTweet(twt_id, scrn_name):
             log(e.reason)
             log("Automated activity detected: waiting for next 15m window...")
             # wait for next 15m window to throw anti-spam bots off the scent
-            sleep(randint(900, 1000))
+            wait(900, 1000)
             return 2
         elif ('326' in e.reason) or ('261' in e.reason) or ('cannot POST' in e.reason):
             log(e.reason)
@@ -352,7 +354,6 @@ def parseDumpLine(dl):
         # [time, twt_id, scrn_name, twt_txt]
         return [a1[0], a2[0], a3[0], a3[1]]
     except IndexError:
-        print("Error reading scrape dump: please ensure its correctly formatted, e.g. no blank lines.")
         raise
         
 
@@ -391,11 +392,11 @@ def processTweet(tweet, pro, fol, dm):
 # continuously scrape for tweets matching all queries
 def scrapeTwitter(con, eng, fol, pro, dm):
    
-    def scrape_log(i, k):
-        log(("Scraped: {total} tweets ({new} new) found with: {query}\n".format(
-        total=str(i), 
-        new=str(k), 
-        query=query.replace("\n", ""))))
+    def report_scrapes(i, k):
+            log(("Scraped: {total} tweets ({new} new) found with: {query}\n".format(
+            total=str(i), 
+            new=str(k), 
+            query=query.replace("\n", ""))))
     
     print("Scraping...")
    
@@ -420,15 +421,16 @@ def scrapeTwitter(con, eng, fol, pro, dm):
                 i += 1
             except tweepy.TweepError as e:
                 if '403' in e.reason:
-                    log("403 not found: check your queries for validity")
-                    sys.exit(1)
-                scrape_log(i, k)
+                    log("Error querying: please check query for validity, e.g. doesn't exceed max length")
+                    break
+                    
+                report_scrapes(i, k)
                 log("Reached API window limit: taking 15min smoke break..." + e.reason)
                 # wait for next request window to continue
-                sleep(60 * 15)
+                wait(60 * 15, 60 * 15 + 1)
                 continue
             except StopIteration:
-                scrape_log(i, k)
+                report_scrapes(i, k)
                 break
 
 
@@ -436,17 +438,23 @@ def scrapeTwitter(con, eng, fol, pro, dm):
 def main(argv):
     # for logging purposes
     start_time = datetime.now()
-    reply_count = 0
     
-    def log_run_time():
+    count_reply = 0
+    count_follow = 0
+    
+    def report_job_status():
+        # report how many actions performed
+        if args.t_pro:
+            log("Replied to {rep} tweets.".format(rep=str(count_reply)))
+        if args.t_fol:
+            log("Followed {fol} tweeters.".format(fol=str(count_follow)))
+        
         log("Total run time: " + str(datetime.now() - start_time))
     
     # catch SIGINTs and KeyboardInterrupts
     def signal_handler(signal, frame):
-        if args.t_pro:
-            log("Replied to {rep} tweets.".format(rep=str(reply_count)))
         log("Current job terminated: received KeyboardInterrupt kill signal.")
-        log_run_time()
+        report_job_status()
         sys.exit(0)
     # set SIGNINT listener to catch kill signals
     signal.signal(signal.SIGINT, signal_handler)
@@ -496,6 +504,7 @@ def main(argv):
         if args.t_scr:
             scrapeTwitter(args.t_con, args.t_eng, args.t_fol, args.t_pro, args.t_dm)
             executed = 1
+                
         else: # otherwise promote to all entries in scrape_dump file
             # get scrape dump lines
             f = open(path_scrp_dmp, "r")
@@ -503,8 +512,11 @@ def main(argv):
             f.close()
             
             for i in range(len(scrp_lines)):
-                pd = parseDumpLine(scrp_lines[i])
-
+                try:
+                    pd = parseDumpLine(scrp_lines[i])
+                except Exception:
+                    log("Error parsing dump line {ln}: check for validity.".format(ln=str(i + 1)))
+                    
                 # ignore lines beginning with '-'
                 if pd[0][0] == '-':
                     continue
@@ -513,18 +525,18 @@ def main(argv):
                 scrn_name = pd[2]
                 
                 if args.t_fol:
-                    folTweeter(scrn_name)
+                    count_follow += folTweeter(scrn_name)
                 
                 if args.t_pro:
                     ret_code = replyToTweet(twt_id, scrn_name)
                     # continue if no error code returned
                     if ret_code is 1:
-                        reply_count += ret_code
+                        count_reply += ret_code
                     elif ret_code is 2: # automation detected
                         pass #already slept it off, do nothing
                     elif ret_code is 3: # serious error returned, terminate activity
-                        log("Prematurely terminating job: replied to {rep} tweets.".format(rep=str(reply_count)))
-                        log_run_time()
+                        log("Prematurely terminating job.")
+                        report_job_status()
                         sys.exit(1)
                         
                     # prefix spammed scape dump lines with '-'
@@ -536,8 +548,8 @@ def main(argv):
                 if args.t_dm:
                     directMessageTweet(scrn_name)
             
-            log("Job done. Replied to {rep} tweets.".format(rep=str(reply_count)))
-            log_run_time()
+            log("Job completed.")
+            report_job_status()
                 
             executed = 1
 
