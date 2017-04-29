@@ -1,5 +1,5 @@
 __pycache__/
-credentials.py
+*credentials.txt
 praw.ini
-log.txt
+*log.txt
 *_inactive*

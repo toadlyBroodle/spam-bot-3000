@@ -12,6 +12,7 @@ A python command-line (CLI) bot for automating promotion on popular social media
 	- praw.errors.HTTPException handling
 	- write all activity to log (log.txt)
 - Twitter
+	- maintain seperate jobs for different promotion projects
 	- update user status
 	- scan twitter for list of custom queries, dump results in local file (twit_scrape_dump.txt)
 		- scan continuously or in overwatch mode
@@ -78,30 +79,33 @@ optional arguments:
 
 ## twitter initial setup
 - install <a href="https://github.com/tweepy/tweepy">tweepy</a> dependency `pip3 install tweepy`
-- create new 'credentials.py' file in main directory with your twitter credentials
+- create new directory to store new job data in (i.e. twit_studfinder_example/)
+- create new 'credentials.txt' file in job directory to store your twitter app's credentials
 	- <a href="https://www.digitalocean.com/community/tutorials/how-to-create-a-twitterbot-with-python-3-and-the-tweepy-library">a good guide for how to get twitter credentials</a>
 
-<credentials.py>
+<credentials.txt>
 ```
-consumer_key = "your_consumer_key"
-consumer_secret = "your_consumer_secret"
-access_token = "your_access_token"
-access_token_secret = "your_access_token_secret"
+your_consumer_key
+your_consumer_secret
+your_access_token
+your_access_token_secret
 ```
 
-- replace promotional tweets (promoTweets.txt) with your own
+- create new 'twit_promos.txt' in job directory to store your job's promotions to spam 
 	- individual tweets on seperate lines
 	- each line must by <= 140 characters long
-- replace search queries (queries.txt) with your own
+- create new 'twit_queries.txt' in job directory to store your job's queries to scrape twitter for
 	- individual queries on seperate lines
 	- <a href="https://dev.twitter.com/rest/public/search">guide to constructing twitter queries</a>
 
 ## twitter usage
 ```
-usage: twatBot.py twitter [-h] [-u] [-s] [-c] [-f] [-p]
+usage: twatBot.py twitter [-h] [-j JOB_DIR] [-u] [-s] [-c] [-f] [-p]
 
 optional arguments:
  -h, --help				show this help message and exit
+ -j JOB_DIR, --job JOB_DIR
+					choose job to run by specifying job's relative directory
  -u, --update-status	update status with random promo from twit_promos.txt
 
 query:

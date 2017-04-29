@@ -6,18 +6,23 @@ import argparse
 import pprint
 import json
 from time import sleep, localtime, strftime
-import datetime
+from datetime import datetime
 from random import randint
 # Reddit imports:
 import praw
 import pdb
 import re
 import os
-# Twitter imports: credentials from credentials.py
+# Twitter imports:
 import tweepy
-from credentials import *
 
 # global variables
+twatbot_abs_dir = os.path.dirname(os.path.abspath(__file__)) #<-- absolute path to twatbot directory
+# paths to files
+path_scrp_dmp = None
+path_queries = None
+path_promos = None
+path_log = None
 # twitter
 p_lines = []
 p_length = 0
@@ -33,7 +38,7 @@ reddit_subkeys = None
 def log(s):
     t = strftime("%Y%b%d %H:%M:%S", localtime()) + " " + s
 
-    with open('log.txt', 'a') as l:
+    with open(path_log, 'a') as l:
         l.write(t + "\n")
         
     # also print truncated log to screen
@@ -43,6 +48,16 @@ def log(s):
 def authReddit():
     global reddit
     global reddit_subkeys
+    global path_scp_dmp
+    global path_queries
+    global path_promos
+    global path_log
+    
+    # get paths to filesk TODO use them for seperate jobs
+    #path_scrp_dmp = os.path.join(twatbot_abs_dir, 'red_scrape_dump.txt')
+    #path_queries =  os.path.join(twatbot_abs_dir, 'red_queries.txt')
+    #path_promos =  os.path.join(twatbot_abs_dir, 'red_promos.txt')
+    path_log =  os.path.join(twatbot_abs_dir, 'red_log.txt')
 
     print("Authenticating...")
 
@@ -56,7 +71,7 @@ def authReddit():
         reddit_subkeys = subkeys_parsed['sub_key_pairs']
 
 def buildRedDumpLine(submission):
-    return (datetime.datetime.fromtimestamp(int(submission.created)).strftime("%b%d %H:%M")
+    return (datetime.fromtimestamp(int(submission.created)).strftime("%b%d %H:%M")
             + "SUBM_URL" + str(submission.url)
             + "SUBM_TXT" + submission.selftext.replace("\n", "") + "\n")
 
@@ -175,20 +190,48 @@ def scrapeReddit(scrape_limit, r_new, r_top, r_hot, r_ris):
 
 
 # get authentication credentials and tweepy api object
-def authTwitter():
-
+def authTwitter(job):
+    
+    global path_scrp_dmp
+    global path_queries
+    global path_promos
+    global path_log
     global p_lines
     global p_length
     global q_lines
     global q_length
     global api
-
-    # get authorization credentials from credentials.py
-    print("Authenticating...")
     
-    auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
-    auth.set_access_token(access_token, access_token_secret)
-    api = tweepy.API(auth)
+    # get correct paths to files for current job
+    if job:
+        cred_path = os.path.join(twatbot_abs_dir, job + '/credentials.txt')    
+        path_scrp_dmp = os.path.join(twatbot_abs_dir, job + '/twit_scrape_dump.txt')
+        path_queries = os.path.join(twatbot_abs_dir, job + '/twit_queries.txt')
+        path_promos = os.path.join(twatbot_abs_dir, job + '/twit_promos.txt')
+        path_log = os.path.join(twatbot_abs_dir, job + '/log.txt')
+    else:
+        cred_path = os.path.join(twatbot_abs_dir, 'credentials.txt')
+        path_scrp_dmp = os.path.join(twatbot_abs_dir, 'twit_scrape_dump.txt')
+        path_queries = os.path.join(twatbot_abs_dir, 'twit_queries.txt')
+        path_promos = os.path.join(twatbot_abs_dir, 'twit_promos.txt')
+        path_log = os.path.join(twatbot_abs_dir, 'log.txt')
+    
+    # get authorization credentials from credentials file
+    with open(cred_path, 'r') as creds:
+        
+        # init empty array to store credentials
+        cred_lines = [None] * 4
+        
+        # strip end of line characters and any trailing spaces, tabs off credential lines
+        cred_lines_raw = creds.readlines()
+        for i in range(len(cred_lines_raw)):
+            cred_lines[i] = (cred_lines_raw[i].strip())
+
+        print("Authenticating...")        
+        # authenticate and get reference to api
+        auth = tweepy.OAuthHandler(cred_lines[0], cred_lines[1])
+        auth.set_access_token(cred_lines[2], cred_lines[3])
+        api = tweepy.API(auth)
     
     # ensure authentication was successful
     try:
@@ -198,11 +241,11 @@ def authTwitter():
         sys.exit(1)
 
     #  load promo lines (tweets) from text file
-    with open('twit_promos.txt', 'r') as promoFile:
+    with open(path_promos, 'r') as promoFile:
         p_lines = promoFile.readlines()
 
     # load queries from text file
-    with open('twit_queries.txt', 'r') as queryFile:
+    with open(path_queries, 'r') as queryFile:
         q_lines = queryFile.readlines()
 
     # get number of promotional tweets and queries
@@ -314,7 +357,7 @@ def processTweet(tweet, pro, fol, dm):
     scrn_name = tweet.user.screen_name
     
     # open dump file in read mode
-    with open('twit_scrape_dump.txt', 'r') as f:
+    with open(path_scrp_dmp, 'r') as f:
         scrp_lines = f.readlines()
 
         # if tweet already scraped, then return
@@ -323,7 +366,7 @@ def processTweet(tweet, pro, fol, dm):
 
     # otherwise append to twit_scrape_dump.txt    
     new_line = buildDumpLine(tweet)
-    with open('twit_scrape_dump.txt', 'a') as f:
+    with open(path_scrp_dmp, 'a') as f:
         f.write(new_line)
     
     # follow op, if not already following
@@ -387,14 +430,19 @@ def scrapeTwitter(con, eng, fol, pro, dm):
 
 # get command line arguments and execute appropriate functions
 def main(argv):
-    # keep count of replies for logging purposes
+    # for logging purposes
+    start_time = datetime.now()
     reply_count = 0
+    
+    def log_run_time():
+        log("Total run time: " + str(datetime.now() - start_time))
     
     # catch SIGINTs and KeyboardInterrupts
     def signal_handler(signal, frame):
         if args.t_pro:
             log("Replied to {rep} tweets.".format(rep=str(reply_count)))
         log("Current job terminated: received KeyboardInterrupt kill signal.")
+        log_run_time()
         sys.exit(0)
     # set SIGNINT listener to catch kill signals
     signal.signal(signal.SIGINT, signal_handler)
@@ -405,7 +453,8 @@ def main(argv):
     
     # Twitter arguments
     twit_parser = subparsers.add_parser('twitter', help='Twitter: scrape for queries, promote to results')
-    twit_parser.add_argument('-u', '--update-status', action='store_true', dest='t_upd', help='update status with random promo from twit_promos.txt ')
+    twit_parser.add_argument('-j', '--job', dest='JOB_DIR', help="choose job to run by specifying job's relative directory")
+    twit_parser.add_argument('-u', '--update-status', action='store_true', dest='t_upd', help='update status with random promo from twit_promos.txt')
     group_scrape = twit_parser.add_argument_group('query')
     group_scrape.add_argument('-s', '--scrape', action='store_true', dest='t_scr', help='scrape for tweets matching queries in twit_queries.txt')
     group_scrape.add_argument('-c', '--continuous', action='store_true', dest='t_con', help='scape continuously - suppress prompt to continue after 50 results per query')
@@ -432,7 +481,7 @@ def main(argv):
     # twitter handler
     if args.platform == 'twitter':
         # get authentication credentials and api
-        authTwitter()
+        authTwitter(args.JOB_DIR)
 
         # update status
         if args.t_upd:
@@ -444,37 +493,47 @@ def main(argv):
             scrapeTwitter(args.t_con, args.t_eng, args.t_fol, args.t_pro, args.t_dm)
             executed = 1
         else: # otherwise promote to all entries in scrape_dump file
-            with open('twit_scrape_dump.txt') as f:
-                t_lines = f.readlines()
-                
-                for t in t_lines:
-                    pd = parseDumpLine(t)
+            # get scrape dump lines
+            f = open(path_scrp_dmp, "r")
+            scrp_lines = f.readlines()
+            f.close()
+            
+            for i in range(len(scrp_lines)):
+                pd = parseDumpLine(scrp_lines[i])
 
-                    # ignore lines beginning with '-'
-                    if pd[0][0] == '-':
-                        continue
-                        
-                    twt_id = pd[1]
-                    scrn_name = pd[2]
+                # ignore lines beginning with '-'
+                if pd[0][0] == '-':
+                    continue
                     
-                    if args.t_fol:
-                        folTweeter(scrn_name)
-                    
-                    if args.t_pro:
-                        ret_code = replyToTweet(twt_id, scrn_name)
-                        # continue if no error code returned
-                        if ret_code is 1:
-                            reply_count += ret_code
-                        elif ret_code is 2: # automation detected
-                            pass #already slept it off, do nothing
-                        elif ret_code is 3: # serious error returned, terminate activity
-                            log("Prematurely terminating job: replied to {rep} tweets.".format(rep=str(reply_count)))
-                            sys.exit(1)
-                        
-                    if args.t_dm:
-                        directMessageTweet(scrn_name)
+                twt_id = pd[1]
+                scrn_name = pd[2]
                 
-                log("Job done. Replied to {rep} tweets.".format(rep=str(reply_count)))
+                if args.t_fol:
+                    folTweeter(scrn_name)
+                
+                if args.t_pro:
+                    ret_code = replyToTweet(twt_id, scrn_name)
+                    # continue if no error code returned
+                    if ret_code is 1:
+                        reply_count += ret_code
+                    elif ret_code is 2: # automation detected
+                        pass #already slept it off, do nothing
+                    elif ret_code is 3: # serious error returned, terminate activity
+                        log("Prematurely terminating job: replied to {rep} tweets.".format(rep=str(reply_count)))
+                        log_run_time()
+                        sys.exit(1)
+                        
+                    # prefix spammed scape dump lines with '-'
+                    scrp_lines[i] = '-' + scrp_lines[i]
+                    f = open(path_scrp_dmp, "w")
+                    f.writelines(scrp_lines)
+                    f.close()
+                    
+                if args.t_dm:
+                    directMessageTweet(scrn_name)
+            
+            log("Job done. Replied to {rep} tweets.".format(rep=str(reply_count)))
+            log_run_time()
                 
             executed = 1
 
