@@ -105,7 +105,7 @@ usage: twatBot.py twitter [-h] [-j JOB_DIR] [-u] [-s] [-c] [-f] [-p]
 optional arguments:
  -h, --help				show this help message and exit
  -j JOB_DIR, --job JOB_DIR
-					choose job to run by specifying job's relative directory
+						choose job to run by specifying job's relative directory
  -u, --update-status	update status with random promo from twit_promos.txt
 
 query:
@@ -141,4 +141,5 @@ spam:
 		- output file: extras/twit_scrp_dmp_filtd.txt
 
 ## notes
+If you don't want to maintain individual jobs in separate directories, you may create single credentials, queries, promos, and scrape dump files in main working directory.
 Future updates will include modules for promoting to instagram, facebook, etc.
