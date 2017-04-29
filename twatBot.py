@@ -274,6 +274,27 @@ def updateStatus():
     except tweepy.TweepError as e:
         log(e.reason)
 
+# unfollow users who don't follow you back within 1 week
+def unfollowUsers(num):
+    my_scr_nm = api.me().screen_name
+    followers = api.followers_ids(my_scr_nm)
+    friends = api.friends_ids(my_scr_nm)
+    
+    print("Unfollowing unreciprocating users...")
+    
+    count_uf = 0
+    for f in friends:
+        if f not in followers:
+            api.destroy_friendship(f)
+            count_uf += 1
+            log("Unfollowed " + api.get_user(f).screen_name)
+            # only unfollow specified number
+            if int(num) <= count_uf:
+                break
+            # avoid anti-spam-bot detection
+            wait(3, 6)
+                
+    log("Unfollowed {unf} filthy freeloaders.".format(unf=str(count_uf)))
 
 def folTweeter(scrn_name):
     try:
@@ -466,7 +487,9 @@ def main(argv):
     # Twitter arguments
     twit_parser = subparsers.add_parser('twitter', help='Twitter: scrape for queries, promote to results')
     twit_parser.add_argument('-j', '--job', dest='JOB_DIR', help="choose job to run by specifying job's relative directory")
-    twit_parser.add_argument('-u', '--update-status', action='store_true', dest='t_upd', help='update status with random promo from twit_promos.txt')
+    twit_parser.add_argument('-u', '--unfollow', dest='UNF', help ="unfollow users who aren't following you back, UNF=number to unfollow")
+    twit_parser.add_argument('-t', '--tweet-status', action='store_true', dest='t_upd', help='update status with random promo from twit_promos.txt')
+    
     group_scrape = twit_parser.add_argument_group('query')
     group_scrape.add_argument('-s', '--scrape', action='store_true', dest='t_scr', help='scrape for tweets matching queries in twit_queries.txt')
     group_scrape.add_argument('-c', '--continuous', action='store_true', dest='t_con', help='scape continuously - suppress prompt to continue after 50 results per query')
@@ -500,6 +523,11 @@ def main(argv):
             updateStatus()
             executed = 1
 
+        # unfollow filthy freeloaders!!!
+        if args.UNF:
+            unfollowUsers(args.UNF)
+            executed = 1
+            
         # scrape twitter for all queries and favorite, follow, and/or promote OPs
         if args.t_scr:
             scrapeTwitter(args.t_con, args.t_eng, args.t_fol, args.t_pro, args.t_dm)

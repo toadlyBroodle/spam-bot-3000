@@ -1,5 +1,5 @@
 # twatBot
-A python command-line (CLI) bot for automating promotion on popular social media sites (reddit, twitter, in progress: instagram, facebook). Scrape social media with custom queries and promote your product to all relevant results with a single command. 
+A python command-line (CLI) bot for automating promotion on popular social media sites (reddit, twitter; in progress: instagram, facebook). Scrape social media with custom queries and promote your product to all relevant results with a single command. 
 <b>Use at your own risk:</b> depending on how specific your custom queries are, your bot could find itself (and likely it's associated accounts) banned from social media sites very quickly ;)
 
 ## features
@@ -14,6 +14,7 @@ A python command-line (CLI) bot for automating promotion on popular social media
 - Twitter
 	- maintain seperate jobs for different promotion projects
 	- update user status
+	- unfollow users who don't reciprocate your follow
 	- scan twitter for list of custom queries, dump results in local file (twit_scrape_dump.txt)
 		- scan continuously or in overwatch mode
 	- promotion abilities
@@ -100,15 +101,17 @@ your_access_token_secret
 
 ## twitter usage
 ```
-usage: twatBot.py twitter [-h] [-j JOB_DIR] [-u] [-s] [-c] [-f] [-p]
+usage: twatBot.py twitter [-h] [-j JOB_DIR] [-u UNF] [-t] [-s] [-c] [-f] [-p]
 
 optional arguments:
  -h, --help				show this help message and exit
  -j JOB_DIR, --job JOB_DIR
 						choose job to run by specifying job's relative directory
- -u, --update-status	update status with random promo from twit_promos.txt
+ -u UNF, --unfollow UNF
+                        unfollow users who aren't following you back, UNF=number to unfollow
+ -t, --tweet-status    update status with random promo from twit_promos.txt
 
-query:
+ query:
  -s, --scrape			scrape for tweets matching queries in twit_queries.txt
  -c, --continuous		scape continuously - suppress prompt to continue after 50 results per query
  -e, --english         	return only tweets written in English
@@ -142,4 +145,5 @@ spam:
 
 ## notes
 If you don't want to maintain individual jobs in separate directories, you may create single credentials, queries, promos, and scrape dump files in main working directory.
+
 Future updates will include modules for promoting to instagram, facebook, etc.
