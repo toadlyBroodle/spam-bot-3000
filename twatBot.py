@@ -293,7 +293,7 @@ def spamOP(twt_id, scrn_name):
     log("Spammed: " + scrn_name)
     
     # wait 45-75 seconds between spam tweets
-    wt = randint(45, 75)
+    wt = randint(3, 6)
     print("waiting " + str(wt) + "s...")
     sleep(wt)
 
@@ -345,12 +345,16 @@ def buildDumpLine(tweet):
     
 def parseDumpLine(dl):
     # parse scrape dump file, seperate tweet ids from screen names
-    a1 = dl.split('TWT_ID')
-    a2 = a1[1].split('SCRN_NAME')
-    a3 = a2[1].split('TWT_TXT')
-    # [time, twt_id, scrn_name, twt_txt]
-    return [a1[0], a2[0], a3[0], a3[1]]
-   
+    try:
+        a1 = dl.split('TWT_ID')
+        a2 = a1[1].split('SCRN_NAME')
+        a3 = a2[1].split('TWT_TXT')
+        # [time, twt_id, scrn_name, twt_txt]
+        return [a1[0], a2[0], a3[0], a3[1]]
+    except IndexError:
+        print("Error reading scrape dump: please ensure its correctly formatted, e.g. no blank lines.")
+        raise
+        
 
 def processTweet(tweet, pro, fol, dm):
 
