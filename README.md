@@ -80,7 +80,7 @@ optional arguments:
 
 ## twitter initial setup
 - install <a href="https://github.com/tweepy/tweepy">tweepy</a> dependency `pip3 install tweepy`
-- create new directory to store new job data in (i.e. twit_studfinder_example/)
+- create new directory to store new job data in (e.g. studfinder_example/)
 - create new 'credentials.txt' file in job directory to store your twitter app's credentials
 	- <a href="https://www.digitalocean.com/community/tutorials/how-to-create-a-twitterbot-with-python-3-and-the-tweepy-library">a good guide for how to get twitter credentials</a>
 
@@ -98,6 +98,7 @@ your_access_token_secret
 - create new 'twit_queries.txt' in job directory to store your job's queries to scrape twitter for
 	- individual queries on seperate lines
 	- <a href="https://dev.twitter.com/rest/public/search">guide to constructing twitter queries</a>
+- create new 'twit_scrape_dump.txt' file to store your job's returned scrape results
 
 ## twitter usage
 ```
