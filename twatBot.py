@@ -208,6 +208,9 @@ def handleTweepyError(e, scrn_name):
     if '136' in e.reason:
         log("Skipping: Blocked from favoriting " + scrn_name + "'s tweets - " + e.reason)
         return 0
+    if '144' in e.reason:
+        log("Skipping: No status from " + scrn_name + " with that id exists - " + e.reason)
+        return 0
     if '226' in e.reason:
         log(e.reason)
         log("Automated activity detected: waiting for next 15m window...")
@@ -363,10 +366,13 @@ def replyToTweet(twt_id, scrn_name):
         ret_code = handleTweepyError(e, scrn_name)
         if ret_code is 0:
             return 0
-        if ret_code is 2:
+        elif ret_code is 2:
             return 2
-        if ret_code is 3:
+        elif ret_code is 3:
             return 3
+        else:
+            log('Unhandled tweepy error: ' + e.reason)
+    return 0
 
 def directMessageTweet(scrn_name):
     try:
