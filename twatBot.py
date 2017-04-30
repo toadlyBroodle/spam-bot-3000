@@ -193,7 +193,33 @@ def scrapeReddit(scrape_limit, r_new, r_top, r_hot, r_ris):
             i += 1                    
         scrape_log(i, k)
 
-
+def handleTweepyError(e, scrn_name):
+    if "Could not authenticate you" in e.reason:
+        log("Authentication failed: check credentials for validity - " + e.reason)
+        return 3
+    if "Failed to send request" in e.reason:
+        log("Failed to SEND request: " + e.reason)
+        # wait for 30s before continuing
+        wait(30, 30)
+        return 0
+    if '139' in e.reason:
+        log("Skipping: Already favorited/spammed " + scrn_name + " - " + e.reason)
+        return 0
+    if '136' in e.reason:
+        log("Skipping: Blocked from favoriting " + scrn_name + "'s tweets - " + e.reason)
+        return 0
+    if '226' in e.reason:
+        log(e.reason)
+        log("Automated activity detected: waiting for next 15m window...")
+        return 2
+    if '403' in e.reason:
+        log("Error querying: please check query for validity, e.g. doesn't exceed max length")
+        return 2
+    if ('326' in e.reason) or ('261' in e.reason) or ('cannot POST' in e.reason):
+        log(e.reason)
+        log("Terminal API Error returned: exiting, see log.txt for details.")
+        return 3
+        
 # get authentication credentials and tweepy api object
 def authTwitter(job_dir):
     
@@ -242,7 +268,7 @@ def authTwitter(job_dir):
     try:
         log("Authenticated as: " + api.me().screen_name)
     except tweepy.TweepError as e:
-        log("Failed Twitter auth: " + e.reason)
+        handleTweepyError(e, None)
         sys.exit(1)
 
     #  load promo lines (tweets) from text file
@@ -303,17 +329,16 @@ def folTweeter(scrn_name):
         if not friends:
             api.create_friendship(scrn_name)
             log("Followed: " + scrn_name)
-            # sleep for 30-60s
-            wait(30, 60)
+            # sleep for 45-75s
+            wait(45, 75)
             return 1
         else:
             log("Already following: " + scrn_name)
             return 0
     except tweepy.TweepError as e:
-        log("Error: " + e.reason)
-        if ('326' in e.reason) or ('261' in e.reason) or ('cannot POST' in e.reason):
-            log("Terminal API Error returned: exiting, see log.txt for details.")
-            sys.exit(1)
+        ret_code = handleTweepyError(e, scrn_name)
+        if ret_code is 3:
+            return 3
         return 0
     
 def spamOP(twt_id, scrn_name):
@@ -335,21 +360,12 @@ def replyToTweet(twt_id, scrn_name):
         return 1
             
     except tweepy.TweepError as e:
-        if '139' in e.reason:
-            log("Skipped " + twt_id + ": Already favorited/spammed " + scrn_name + " - " + e.reason)
+        ret_code = handleTweepyError(e, scrn_name)
+        if ret_code is 0:
             return 0
-        if '136' in e.reason:
-            log("Skipped " + twt_id + ": Blocked from favoriting " + scrn_name + "'s tweets - " + e.reason)
-            return 0
-        elif '226' in e.reason:
-            log(e.reason)
-            log("Automated activity detected: waiting for next 15m window...")
-            # wait for next 15m window to throw anti-spam bots off the scent
-            wait(900, 1000)
+        if ret_code is 2:
             return 2
-        elif ('326' in e.reason) or ('261' in e.reason) or ('cannot POST' in e.reason):
-            log(e.reason)
-            log("Terminal API Error returned: exiting, see log.txt for details.")
+        if ret_code is 3:
             return 3
 
 def directMessageTweet(scrn_name):
@@ -358,7 +374,7 @@ def directMessageTweet(scrn_name):
         api.send_direct_message(screen_name=scrn_name, text=getRandPromo())
 
     except tweepy.TweepError as e:
-        log("Error: " + e.reason)
+        handleTweepyError(e, scrn_name)
         return
     
     log("Direct Messaged: " + scrn_name)
@@ -378,7 +394,7 @@ def parseDumpLine(dl):
         # [time, twt_id, scrn_name, twt_txt]
         return [a1[0], a2[0], a3[0], a3[1]]
     except IndexError:
-        raise
+        raise IndexError
         
 
 def processTweet(tweet, pro, fol, dm):
@@ -401,7 +417,7 @@ def processTweet(tweet, pro, fol, dm):
     # follow op, if not already following
     if fol and not tweet.user.following:
         folTweeter(scrn_name)
-
+        
     # favorite and respond to op's tweet
     if pro:
         replyToTweet(tweet.id, scrn_name)
@@ -444,8 +460,8 @@ def scrapeTwitter(con, eng, fol, pro, dm):
                 k += processTweet(c.next(), pro, fol, dm)                    
                 i += 1
             except tweepy.TweepError as e:
-                if '403' in e.reason:
-                    log("Error querying: please check query for validity, e.g. doesn't exceed max length")
+                ret_code = handleTweepError(e, None)
+                if ret_code is 2: # HTTPError returned from query, move onto next query
                     break
                     
                 report_scrapes(i, k)
@@ -490,8 +506,8 @@ def main(argv):
     # Twitter arguments
     twit_parser = subparsers.add_parser('twitter', help='Twitter: scrape for queries, promote to results')
     twit_parser.add_argument('-j', '--job', dest='JOB_DIR', help="choose job to run by specifying job's relative directory")
-    twit_parser.add_argument('-u', '--unfollow', dest='UNF', help ="unfollow users who aren't following you back, UNF=number to unfollow")
     twit_parser.add_argument('-t', '--tweet-status', action='store_true', dest='t_upd', help='update status with random promo from twit_promos.txt')
+    twit_parser.add_argument('-u', '--unfollow', dest='UNF', help ="unfollow users who aren't following you back, UNF=number to unfollow")
     
     group_scrape = twit_parser.add_argument_group('query')
     group_scrape.add_argument('-s', '--scrape', action='store_true', dest='t_scr', help='scrape for tweets matching queries in twit_queries.txt')
@@ -545,7 +561,7 @@ def main(argv):
             for i in range(len(scrp_lines)):
                 try:
                     pd = parseDumpLine(scrp_lines[i])
-                except Exception:
+                except IndexError:
                     log("Error parsing dump line {ln}: check for validity.".format(ln=str(i + 1)))
                     
                 # ignore lines beginning with '-'
@@ -556,17 +572,21 @@ def main(argv):
                 scrn_name = pd[2]
                 
                 if args.t_fol:
-                    count_follow += folTweeter(scrn_name)
-                
+                    ret_code = folTweeter(scrn_name)
+                    if ret_code is 3:
+                        report_job_status()
+                        sys.exit(1)
+                    # update follow count: return value will be either 0 or 1
+                    count_follow += ret_code
+                    
                 if args.t_pro:
                     ret_code = replyToTweet(twt_id, scrn_name)
-                    # continue if no error code returned
-                    if ret_code is 1:
+                    if ret_code <= 1: # minor isolated error returned, increment/decrement reply count and continue
                         count_reply += ret_code
                     elif ret_code is 2: # automation detected
-                        pass #already slept it off, do nothing
+                        # wait for next 15m window to throw anti-spam bots off the scent
+                        wait(900, 1000)
                     elif ret_code is 3: # serious error returned, terminate activity
-                        log("Prematurely terminating job.")
                         report_job_status()
                         sys.exit(1)
                         
