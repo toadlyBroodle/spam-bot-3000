@@ -401,7 +401,6 @@ def parseDumpLine(dl):
         return [a1[0], a2[0], a3[0], a3[1]]
     except IndexError:
         raise IndexError
-        
 
 def processTweet(tweet, pro, fol, dm):
 

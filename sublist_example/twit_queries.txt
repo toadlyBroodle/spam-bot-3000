@@ -1,1 +1,15 @@
-#minimalist
+@rydercarroll android
+-from:minimalistTB -from:rydercarroll #bulletjournal OR "bullet journal" OR #bujo OR bujo #android OR android OR app
+? "android task management app" OR "android task manager app" OR "android note taking app" OR "note-taking app for android" OR "android list app" OR "to do list android app" OR "to-do list android app" OR "todo list android app" OR "list making app for android"
+list OR todo app android -ios -iphone ?
+daily list android ?
+app OR android "organize your life" OR declutter tips OR help OR advice -Dungeons -from:googletricks19 -from:TechWireAsia
+android list ? to-do OR todo OR "to do" OR "note-tak" OR "note tak" OR "task manage" replace OR alternat OR worthy OR best OR loooking OR need OR recommend OR suggest OR share
+android ? wunderlist OR todo OR to-do OR onenote OR workflowy OR keep top OR best OR replace OR alternat OR worthy OR looking OR need OR recommend OR suggest OR share
+-from:WorkFlowy workflowy ? top OR best OR to-do OR todo OR replace OR alternat OR worthy OR loooking OR need OR recommend OR suggest
+-from:google "google keep" ? top OR best OR to-do OR todo OR replace OR alternat OR worthy OR loooking OR need OR recommend OR suggest
+#minimalism OR #minimalist OR #minimal #app OR #android -from:AEEIncidents -from:minimalistTB
+-from:Wunderlist wunderlist ? To-Do OR top OR best OR todo OR replace OR alternat OR worthy OR loooking OR need OR recommend OR suggest OR vs OR better OR using OR use OR other OR compare OR similar OR instead OR anyone OR anybody
+-from:msonenote -from:onenotec onenote ? top OR best OR to-do OR todo OR replace OR alternat OR worthy OR loooking OR need OR recommend OR suggest OR vs OR better OR using OR use OR other OR compare OR similar OR instead OR anyone OR anybody
+-from:evernote -from:evernotehelps evernote ? top OR best OR to-do OR todo OR replace OR alternat OR worthy OR loooking OR need OR recommend OR suggest OR vs OR better OR using OR use OR other OR compare OR similar OR instead OR anyone OR anybody
+-from:todoist todoist ? top OR best OR to-do OR todo OR replace OR alternat OR worthy OR loooking OR need OR recommend OR suggest OR vs OR better OR using OR use OR other OR compare OR similar OR instead OR anyone OR anybody
