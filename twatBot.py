@@ -296,8 +296,8 @@ def deleteTweets(num):
     count_del = 0
     print('scanning for 2week old tweets...')
     for status in limit_handled(tweepy.Cursor(api.user_timeline).items()):
-        # if status older than 1 month, delete it
-        cutoff = datetime.datetime.now() - datetime.timedelta(weeks=4)
+        # if status older than 2weeks, delete it
+        cutoff = datetime.datetime.now() - datetime.timedelta(weeks=2)
         if status.created_at < cutoff:
             try:
                 api.destroy_status(status.id)
