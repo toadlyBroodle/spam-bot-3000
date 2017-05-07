@@ -389,10 +389,12 @@ def replyToTweet(twt_id, scrn_name):
         ret_code = handleTweepyError(e, scrn_name)
         if ret_code is 0:
             return 0
-        if ret_code is 2:
+        elif ret_code is 2:
             return 2
-        if ret_code is 3:
+        elif ret_code is 3:
             return 3
+        else:
+            return 0
 
 def directMessageTweet(scrn_name):
     try:
