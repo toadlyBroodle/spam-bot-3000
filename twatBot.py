@@ -294,7 +294,7 @@ def deleteTweets(num):
                 # wait for next request window to continue
                 wait(60 * 15, 60 * 15 + 1)
     count_del = 0
-    print('scanning for month old tweets...')
+    print('scanning for 2week old tweets...')
     for status in limit_handled(tweepy.Cursor(api.user_timeline).items()):
         # if status older than 1 month, delete it
         cutoff = datetime.datetime.now() - datetime.timedelta(weeks=4)
@@ -308,7 +308,7 @@ def deleteTweets(num):
                 log("Failed to delete: " + str(status.id))
         if count_del >= int(num):
             break
-    log(str(count_del) + ' month old tweets deleted.')
+    log(str(count_del) + ' 2week old tweets deleted.')
 
 def getRandPromo():
     return p_lines[randint(0, p_length - 1)]
@@ -580,8 +580,8 @@ def main(argv):
             executed = 1
             
         elif args.N_REM:
-            deleteTweets(args.N_REM)  
-  
+            deleteTweets(args.N_REM)
+            executed = 1  
         else: # otherwise promote to all entries in scrape_dump file
             # get scrape dump lines
             f = open(path_scrp_dmp, "r")
