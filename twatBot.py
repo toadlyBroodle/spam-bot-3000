@@ -6,7 +6,7 @@ import argparse
 import pprint
 import json
 from time import sleep, localtime, strftime
-from datetime import datetime
+import datetime
 from random import randint
 # Reddit imports:
 import praw
@@ -58,7 +58,7 @@ def authReddit():
     global path_promos
     global path_log
     
-    # get paths to filesk TODO use them for seperate jobs
+    # get paths to files TODO use them for seperate jobs
     #path_scrp_dmp = os.path.join(twatbot_abs_dir, 'red_scrape_dump.txt')
     #path_queries =  os.path.join(twatbot_abs_dir, 'red_queries.txt')
     #path_promos =  os.path.join(twatbot_abs_dir, 'red_promos.txt')
@@ -76,7 +76,7 @@ def authReddit():
         reddit_subkeys = subkeys_parsed['sub_key_pairs']
 
 def buildRedDumpLine(submission):
-    return (datetime.fromtimestamp(int(submission.created)).strftime("%b%d %H:%M")
+    return (datetime.datetime.fromtimestamp(int(submission.created)).strftime("%b%d %H:%M")
             + "SUBM_URL" + str(submission.url)
             + "SUBM_TXT" + submission.selftext.replace("\n", "") + "\n")
 
@@ -283,6 +283,32 @@ def authTwitter(job_dir):
     p_length = sum(1 for _ in p_lines)
     q_length = sum(1 for _ in q_lines)
 
+def deleteTweets(num):
+    # handle window limits
+    def limit_handled(cursor):
+        while True:
+            try:
+                yield cursor.next()
+            except tweepy.RateLimitError:
+                log("Reached API window limit: taking 15min smoke break..." + e.reason)
+                # wait for next request window to continue
+                wait(60 * 15, 60 * 15 + 1)
+    count_del = 0
+    print('scanning for month old tweets...')
+    for status in limit_handled(tweepy.Cursor(api.user_timeline).items()):
+        # if status older than 1 month, delete it
+        cutoff = datetime.datetime.now() - datetime.timedelta(weeks=4)
+        if status.created_at < cutoff:
+            try:
+                api.destroy_status(status.id)
+                count_del += 1
+                log("Deleted: " + str(status.id) + ' originally posted ' + str(status.created_at))
+                #wait(1, 3)
+            except:
+                log("Failed to delete: " + str(status.id))
+        if count_del >= int(num):
+            break
+    log(str(count_del) + ' month old tweets deleted.')
 
 def getRandPromo():
     return p_lines[randint(0, p_length - 1)]
@@ -477,7 +503,7 @@ def scrapeTwitter(con, eng, fol, pro, dm):
 # get command line arguments and execute appropriate functions
 def main(argv):
     # for logging purposes
-    start_time = datetime.now()
+    start_time = datetime.datetime.now()
     
     count_reply = 0
     count_follow = 0
@@ -489,7 +515,7 @@ def main(argv):
         if args.t_fol:
             log("Followed {fol} tweeters.".format(fol=str(count_follow)))
         
-        log("Total run time: " + str(datetime.now() - start_time))
+        log("Total run time: " + str(datetime.datetime.now() - start_time))
     
     # catch SIGINTs and KeyboardInterrupts
     def signal_handler(signal, frame):
@@ -508,6 +534,7 @@ def main(argv):
     twit_parser.add_argument('-j', '--job', dest='JOB_DIR', help="choose job to run by specifying job's relative directory")
     twit_parser.add_argument('-t', '--tweet-status', action='store_true', dest='t_upd', help='update status with random promo from twit_promos.txt')
     twit_parser.add_argument('-u', '--unfollow', dest='UNF', help ="unfollow users who aren't following you back, UNF=number to unfollow")
+    twit_parser.add_argument('-r', '--remove-tweets', dest='N_REM', help='remove tweets/replies older than 1 month')    
     
     group_scrape = twit_parser.add_argument_group('query')
     group_scrape.add_argument('-s', '--scrape', action='store_true', dest='t_scr', help='scrape for tweets matching queries in twit_queries.txt')
@@ -517,8 +544,8 @@ def main(argv):
     group_promote = twit_parser.add_argument_group('spam')
     group_promote.add_argument('-f', '--follow', action='store_true', dest='t_fol', help='follow original tweeters in twit_scrape_dump.txt')
     group_promote.add_argument('-p', '--promote', action='store_true', dest='t_pro', help='favorite tweets and reply to tweeters in twit_scrape_dump.txt with random promo from twit_promos.txt')
-    group_promote.add_argument('-d', '--direct-message', action='store_true', dest='t_dm', help='direct message tweeters in twit_scrape_dump.txt with random promo from twit_promos.txt')
-    
+    group_promote.add_argument('-d', '--direct-message', action='store_true', dest='t_dm', help='direct message tweeters in twit_scrape_dump.txt with random promo from twit_promos.txt')    
+
     # Reddit arguments
     reddit_parser = subparsers.add_parser('reddit', help='Reddit: scrape subreddits, promote to results')
     reddit_parser.add_argument('-s', '--scrape', dest='N', help='scrape subreddits in subreddits.txt for keywords in red_keywords.txt; N = number of posts to scrape')
@@ -551,7 +578,10 @@ def main(argv):
         if args.t_scr:
             scrapeTwitter(args.t_con, args.t_eng, args.t_fol, args.t_pro, args.t_dm)
             executed = 1
-                
+            
+        elif args.N_REM:
+            deleteTweets(args.N_REM)  
+  
         else: # otherwise promote to all entries in scrape_dump file
             # get scrape dump lines
             f = open(path_scrp_dmp, "r")
