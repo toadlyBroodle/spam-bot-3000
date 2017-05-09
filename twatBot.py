@@ -356,7 +356,7 @@ def folTweeter(scrn_name):
             api.create_friendship(scrn_name)
             log("Followed: " + scrn_name)
             # sleep for 45-75s
-            wait(45, 75)
+            wait(30, 60)
             return 1
         else:
             log("Already following: " + scrn_name)
@@ -381,6 +381,9 @@ def replyToTweet(twt_id, scrn_name):
         api.create_favorite(twt_id)
         log("Favorited: " + scrn_name + " [" + twt_id + "]")
         
+        # wait 30-60 seconds between favoriting and spamming
+        wait(30, 60)
+
         # try spamming op with random promo line
         spamOP(twt_id, scrn_name)
         return 1
