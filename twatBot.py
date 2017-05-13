@@ -491,7 +491,7 @@ def scrapeTwitter(con, eng, fol, pro, dm):
                 k += processTweet(c.next(), pro, fol, dm)                    
                 i += 1
             except tweepy.TweepError as e:
-                ret_code = handleTweepError(e, None)
+                ret_code = handleTweepyError(e, None)
                 if ret_code is 2: # HTTPError returned from query, move onto next query
                     break
                     

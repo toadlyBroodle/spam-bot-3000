@@ -20,6 +20,8 @@ grep -iv spectacular |
 grep -iv points |
 grep -iv "50" |
 grep -iv Enter |
+grep -iv wonder |
+grep -iv mature |
 grep -iv @SYWSweeps |
 grep -iv PORTER-CABLE |
 grep -iv @Tool_Time_UK: |
