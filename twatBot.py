@@ -290,7 +290,7 @@ def authTwitter(job_dir, t_bro):
         pw = getpass.getpass()
         print("Booting browser...")
         browser = webdriver.Firefox()
-        print("While script running, browser must remain in focus.")
+        print("For script to work correctly, browser must remain in focus.")
         print("Logging in to twitter...")
         browser.get("https://twitter.com/login")
         # wait till login page loaded    
@@ -516,9 +516,9 @@ def main(argv):
     
     def report_job_status():
         # report how many actions performed
-        if args.t_pro:
+        if args.t_pro or args.t_bro:
             log("Replied to {rep} tweets.".format(rep=str(count_reply)))
-        if args.t_fol:
+        if args.t_fol or args.t_bro:
             log("Followed {fol} tweeters.".format(fol=str(count_follow)))
         
         log("Total run time: " + str(datetime.now() - start_time))
@@ -619,7 +619,8 @@ def main(argv):
 
                     # favorite
                     skipWait = False
-                    try: 
+                    try:
+                        # will throw exception if already favorited because button not clickable                        
                         browser.find_element_by_css_selector("button.js-actionFavorite:nth-child(1)").click()
                         log("Favorited " + scrn_name)
                         
@@ -632,18 +633,21 @@ def main(argv):
                                 log('Browser problem following ' + scrn_name)
                             
                             log("Followed: " + scrn_name)
+                            count_follow += 1
                         else:
                             log("Already following: " + scrn_name)
                                          
-                        # reply
+                        # reply; don't reply to rewetweeters because original tweet already favorited
                         try:
                             reply_form.click()
                             sleep(1)
                             reply_form.send_keys(getRandPromo())
                             browser.find_element_by_css_selector(".is-reply > div:nth-child(3) > div:nth-child(2) > button:nth-child(2)").click()
                             log("Replied to " + scrn_name)
+                            count_reply += 1
                         except:
                             log('Browser problem replying to ' + twt_id)
+                            skipWait = True
                     except:
                         log('Already favorited and replied to ' + twt_id)
                         skipWait = True
