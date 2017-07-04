@@ -15,6 +15,13 @@ import re
 import os
 # Twitter imports:
 import tweepy
+# Web Scraping, Parsing imports:
+import getpass
+import requests, webbrowser, bs4 
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 # global variables
 twatbot_abs_dir = os.path.dirname(os.path.abspath(__file__)) #<-- absolute path to twatbot directory
@@ -29,6 +36,7 @@ p_length = 0
 q_lines = []
 q_length = 0
 api = None
+browser = None
 # reddit
 reddit = None
 reddit_subkeys = None
@@ -224,7 +232,7 @@ def handleTweepyError(e, scrn_name):
         return 3
         
 # get authentication credentials and tweepy api object
-def authTwitter(job_dir):
+def authTwitter(job_dir, t_bro):
     
     global path_scrp_dmp
     global path_queries
@@ -235,6 +243,7 @@ def authTwitter(job_dir):
     global q_lines
     global q_length
     global api
+    global browser
     
     # get correct paths to files for current job
     if job_dir:
@@ -261,7 +270,7 @@ def authTwitter(job_dir):
         for i in range(len(cred_lines_raw)):
             cred_lines[i] = (cred_lines_raw[i].strip())
 
-        print("Authenticating...")        
+        print("Authenticating tweepy api...")        
         # authenticate and get reference to api
         auth = tweepy.OAuthHandler(cred_lines[0], cred_lines[1])
         auth.set_access_token(cred_lines[2], cred_lines[3])
@@ -269,10 +278,26 @@ def authTwitter(job_dir):
     
     # ensure authentication was successful
     try:
-        log("Authenticated as: " + api.me().screen_name)
+        log("Authenticated tweepy api as: " + api.me().screen_name)
     except tweepy.TweepError as e:
         handleTweepyError(e, None)
         sys.exit(1)
+
+    if t_bro:
+        # open browser and login to twitter
+        print("Twitter user: ", end='')
+        usr = input()
+        pw = getpass.getpass()
+        print("Booting browser...")
+        browser = webdriver.Firefox()
+        print("While script running, browser must remain in focus.")
+        print("Logging in to twitter...")
+        browser.get("https://twitter.com/login")
+        # wait till login page loaded    
+        sleep(2)
+        browser.find_element_by_css_selector(".js-username-field").send_keys(usr)
+        browser.find_element_by_css_selector(".js-password-field").send_keys(pw)   
+        browser.find_element_by_css_selector("#page-container > div > div.signin-wrapper > form > div.clearfix > button").click()
 
     #  load promo lines (tweets) from text file
     with open(path_promos, 'r') as promoFile:
@@ -331,6 +356,7 @@ def folTweeter(scrn_name):
         friends = api.get_user(scrn_name).following
         if not friends:
             api.create_friendship(scrn_name)
+            
             log("Followed: " + scrn_name)
             # sleep for 45-75s
             wait(45, 75)
@@ -347,7 +373,8 @@ def folTweeter(scrn_name):
 def spamOP(twt_id, scrn_name):
     # reply to op with random spam
     spamPost = getRandPromo()
-    api.update_status('@' + scrn_name + ' ' + spamPost, twt_id)
+    api.update_status('@' + scrn_name + ' ' + spamPost, twt_id)    
+
     log("Spammed: " + scrn_name)
     # wait 45-75 seconds between spam tweets
     wait(45, 75)
@@ -519,10 +546,12 @@ def main(argv):
     group_scrape.add_argument('-c', '--continuous', action='store_true', dest='t_con', help='scape continuously - suppress prompt to continue after 50 results per query')
     group_scrape.add_argument('-e', '--english', action='store_true', dest='t_eng', help='return only tweets written in English')
     
-    group_promote = twit_parser.add_argument_group('spam')
-    group_promote.add_argument('-f', '--follow', action='store_true', dest='t_fol', help='follow original tweeters in twit_scrape_dump.txt')
-    group_promote.add_argument('-p', '--promote', action='store_true', dest='t_pro', help='favorite tweets and reply to tweeters in twit_scrape_dump.txt with random promo from twit_promos.txt')
-    group_promote.add_argument('-d', '--direct-message', action='store_true', dest='t_dm', help='direct message tweeters in twit_scrape_dump.txt with random promo from twit_promos.txt')
+    group_promote_browser = twit_parser.add_argument_group('spam -> browser')
+    group_promote_browser.add_argument('-b', '--browser', action='store_true', dest='t_bro', help='favorite, follow, reply to all scraped results and thwart api limits by mimicking human in browser!')
+    group_promote_tweepy = twit_parser.add_argument_group('spam -> tweepy api')
+    group_promote_tweepy.add_argument('-f', '--follow', action='store_true', dest='t_fol', help='follow original tweeters in twit_scrape_dump.txt')
+    group_promote_tweepy.add_argument('-p', '--promote', action='store_true', dest='t_pro', help='favorite tweets and reply to tweeters in twit_scrape_dump.txt with random promo from twit_promos.txt')
+    group_promote_tweepy.add_argument('-d', '--direct-message', action='store_true', dest='t_dm', help='direct message tweeters in twit_scrape_dump.txt with random promo from twit_promos.txt')
     
     # Reddit arguments
     reddit_parser = subparsers.add_parser('reddit', help='Reddit: scrape subreddits, promote to results')
@@ -540,7 +569,7 @@ def main(argv):
     # twitter handler
     if args.platform == 'twitter':
         # get authentication credentials and api
-        authTwitter(args.JOB_DIR)
+        authTwitter(args.JOB_DIR, args.t_bro)
 
         # update status
         if args.t_upd:
@@ -575,17 +604,72 @@ def main(argv):
                     
                 twt_id = pd[1]
                 scrn_name = pd[2]
-                
-                if args.t_fol:
+            
+                if args.t_bro:
+                    tweet_url = 'https://twitter.com/' + scrn_name + '/status/' + twt_id
+                    #print('Loading ' + tweet_url + '...')
+                    # Retrieve tweet page.
+                    browser.get(tweet_url)
+                    try:
+                        reply_form_id = "tweet-box-reply-to-" + twt_id
+                        reply_form = browser.find_element_by_id(reply_form_id)
+                        #reply_form = browser.find_element_by_css_selector("div[id*=tweet-box-reply-to-]") # id contains string
+                    except:
+                        print('No browser element found with id=' + reply_form_id)
+
+                    # favorite
+                    skipWait = False
+                    try: 
+                        browser.find_element_by_css_selector("button.js-actionFavorite:nth-child(1)").click()
+                        log("Favorited " + scrn_name)
+                        
+                        # follow, if not already; don't follow retweeters because already favorited original tweet
+                        friends = api.get_user(scrn_name).following
+                        if not friends:
+                            try:
+                                browser.find_element_by_css_selector("button.EdgeButton--medium:nth-child(1)").click()
+                            except:
+                                log('Browser problem following ' + scrn_name)
+                            
+                            log("Followed: " + scrn_name)
+                        else:
+                            log("Already following: " + scrn_name)
+                                         
+                        # reply
+                        try:
+                            reply_form.click()
+                            sleep(1)
+                            reply_form.send_keys(getRandPromo())
+                            browser.find_element_by_css_selector(".is-reply > div:nth-child(3) > div:nth-child(2) > button:nth-child(2)").click()
+                            log("Replied to " + scrn_name)
+                        except:
+                            log('Browser problem replying to ' + twt_id)
+                    except:
+                        log('Already favorited and replied to ' + twt_id)
+                        skipWait = True
+
+                    # prefix all processed scape dump lines with '-'
+                    scrp_lines[i] = '-' + scrp_lines[i]
+                    f = open(path_scrp_dmp, "w")
+                    f.writelines(scrp_lines)
+                    f.close()
+
+                    # only wait if successfully promoted to
+                    if not skipWait:
+                        wait(30, 60)
+
+                elif args.t_fol:
                     ret_code = folTweeter(scrn_name)
+                    
                     if ret_code is 3:
                         report_job_status()
                         sys.exit(1)
                     # update follow count: return value will be either 0 or 1
                     count_follow += ret_code
                     
-                if args.t_pro:
+                elif args.t_pro:
                     ret_code = replyToTweet(twt_id, scrn_name)
+
                     if ret_code <= 1: # minor isolated error returned, increment/decrement reply count and continue
                         count_reply += ret_code
                     elif ret_code is 2: # automation detected
@@ -594,16 +678,20 @@ def main(argv):
                     elif ret_code is 3: # serious error returned, terminate activity
                         report_job_status()
                         sys.exit(1)
-                        
+
                     # prefix spammed scape dump lines with '-'
                     scrp_lines[i] = '-' + scrp_lines[i]
                     f = open(path_scrp_dmp, "w")
                     f.writelines(scrp_lines)
                     f.close()
                     
-                if args.t_dm:
+                elif args.t_dm:
                     directMessageTweet(scrn_name)
-            
+
+            # close browser if open
+            if t_bro:
+                browser.quit()
+
             log("Job completed.")
             report_job_status()
                 

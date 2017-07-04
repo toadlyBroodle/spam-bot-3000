@@ -14,8 +14,14 @@ fi
 #done < "$1"
 
 cat ./$1/twit_scrape_dump.txt | 	# get scrape dump file from command's first argument
-grep -iv "wall clock" | 			# remove all these keywords, ignoring case
-grep -iv stick | 
-grep -iv wand |
-grep -iv memorial |
+grep -iv chance | 			# remove all these keywords, ignoring case
+grep -iv instantwingame | 
+grep -iv snrtg |
+grep -iv kprs |
+grep -iv flockbn |
+grep -iv mistylady |
+grep -iv points |
+grep -iv @SYWSweeps |
+grep -iv mature |
+grep -iv wonder |
 tr -d '\200-\377' > ./$1/twit_scrp_dmp_filtd.txt # remove any non-ascii characters introduced by grep, and print to file

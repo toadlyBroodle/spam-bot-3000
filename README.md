@@ -18,11 +18,14 @@ A python command-line (CLI) bot for automating promotion on popular social media
 	- scan twitter for list of custom queries, dump results in local file (twit_scrape_dump.txt)
 		- scan continuously or in overwatch mode
 	- promotion abilities
-		- follow original posters
-		- favorite relevant tweets
-		- direct message relevant tweets
-		- reply to relevant tweets with random promotional tweet from file (twit_promos.txt)
-		- ignore tweets by marking them in dump file with "-" prefix
+        - tweepy api
+		    - follow original posters
+		    - favorite relevant tweets
+		    - direct message relevant tweets
+		    - reply to relevant tweets with random promotional tweet from file (twit_promos.txt)
+        - in browser
+            - favorite, follow, reply to scraped results directly in browser to thwart api limits	    
+        - ignore tweets by marking them in dump file with "-" prefix
 	- script for new keyword and hashtag research and gleening from scraped results
 	- script for filtering out of irrelevant keywords/hashtags
 	- tweepy exception handling
@@ -102,7 +105,8 @@ your_access_token_secret
 
 ## twitter usage
 ```
-usage: twatBot.py twitter [-h] [-j JOB_DIR] [-u UNF] [-t] [-s] [-c] [-f] [-p]
+usage: twatBot.py twitter [-h] [-j JOB_DIR] [-t] [-u UNF] [-s] [-c] [-e] [-b]
+                          [-f] [-p] [-d]
 
 optional arguments:
  -h, --help				show this help message and exit
@@ -117,32 +121,41 @@ optional arguments:
  -c, --continuous		scape continuously - suppress prompt to continue after 50 results per query
  -e, --english         	return only tweets written in English
 
-spam:
+spam -> browser:
+ -b, --browser          favorite, follow, reply to all scraped results and
+                        thwart api limits by mimicking human in browser!
+
+spam -> tweepy api:
  -f, --follow			follow original tweeters in twit_scrape_dump.txt
  -p, --promote			favorite tweets and reply to tweeters in twit_scrape_dump.txt with random promo from twit_promos.txt
  -d, --direct-message	direct message tweeters in twit_scrape_dump.txt with random promo from twit_promos.txt
 ```
 
-## twitter workflows
+## twitter example workflows
 1) continuous mode
-	- `-csp` scrape and promote to all tweets matching queries
+	- `-cspf` scrape and promote to all tweets matching queries
 2) overwatch mode
 	- `-s` scrape first
 	- manually edit twit_scrape_dump.txt
 		- add '-' to beginning of line to ignore
 		- leave line unaltered to promote to
-	- `-p` then promote to remaining tweets in twit_scrape_dump.txt
+	- `-pf` then promote to remaining tweets in twit_scrape_dump.txt
 3) gleen new keywords and hashtags from scrape dumps
 	- `bash gleen_keywords_from_twit_scrape.bash`
 		- input file: twit_scrape_dump.txt
-		- output file: extras/gleened_keywords.txt
+		- output file: gleened_keywords.txt
 	- `bash gleen_hashtags_from_twit_scrape.bash`
 		- input file: twit_scrape_dump.txt
-		- output file: extras/gleened_hashtags.txt
+		- output file: gleened_hashtags.txt
 4) filter out keywords/hashtags from scrape dump
 	- 'filter_out_strings_from_twit_scrape.bash'
 		- input file: twit_scrape_dump.txt
-		- output file: extras/twit_scrp_dmp_filtd.txt
+		- output file: twit_scrp_dmp_filtd.txt
+5) browser mode
+    - `-b` thwart api limits by promoting to scraped results directly in firefox browser 
+        - on start, login with twitter username and password
+6) specify job
+    - `-j studfinder_example/` specify which job directory to execute
 
 ## notes
 If you don't want to maintain individual jobs in separate directories, you may create single credentials, queries, promos, and scrape dump files in main working directory.
