@@ -592,6 +592,7 @@ def main(argv):
             scrp_lines = f.readlines()
             f.close()
             
+            
             for i in range(len(scrp_lines)):
                 try:
                     pd = parseDumpLine(scrp_lines[i])
@@ -660,7 +661,7 @@ def main(argv):
 
                     # only wait if successfully promoted to
                     if not skipWait:
-                        wait(30, 60)
+                        wait(60, 90)
 
                 elif args.t_fol:
                     ret_code = folTweeter(scrn_name)
@@ -693,7 +694,7 @@ def main(argv):
                     directMessageTweet(scrn_name)
 
             # close browser if open
-            if t_bro:
+            if args.t_bro:
                 browser.quit()
 
             log("Job completed.")

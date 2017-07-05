@@ -9,10 +9,9 @@ fi
 
 
 cat ./$1/twit_scrape_dump.txt | 	# get scrape dump file from command's first argument
-sed s/TWT_TXT/" "/g | 			# seperate meta data from keywords
+sed s/SCRN_NAME/" "/g | 			# seperate meta data from keywords
 tr '[:space:]' '[\n*]' | 		# change spaces to newlines
 grep -v "^\s*$" | 			# remove blank lines
-grep -v "#" | 				# filter out hashtags
 sort | 					# prepare input to uniq
-uniq -dic | 				# eliminate single instance keywords, ignore case, prefix keywords with occurrence counts
+uniq -di | 				# eliminate single instance keywords, ignore case
 sort -bnr > ./$1/gleened_keywords.txt 	# sort in numeric reverse order, ignore whitespace, output to file 

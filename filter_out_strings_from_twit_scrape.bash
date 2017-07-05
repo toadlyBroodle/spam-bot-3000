@@ -7,21 +7,11 @@ if [ -z "$1" ]
 		exit
 fi
 
-# TODO read in job's list of strings to filter
-#list_to_filter=()
-#while IFS='' read -r line || [[ -n "$line" ]]; do
-#	list_to_filter+=("$line")
-#done < "$1"
+# get | delimeted string of edited keywords to filter out
+delimStr=$(cat ./$1gleened_keywords.txt | tr "\n" "|")
+# remove lines containing strings to filter out
+grep -vE "($delimStr)" ./$1twit_scrape_dump.txt |
+# remove any non ascii characters from dump file
+tr -d '\200-\377' > ./$1twit_scrape_dump_filtd.txt
 
-cat ./$1/twit_scrape_dump.txt | 	# get scrape dump file from command's first argument
-grep -iv chance | 			# remove all these keywords, ignoring case
-grep -iv instantwingame | 
-grep -iv snrtg |
-grep -iv kprs |
-grep -iv flockbn |
-grep -iv mistylady |
-grep -iv points |
-grep -iv @SYWSweeps |
-grep -iv mature |
-grep -iv wonder |
-tr -d '\200-\377' > ./$1/twit_scrp_dmp_filtd.txt # remove any non-ascii characters introduced by grep, and print to file
+echo 'done'
