@@ -111,7 +111,7 @@ usage: twatBot.py twitter [-h] [-j JOB_DIR] [-t] [-u UNF] [-s] [-c] [-e] [-b]
 optional arguments:
  -h, --help		show this help message and exit
  -j JOB_DIR, --job JOB_DIR
-	            choose job to run by specifying job's relative directory
+	                choose job to run by specifying job's relative directory
  -t, --tweet-status 	update status with random promo from twit_promos.txt
  -u UNF, --unfollow UNF
                         unfollow users who aren't following you back, UNF=number to unfollow
