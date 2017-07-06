@@ -111,14 +111,14 @@ usage: twatBot.py twitter [-h] [-j JOB_DIR] [-t] [-u UNF] [-s] [-c] [-e] [-b]
 optional arguments:
  -h, --help				show this help message and exit
  -j JOB_DIR, --job JOB_DIR
-						choose job to run by specifying job's relative directory
+	        choose job to run by specifying job's relative directory
  -t, --tweet-status 	update status with random promo from twit_promos.txt
  -u UNF, --unfollow UNF
                         unfollow users who aren't following you back, UNF=number to unfollow
 
  query:
- -s, --scrape			scrape for tweets matching queries in twit_queries.txt
- -c, --continuous		scape continuously - suppress prompt to continue after 50 results per query
+ -s, --scrape		scrape for tweets matching queries in twit_queries.txt
+ -c, --continuous	scape continuously - suppress prompt to continue after 50 results per query
  -e, --english         	return only tweets written in English
 
 spam -> browser:
@@ -126,8 +126,8 @@ spam -> browser:
                         thwart api limits by mimicking human in browser!
 
 spam -> tweepy api:
- -f, --follow			follow original tweeters in twit_scrape_dump.txt
- -p, --promote			favorite tweets and reply to tweeters in twit_scrape_dump.txt with random promo from twit_promos.txt
+ -f, --follow		follow original tweeters in twit_scrape_dump.txt
+ -p, --promote		favorite tweets and reply to tweeters in twit_scrape_dump.txt with random promo from twit_promos.txt
  -d, --direct-message	direct message tweeters in twit_scrape_dump.txt with random promo from twit_promos.txt
 ```
 
