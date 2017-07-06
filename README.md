@@ -26,9 +26,9 @@ A python command-line (CLI) bot for automating promotion on popular social media
         - in browser
             - favorite, follow, reply to scraped results directly in browser to thwart api limits	    
         - ignore tweets by marking them in dump file with "-" prefix
-	- script for new keyword and hashtag research and gleening from scraped results
-	- script for filtering out of irrelevant keywords/hashtags
-	- tweepy exception handling
+	- script for new keyword, hashtag research by gleening scraped results
+	- script for filtering out irrelevant keywords, hashtags, screen names
+	- relatively graceful exception handling
 	- write all activity to log (log.txt)
  
 ## reddit initial setup
@@ -140,16 +140,16 @@ spam -> tweepy api:
 		- add '-' to beginning of line to ignore
 		- leave line unaltered to promote to
 	- `-pf` then promote to remaining tweets in twit_scrape_dump.txt
-3) gleen new keywords and hashtags from scrape dumps
+3) gleen common keywords, hashtags, screen names from scrape dumps
 	- `bash gleen_keywords_from_twit_scrape.bash`
 		- input file: twit_scrape_dump.txt
 		- output file: gleened_keywords.txt
-	- `bash gleen_hashtags_from_twit_scrape.bash`
-		- input file: twit_scrape_dump.txt
-		- output file: gleened_hashtags.txt
+            - results ordered by most occurrences first
 4) filter out keywords/hashtags from scrape dump
-	- 'filter_out_strings_from_twit_scrape.bash'
-		- input file: twit_scrape_dump.txt
+    - manually edit gleened_keywords.txt by removing all relevent results	
+    - `filter_out_strings_from_twit_scrape.bash`
+        - keywords input file: gleened_keywords.txt		
+        - input file: twit_scrape_dump.txt
 		- output file: twit_scrp_dmp_filtd.txt
 5) browser mode
     - `-b` thwart api limits by promoting to scraped results directly in firefox browser 
