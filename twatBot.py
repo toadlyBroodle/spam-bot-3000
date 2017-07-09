@@ -17,7 +17,7 @@ import os
 import tweepy
 # Web Scraping, Parsing imports:
 import getpass
-import requests, webbrowser, bs4 
+import requests, webbrowser, bs4
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -48,7 +48,7 @@ def log(s):
 
     with open(path_log, 'a') as l:
         l.write(t + "\n")
-        
+
     # also print truncated log to screen
     p = t[:90] + (t[90:] and '..')
     print(p)
@@ -57,7 +57,7 @@ def wait(min, max):
     wt = randint(min, max)
     print("sleeping " + str(wt) + "s...")
     sleep(wt)
-    
+
 def authReddit():
     global reddit
     global reddit_subkeys
@@ -65,7 +65,7 @@ def authReddit():
     global path_queries
     global path_promos
     global path_log
-    
+
     # get paths to filesk TODO use them for seperate jobs
     #path_scrp_dmp = os.path.join(twatbot_abs_dir, 'red_scrape_dump.txt')
     #path_queries =  os.path.join(twatbot_abs_dir, 'red_queries.txt')
@@ -114,7 +114,7 @@ def getRandRedPromo():
         rp_lines = f.readlines()
         f_length = sum(1 for _ in rp_lines)
         return rp_lines[randint(0, f_length - 1)]
-        
+
 def replyReddit():
      # open dump file in read mode
     with open('red_scrape_dump.txt', 'r') as f:
@@ -132,17 +132,17 @@ def replyReddit():
             try:
                 submission.reply(getRandRedPromo())
                 log('Replied: ' + pd[1])
-                
+
                 # wait for 45-75 secs to evade spamming flags
                 wait(45, 75)
             except praw.exceptions.ClientException as e:
                 log("Error: " + e.message)
 
 def scrapeReddit(scrape_limit, r_new, r_top, r_hot, r_ris):
-    
+
     def scrape_log(i, k):
         log("Scraped: {total} submissions ({new} new) in {subs}".format(
-            total=str(i), 
+            total=str(i),
             new=str(k),
             subs=subredstr))
 
@@ -150,10 +150,10 @@ def scrapeReddit(scrape_limit, r_new, r_top, r_hot, r_ris):
     for subkey in reddit_subkeys:
         i = 0 # total submissions scraped
         k = 0 # new submissions scraped
-        
+
         subredstr = subkey["subreddits"]
         subreddits = reddit.subreddit(subredstr)
-        
+
         # search new, hot, or rising categories?
         category = None
         if r_new:
@@ -171,7 +171,7 @@ def scrapeReddit(scrape_limit, r_new, r_top, r_hot, r_ris):
         else:
             print("Which category would you like to scrape? [-n|-t|-H|-r]")
             sys.exit(1)
-        
+
         # indefinitely monitor new submissions with: subreddit.stream.submissions()
         for submission in category:
             done = False
@@ -198,7 +198,7 @@ def scrapeReddit(scrape_limit, r_new, r_top, r_hot, r_ris):
                     break
 
             k += processSubmission(submission)
-            i += 1                    
+            i += 1
         scrape_log(i, k)
 
 def handleTweepyError(e, scrn_name):
@@ -230,10 +230,10 @@ def handleTweepyError(e, scrn_name):
         log(e.reason)
         log("Terminal API Error returned: exiting, see log.txt for details.")
         return 3
-        
+
 # get authentication credentials and tweepy api object
 def authTwitter(job_dir, t_bro):
-    
+
     global path_scrp_dmp
     global path_queries
     global path_promos
@@ -244,10 +244,10 @@ def authTwitter(job_dir, t_bro):
     global q_length
     global api
     global browser
-    
+
     # get correct paths to files for current job
     if job_dir:
-        cred_path = os.path.join(twatbot_abs_dir, job_dir + 'credentials.txt')    
+        cred_path = os.path.join(twatbot_abs_dir, job_dir + 'credentials.txt')
         path_scrp_dmp = os.path.join(twatbot_abs_dir, job_dir + 'twit_scrape_dump.txt')
         path_queries = os.path.join(twatbot_abs_dir, job_dir + 'twit_queries.txt')
         path_promos = os.path.join(twatbot_abs_dir, job_dir + 'twit_promos.txt')
@@ -258,24 +258,24 @@ def authTwitter(job_dir, t_bro):
         path_queries = os.path.join(twatbot_abs_dir, 'twit_queries.txt')
         path_promos = os.path.join(twatbot_abs_dir, 'twit_promos.txt')
         path_log = os.path.join(twatbot_abs_dir, 'log.txt')
-    
+
     # get authorization credentials from credentials file
     with open(cred_path, 'r') as creds:
-        
+
         # init empty array to store credentials
         cred_lines = [None] * 4
-        
+
         # strip end of line characters and any trailing spaces, tabs off credential lines
         cred_lines_raw = creds.readlines()
         for i in range(len(cred_lines_raw)):
             cred_lines[i] = (cred_lines_raw[i].strip())
 
-        print("Authenticating tweepy api...")        
+        print("Authenticating tweepy api...")
         # authenticate and get reference to api
         auth = tweepy.OAuthHandler(cred_lines[0], cred_lines[1])
         auth.set_access_token(cred_lines[2], cred_lines[3])
         api = tweepy.API(auth)
-    
+
     # ensure authentication was successful
     try:
         log("Authenticated tweepy api as: " + api.me().screen_name)
@@ -293,10 +293,10 @@ def authTwitter(job_dir, t_bro):
         print("For script to work correctly, browser must remain in focus.")
         print("Logging in to twitter...")
         browser.get("https://twitter.com/login")
-        # wait till login page loaded    
+        # wait till login page loaded
         sleep(2)
         browser.find_element_by_css_selector(".js-username-field").send_keys(usr)
-        browser.find_element_by_css_selector(".js-password-field").send_keys(pw)   
+        browser.find_element_by_css_selector(".js-password-field").send_keys(pw)
         browser.find_element_by_css_selector("#page-container > div > div.signin-wrapper > form > div.clearfix > button").click()
 
     #  load promo lines (tweets) from text file
@@ -333,9 +333,9 @@ def unfollowUsers(num):
     my_scr_nm = api.me().screen_name
     followers = api.followers_ids(my_scr_nm)
     friends = api.friends_ids(my_scr_nm)
-    
+
     print("Unfollowing unreciprocating users...")
-    
+
     count_uf = 0
     for f in friends:
         if f not in followers:
@@ -347,7 +347,7 @@ def unfollowUsers(num):
                 break
             # avoid anti-spam-bot detection
             wait(3, 6)
-                
+
     log("Unfollowed {unf} filthy freeloaders.".format(unf=str(count_uf)))
 
 def folTweeter(scrn_name):
@@ -356,7 +356,7 @@ def folTweeter(scrn_name):
         friends = api.get_user(scrn_name).following
         if not friends:
             api.create_friendship(scrn_name)
-            
+
             log("Followed: " + scrn_name)
             # sleep for 45-75s
             wait(45, 75)
@@ -369,11 +369,11 @@ def folTweeter(scrn_name):
         if ret_code is 3:
             return 3
         return 0
-    
+
 def spamOP(twt_id, scrn_name):
     # reply to op with random spam
     spamPost = getRandPromo()
-    api.update_status('@' + scrn_name + ' ' + spamPost, twt_id)    
+    api.update_status('@' + scrn_name + ' ' + spamPost, twt_id)
 
     log("Spammed: " + scrn_name)
     # wait 45-75 seconds between spam tweets
@@ -384,11 +384,11 @@ def replyToTweet(twt_id, scrn_name):
         # favorite tweet, will throw error if tweet already favorited so as to avoid double spamming
         api.create_favorite(twt_id)
         log("Favorited: " + scrn_name + " [" + twt_id + "]")
-        
+
         # try spamming op with random promo line
         spamOP(twt_id, scrn_name)
         return 1
-            
+
     except tweepy.TweepError as e:
         ret_code = handleTweepyError(e, scrn_name)
         if ret_code is 0:
@@ -409,15 +409,15 @@ def directMessageTweet(scrn_name):
     except tweepy.TweepError as e:
         handleTweepyError(e, scrn_name)
         return
-    
+
     log("Direct Messaged: " + scrn_name)
-    
+
 def buildDumpLine(tweet):
     return (tweet.created_at.strftime("%b%d %H:%M")
                 + "TWT_ID" + str(tweet.id)
                 + "SCRN_NAME" + tweet.user.screen_name
                 + "TWT_TXT" + tweet.text.replace("\n", "") + "\n")
-    
+
 def parseDumpLine(dl):
     # parse scrape dump file, seperate tweet ids from screen names
     try:
@@ -432,7 +432,7 @@ def parseDumpLine(dl):
 def processTweet(tweet, pro, fol, dm):
 
     scrn_name = tweet.user.screen_name
-    
+
     # open dump file in read mode
     with open(path_scrp_dmp, 'r') as f:
         scrp_lines = f.readlines()
@@ -441,37 +441,37 @@ def processTweet(tweet, pro, fol, dm):
         if any(str(tweet.id) in s for s in scrp_lines):
             return 0
 
-    # otherwise append to twit_scrape_dump.txt    
+    # otherwise append to twit_scrape_dump.txt
     new_line = buildDumpLine(tweet)
     with open(path_scrp_dmp, 'a') as f:
         f.write(new_line)
-    
+
     # follow op, if not already following
     if fol and not tweet.user.following:
         folTweeter(scrn_name)
-        
+
     # favorite and respond to op's tweet
     if pro:
         replyToTweet(tweet.id, scrn_name)
-        
+
     # direct message op
     if dm:
         directMessageTweet(scrn_name)
-    
+
     return 1 # return count of new tweets added to twit_scrape_dump.txt
 
 
 # continuously scrape for tweets matching all queries
 def scrapeTwitter(con, eng, fol, pro, dm):
-   
+
     def report_scrapes(i, k):
             log(("Scraped: {total} tweets ({new} new) found with: {query}\n".format(
-            total=str(i), 
-            new=str(k), 
+            total=str(i),
+            new=str(k),
             query=query.replace("\n", ""))))
-    
+
     print("Scraping...")
-   
+
     for query in q_lines:
         c = None
         if eng:
@@ -489,13 +489,13 @@ def scrapeTwitter(con, eng, fol, pro, dm):
                     if (keep_going != "Y"):
                         raise StopIteration()
                 # process next tweet
-                k += processTweet(c.next(), pro, fol, dm)                    
+                k += processTweet(c.next(), pro, fol, dm)
                 i += 1
             except tweepy.TweepError as e:
-                ret_code = handleTweepError(e, None)
+                ret_code = handleTweepyError(e, None)
                 if ret_code is 2: # HTTPError returned from query, move onto next query
                     break
-                    
+
                 report_scrapes(i, k)
                 log("Reached API window limit: taking 15min smoke break..." + e.reason)
                 # wait for next request window to continue
@@ -510,19 +510,19 @@ def scrapeTwitter(con, eng, fol, pro, dm):
 def main(argv):
     # for logging purposes
     start_time = datetime.now()
-    
+
     count_reply = 0
     count_follow = 0
-    
+
     def report_job_status():
         # report how many actions performed
         if args.t_pro or args.t_bro:
             log("Replied to {rep} tweets.".format(rep=str(count_reply)))
         if args.t_fol or args.t_bro:
             log("Followed {fol} tweeters.".format(fol=str(count_follow)))
-        
+
         log("Total run time: " + str(datetime.now() - start_time))
-    
+
     # catch SIGINTs and KeyboardInterrupts
     def signal_handler(signal, frame):
         log("Current job terminated: received KeyboardInterrupt kill signal.")
@@ -534,25 +534,25 @@ def main(argv):
     parser = argparse.ArgumentParser(description="Beep, boop.. I'm a social media promotion bot - Let's get spammy!")
 
     subparsers = parser.add_subparsers(help='platforms', dest='platform')
-    
+
     # Twitter arguments
     twit_parser = subparsers.add_parser('twitter', help='Twitter: scrape for queries, promote to results')
     twit_parser.add_argument('-j', '--job', dest='JOB_DIR', help="choose job to run by specifying job's relative directory")
     twit_parser.add_argument('-t', '--tweet-status', action='store_true', dest='t_upd', help='update status with random promo from twit_promos.txt')
     twit_parser.add_argument('-u', '--unfollow', dest='UNF', help ="unfollow users who aren't following you back, UNF=number to unfollow")
-    
+
     group_scrape = twit_parser.add_argument_group('query')
     group_scrape.add_argument('-s', '--scrape', action='store_true', dest='t_scr', help='scrape for tweets matching queries in twit_queries.txt')
     group_scrape.add_argument('-c', '--continuous', action='store_true', dest='t_con', help='scape continuously - suppress prompt to continue after 50 results per query')
     group_scrape.add_argument('-e', '--english', action='store_true', dest='t_eng', help='return only tweets written in English')
-    
+
     group_promote_browser = twit_parser.add_argument_group('spam -> browser')
     group_promote_browser.add_argument('-b', '--browser', action='store_true', dest='t_bro', help='favorite, follow, reply to all scraped results and thwart api limits by mimicking human in browser!')
     group_promote_tweepy = twit_parser.add_argument_group('spam -> tweepy api')
     group_promote_tweepy.add_argument('-f', '--follow', action='store_true', dest='t_fol', help='follow original tweeters in twit_scrape_dump.txt')
     group_promote_tweepy.add_argument('-p', '--promote', action='store_true', dest='t_pro', help='favorite tweets and reply to tweeters in twit_scrape_dump.txt with random promo from twit_promos.txt')
     group_promote_tweepy.add_argument('-d', '--direct-message', action='store_true', dest='t_dm', help='direct message tweeters in twit_scrape_dump.txt with random promo from twit_promos.txt')
-    
+
     # Reddit arguments
     reddit_parser = subparsers.add_parser('reddit', help='Reddit: scrape subreddits, promote to results')
     reddit_parser.add_argument('-s', '--scrape', dest='N', help='scrape subreddits in subreddits.txt for keywords in red_keywords.txt; N = number of posts to scrape')
@@ -565,7 +565,7 @@ def main(argv):
 
     executed = 0 # catches any command/args that fall through below tree
     args = parser.parse_args()
-    
+
     # twitter handler
     if args.platform == 'twitter':
         # get authentication credentials and api
@@ -580,32 +580,32 @@ def main(argv):
         if args.UNF:
             unfollowUsers(args.UNF)
             executed = 1
-            
+
         # scrape twitter for all queries and favorite, follow, and/or promote OPs
         if args.t_scr:
             scrapeTwitter(args.t_con, args.t_eng, args.t_fol, args.t_pro, args.t_dm)
             executed = 1
-                
+
         else: # otherwise promote to all entries in scrape_dump file
             # get scrape dump lines
             f = open(path_scrp_dmp, "r")
             scrp_lines = f.readlines()
             f.close()
-            
-            
+
+
             for i in range(len(scrp_lines)):
                 try:
                     pd = parseDumpLine(scrp_lines[i])
                 except IndexError:
                     log("Error parsing dump line {ln}: check for validity.".format(ln=str(i + 1)))
-                    
+
                 # ignore lines beginning with '-'
                 if pd[0][0] == '-':
                     continue
-                    
+
                 twt_id = pd[1]
                 scrn_name = pd[2]
-            
+
                 if args.t_bro:
                     tweet_url = 'https://twitter.com/' + scrn_name + '/status/' + twt_id
                     #print('Loading ' + tweet_url + '...')
@@ -621,10 +621,10 @@ def main(argv):
                     # favorite
                     skipWait = False
                     try:
-                        # will throw exception if already favorited because button not clickable                        
+                        # will throw exception if already favorited because button not clickable
                         browser.find_element_by_css_selector("button.js-actionFavorite:nth-child(1)").click()
                         log("Favorited " + scrn_name)
-                        
+
                         # follow, if not already; don't follow retweeters because already favorited original tweet
                         friends = api.get_user(scrn_name).following
                         if not friends:
@@ -632,12 +632,12 @@ def main(argv):
                                 browser.find_element_by_css_selector("button.EdgeButton--medium:nth-child(1)").click()
                             except:
                                 log('Browser problem following ' + scrn_name)
-                            
+
                             log("Followed: " + scrn_name)
                             count_follow += 1
                         else:
                             log("Already following: " + scrn_name)
-                                         
+
                         # reply; don't reply to rewetweeters because original tweet already favorited
                         try:
                             reply_form.click()
@@ -665,13 +665,13 @@ def main(argv):
 
                 elif args.t_fol:
                     ret_code = folTweeter(scrn_name)
-                    
+
                     if ret_code is 3:
                         report_job_status()
                         sys.exit(1)
                     # update follow count: return value will be either 0 or 1
                     count_follow += ret_code
-                    
+
                 elif args.t_pro:
                     ret_code = replyToTweet(twt_id, scrn_name)
 
@@ -689,7 +689,7 @@ def main(argv):
                     f = open(path_scrp_dmp, "w")
                     f.writelines(scrp_lines)
                     f.close()
-                    
+
                 elif args.t_dm:
                     directMessageTweet(scrn_name)
 
@@ -699,7 +699,7 @@ def main(argv):
 
             log("Job completed.")
             report_job_status()
-                
+
             executed = 1
 
     # reddit handler
@@ -713,14 +713,14 @@ def main(argv):
         if args.r_pro:
             replyReddit()
             executed = 1
-    
+
     if not executed:
         log("Unknown Execution Error")
         parser.print_help()
         sys.exit(1)
 
-            
-            
+
+
 # so main() isn't executed if file is imported
 if __name__ == "__main__":
     # remove first script name argument

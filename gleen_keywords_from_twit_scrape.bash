@@ -13,5 +13,5 @@ sed s/SCRN_NAME/" "/g | 			# seperate meta data from keywords
 tr '[:space:]' '[\n*]' | 		# change spaces to newlines
 grep -v "^\s*$" | 			# remove blank lines
 sort | 					# prepare input to uniq
-uniq -di | 				# eliminate single instance keywords, ignore case
+uniq -dic | 				# eliminate single instance keywords, ignore case
 sort -bnr > ./$1/gleened_keywords.txt 	# sort in numeric reverse order, ignore whitespace, output to file 
