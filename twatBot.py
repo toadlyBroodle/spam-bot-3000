@@ -263,7 +263,7 @@ def authTwitter(job_dir, t_bro):
     with open(cred_path, 'r') as creds:
 
         # init empty array to store credentials
-        cred_lines = [None] * 4
+        cred_lines = [None] * 6
 
         # strip end of line characters and any trailing spaces, tabs off credential lines
         cred_lines_raw = creds.readlines()
@@ -276,28 +276,25 @@ def authTwitter(job_dir, t_bro):
         auth.set_access_token(cred_lines[2], cred_lines[3])
         api = tweepy.API(auth)
 
-    # ensure authentication was successful
-    try:
-        log("Authenticated tweepy api as: " + api.me().screen_name)
-    except tweepy.TweepError as e:
-        handleTweepyError(e, None)
-        sys.exit(1)
+        # ensure authentication was successful
+        try:
+            log("Authenticated tweepy api as: " + api.me().screen_name)
+        except tweepy.TweepError as e:
+            handleTweepyError(e, None)
+            sys.exit(1)
 
-    if t_bro:
-        # open browser and login to twitter
-        print("Twitter user: ", end='')
-        usr = input()
-        pw = getpass.getpass()
-        print("Booting browser...")
-        browser = webdriver.Firefox()
-        print("For script to work correctly, browser must remain in focus.")
-        print("Logging in to twitter...")
-        browser.get("https://twitter.com/login")
-        # wait till login page loaded
-        sleep(2)
-        browser.find_element_by_css_selector(".js-username-field").send_keys(usr)
-        browser.find_element_by_css_selector(".js-password-field").send_keys(pw)
-        browser.find_element_by_css_selector("#page-container > div > div.signin-wrapper > form > div.clearfix > button").click()
+        if t_bro:
+            # open browser and login to twitter
+            print("Booting browser...")
+            browser = webdriver.Firefox()
+            print("For script to work correctly, browser must remain in focus.")
+            print("Logging in to twitter...")
+            browser.get("https://twitter.com/login")
+            # wait till login page loaded
+            sleep(2)
+            browser.find_element_by_css_selector(".js-username-field").send_keys(cred_lines[4])
+            browser.find_element_by_css_selector(".js-password-field").send_keys(cred_lines[5])
+            browser.find_element_by_css_selector("#page-container > div > div.signin-wrapper > form > div.clearfix > button").click()
 
     #  load promo lines (tweets) from text file
     with open(path_promos, 'r') as promoFile:

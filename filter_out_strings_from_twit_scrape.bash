@@ -14,4 +14,4 @@ grep -vE "($delimStr)" ./$1twit_scrape_dump.txt |
 # remove any non ascii characters from dump file
 tr -d '\200-\377' > ./$1twit_scrape_dump_filtd.txt
 
-echo 'done'
+echo 'done filtering out keywords'
