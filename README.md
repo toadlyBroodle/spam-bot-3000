@@ -1,5 +1,5 @@
 # twatBot
-A python command-line (CLI) bot for automating promotion on popular social media sites (reddit, twitter; in progress: instagram, facebook). Scrape social media with custom queries and promote your product to all relevant results with a single command. 
+A python command-line (CLI) bot for automating promotion on popular social media sites (reddit, twitter; in progress: instagram, facebook). Scrape social media with custom queries and promote your product to all relevant results with a single command.
 <b>Use at your own risk:</b> depending on how specific your custom queries are, your bot could find itself (and likely it's associated accounts) banned from social media sites very quickly ;)
 
 ## features
@@ -30,7 +30,7 @@ A python command-line (CLI) bot for automating promotion on popular social media
 	- script for filtering out irrelevant keywords, hashtags, screen names
 	- relatively graceful exception handling
 	- write all activity to log (log.txt)
- 
+
 ## reddit initial setup
 - install pip3 `sudo apt install python3-pip`
 - install <a href="https://github.com/praw-dev/praw">praw</a> python library dependency `pip3 install praw`
@@ -43,7 +43,7 @@ A python command-line (CLI) bot for automating promotion on popular social media
 	- `keywords_or`: at least one keyword in this list must be present for positive match
 	- `keywords_not`: none of these keywords can be present in a positive match
 	- any of the three lists may be omitted by leaving it empty - e.g. `"keywords_not": []`
-	
+
 <praw.ini>
 ```
 ...
@@ -55,7 +55,7 @@ password=pni9ubeht4wd50gk
 username=fakebot1
 user_agent=fakebot 0.1
 ```
-	
+
 <red_subkey_pairs.json>
 ```
 {"sub_key_pairs": [
@@ -67,7 +67,7 @@ user_agent=fakebot 0.1
 }
 ]}
 ```
-	
+
 ## reddit usage
 ```
 usage: twatBot.py reddit [-h] [-s N] [-n | -H | -r] [-p]
@@ -79,7 +79,7 @@ optional arguments:
   -H,	--hot		scrape hot posts
   -r,	--rising	scrape rising posts
   -p,	--promote	promote to posts in red_scrape_dump.txt not marked with a "-" prefix
-``` 
+```
 
 ## twitter initial setup
 - install <a href="https://github.com/tweepy/tweepy">tweepy</a> dependency `pip3 install tweepy`
@@ -93,9 +93,11 @@ your_consumer_key
 your_consumer_secret
 your_access_token
 your_access_token_secret
+your_twitter_username
+your_twitter_password
 ```
 
-- create new 'twit_promos.txt' in job directory to store your job's promotions to spam 
+- create new 'twit_promos.txt' in job directory to store your job's promotions to spam
 	- individual tweets on seperate lines
 	- each line must by <= 140 characters long
 - create new 'twit_queries.txt' in job directory to store your job's queries to scrape twitter for
@@ -146,14 +148,13 @@ spam -> tweepy api:
 		- output file: gleened_keywords.txt
             - results ordered by most occurrences first
 4) filter out keywords/hashtags from scrape dump
-    - manually edit gleened_keywords.txt by removing all relevent results	
+    - manually edit gleened_keywords.txt by removing all relevent results
     - `filter_out_strings_from_twit_scrape.bash`
         - keywords input file: gleened_keywords.txt		
         - input file: twit_scrape_dump.txt
 		- output file: twit_scrp_dmp_filtd.txt
 5) browser mode
-    - `-b` thwart api limits by promoting to scraped results directly in firefox browser 
-        - on start, login with twitter username and password
+    - `-b` thwart api limits by promoting to scraped results directly in firefox browser
 6) specify job
     - `-j studfinder_example/` specify which job directory to execute
 
