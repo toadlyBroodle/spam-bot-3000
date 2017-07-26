@@ -158,8 +158,8 @@ spam -> tweepy api:
     - `-b` thwart api limits by promoting to scraped results directly in firefox browser
 		- add username and password to lines 5 and 6 of credentials.txt respectively
 6) automatic scrape, filter, spam
-		- `auto_spam.bash`
-				- automatically scrape twitter for queries, filter out results to ignore, and spam remaining results
+	- `auto_spam.bash`
+		- automatically scrape twitter for queries, filter out results to ignore, and spam remaining results
 7) specify job
     - `-j studfinder_example/` specify which job directory to execute
 
