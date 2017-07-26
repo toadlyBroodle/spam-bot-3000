@@ -28,6 +28,7 @@ A python command-line (CLI) bot for automating promotion on popular social media
         - ignore tweets by marking them in dump file with "-" prefix
 	- script for new keyword, hashtag research by gleening scraped results
 	- script for filtering out irrelevant keywords, hashtags, screen names
+	- script for automating scraping, filtering, and spamming only most relevant results
 	- relatively graceful exception handling
 	- write all activity to log (log.txt)
 
@@ -155,7 +156,11 @@ spam -> tweepy api:
 		- output file: twit_scrp_dmp_filtd.txt
 5) browser mode
     - `-b` thwart api limits by promoting to scraped results directly in firefox browser
-6) specify job
+		- add username and password to lines 5 and 6 of credentials.txt respectively
+6) automatic scrape, filter, spam
+		- `auto_spam.bash`
+				- automatically scrape twitter for queries, filter out results to ignore, and spam remaining results
+7) specify job
     - `-j studfinder_example/` specify which job directory to execute
 
 ## notes
