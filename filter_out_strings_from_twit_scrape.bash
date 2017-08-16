@@ -8,7 +8,7 @@ if [ -z "$1" ]
 fi
 
 # get | delimeted string of edited keywords to filter out
-delimStr=$(cat ./$1gleened_keywords.txt | tr "\n" "|")
+delimStr=$(cat ./$1gleened_keywords_list.txt | tr "\n" "|")
 # remove lines containing strings to filter out
 grep -vE "($delimStr)" ./$1twit_scrape_dump.txt |
 # remove any non ascii characters from dump file
