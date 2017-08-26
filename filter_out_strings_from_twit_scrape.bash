@@ -7,6 +7,8 @@ if [ -z "$1" ]
 		exit
 fi
 
+# TODO count and print number of results removed
+
 # get | delimeted string of edited keywords to filter out
 delimStr=$(cat ./$1gleened_keywords_list.txt | tr "\n" "|")
 # remove lines containing strings to filter out
