@@ -230,6 +230,8 @@ def handleTweepyError(e, scrn_name):
         log(e.reason)
         log("Terminal API Error returned: exiting, see log.txt for details.")
         return 3
+    if ('89' in e.reason):
+        log(e.reason)
 
 # get authentication credentials and tweepy api object
 def authTwitter(job_dir, t_bro):
