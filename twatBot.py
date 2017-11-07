@@ -193,9 +193,12 @@ def scrapeReddit(scrape_limit, r_new, r_top, r_hot, r_ris):
                 continue
 
             # must contain at least one OR keyword
+            at_least_one = False
             for kw in subkey['keywords_or']:
                 if kw in tit_txt:
-                    break
+                    at_least_one = True
+            if not at_least_one:
+                continue
 
             k += processSubmission(submission)
             i += 1
