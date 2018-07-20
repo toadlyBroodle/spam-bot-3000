@@ -32,9 +32,11 @@ A python command-line (CLI) bot for automating promotion on popular social media
 	- relatively graceful exception handling
 	- write all activity to log (log.txt)
 
-## reddit initial setup
+## dependencies
 - install pip3 `sudo apt install python3-pip`
-- install <a href="https://github.com/praw-dev/praw">praw</a> python library dependency `pip3 install praw`
+- install dependencies `pip3 install --user tweepy bs4 praw selenium`
+
+## reddit initial setup
 - <a href="https://praw.readthedocs.io/en/v4.0.0/getting_started/configuration/prawini.html">update 'praw.ini'</a> with <a href="https://www.reddit.com/prefs/apps/">your reddit app credentials</a>
 	- <a href="http://pythonforengineers.com/build-a-reddit-bot-part-1/">how to register a new reddit app</a>
 - replace example promotions (red_promos.txt) with your own
@@ -83,7 +85,6 @@ optional arguments:
 ```
 
 ## twitter initial setup
-- install <a href="https://github.com/tweepy/tweepy">tweepy</a> dependency `pip3 install tweepy`
 - create new directory to store new job data in (e.g. studfinder_example/)
 - create new 'credentials.txt' file in job directory to store your twitter app's credentials
 	- <a href="https://www.digitalocean.com/community/tutorials/how-to-create-a-twitterbot-with-python-3-and-the-tweepy-library">a good guide for how to get twitter credentials</a>
