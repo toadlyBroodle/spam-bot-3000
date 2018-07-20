@@ -24,7 +24,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 # global variables
-twatbot_abs_dir = os.path.dirname(os.path.abspath(__file__)) #<-- absolute path to twatbot directory
+twotbot_abs_dir = os.path.dirname(os.path.abspath(__file__)) #<-- absolute path to twotbot directory
 # paths to files
 path_scrp_dmp = None
 path_queries = None
@@ -67,14 +67,14 @@ def authReddit():
     global path_log
 
     # get paths to filesk TODO use them for seperate jobs
-    #path_scrp_dmp = os.path.join(twatbot_abs_dir, 'red_scrape_dump.txt')
-    #path_queries =  os.path.join(twatbot_abs_dir, 'red_queries.txt')
-    #path_promos =  os.path.join(twatbot_abs_dir, 'red_promos.txt')
-    path_log =  os.path.join(twatbot_abs_dir, 'red_log.txt')
+    #path_scrp_dmp = os.path.join(twotbot_abs_dir, 'red_scrape_dump.txt')
+    #path_queries =  os.path.join(twotbot_abs_dir, 'red_queries.txt')
+    #path_promos =  os.path.join(twotbot_abs_dir, 'red_promos.txt')
+    path_log =  os.path.join(twotbot_abs_dir, 'red_log.txt')
 
     print("Authenticating...")
 
-    reddit = praw.Reddit('twatBot')
+    reddit = praw.Reddit('twotBot')
 
     log("Authenticated as: " + str(reddit.user.me()));
 
@@ -252,17 +252,17 @@ def authTwitter(job_dir, t_bro):
 
     # get correct paths to files for current job
     if job_dir:
-        cred_path = os.path.join(twatbot_abs_dir, job_dir + 'credentials.txt')
-        path_scrp_dmp = os.path.join(twatbot_abs_dir, job_dir + 'twit_scrape_dump.txt')
-        path_queries = os.path.join(twatbot_abs_dir, job_dir + 'twit_queries.txt')
-        path_promos = os.path.join(twatbot_abs_dir, job_dir + 'twit_promos.txt')
-        path_log = os.path.join(twatbot_abs_dir, job_dir + 'log.txt')
+        cred_path = os.path.join(twotbot_abs_dir, job_dir + 'credentials.txt')
+        path_scrp_dmp = os.path.join(twotbot_abs_dir, job_dir + 'twit_scrape_dump.txt')
+        path_queries = os.path.join(twotbot_abs_dir, job_dir + 'twit_queries.txt')
+        path_promos = os.path.join(twotbot_abs_dir, job_dir + 'twit_promos.txt')
+        path_log = os.path.join(twotbot_abs_dir, job_dir + 'log.txt')
     else:
-        cred_path = os.path.join(twatbot_abs_dir, 'credentials.txt')
-        path_scrp_dmp = os.path.join(twatbot_abs_dir, 'twit_scrape_dump.txt')
-        path_queries = os.path.join(twatbot_abs_dir, 'twit_queries.txt')
-        path_promos = os.path.join(twatbot_abs_dir, 'twit_promos.txt')
-        path_log = os.path.join(twatbot_abs_dir, 'log.txt')
+        cred_path = os.path.join(twotbot_abs_dir, 'credentials.txt')
+        path_scrp_dmp = os.path.join(twotbot_abs_dir, 'twit_scrape_dump.txt')
+        path_queries = os.path.join(twotbot_abs_dir, 'twit_queries.txt')
+        path_promos = os.path.join(twotbot_abs_dir, 'twit_promos.txt')
+        path_log = os.path.join(twotbot_abs_dir, 'log.txt')
 
     # get authorization credentials from credentials file
     with open(cred_path, 'r') as creds:

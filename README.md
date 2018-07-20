@@ -1,4 +1,4 @@
-# twatBot
+# twotBot
 A python command-line (CLI) bot for automating promotion on popular social media sites (reddit, twitter; in progress: instagram, facebook). Scrape social media with custom queries and promote your product to all relevant results with a single command.
 <b>Use at your own risk:</b> depending on how specific your custom queries are, your bot could find itself (and likely it's associated accounts) banned from social media sites very quickly ;)
 
@@ -33,8 +33,9 @@ A python command-line (CLI) bot for automating promotion on popular social media
 	- write all activity to log (log.txt)
 
 ## dependencies
-- install pip3 `sudo apt install python3-pip`
-- install dependencies `pip3 install --user tweepy bs4 praw selenium`
+- install dependencies you probably don't have already, errors will show up if you're missing any others
+	- install pip3 `sudo apt install python3-pip`
+	- install dependencies `pip3 install --user tweepy bs4 praw selenium`
 
 ## reddit initial setup
 - <a href="https://praw.readthedocs.io/en/v4.0.0/getting_started/configuration/prawini.html">update 'praw.ini'</a> with <a href="https://www.reddit.com/prefs/apps/">your reddit app credentials</a>
@@ -73,7 +74,7 @@ user_agent=fakebot 0.1
 
 ## reddit usage
 ```
-usage: twatBot.py reddit [-h] [-s N] [-n | -H | -r] [-p]
+usage: twotBot.py reddit [-h] [-s N] [-n | -H | -r] [-p]
 
 optional arguments:
   -h,	--help		show this help message and exit
@@ -109,7 +110,7 @@ your_twitter_password
 
 ## twitter usage
 ```
-usage: twatBot.py twitter [-h] [-j JOB_DIR] [-t] [-u UNF] [-s] [-c] [-e] [-b]
+usage: twotBot.py twitter [-h] [-j JOB_DIR] [-t] [-u UNF] [-s] [-c] [-e] [-b]
                           [-f] [-p] [-d]
 
 optional arguments:
