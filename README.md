@@ -1,18 +1,19 @@
-# twotBot
-A python command-line (CLI) bot for automating promotion on popular social media sites (reddit, twitter; in progress: instagram, facebook). Scrape social media with custom queries and promote your product to all relevant results with a single command.
-<b>Use at your own risk:</b> depending on how specific your custom queries are, your bot could find itself (and likely it's associated accounts) banned from social media sites very quickly ;)
+# social-research-bot
+A python command-line (CLI) bot for automating research and promotion on popular social media sites (reddit, twitter, facebook, [TODO: instagram]). With a single command, scrape social media sites using custom queries and/or promote to all relevant results.
+
+<b>Use at your own risk:</b> choose your input parameters wisely, otherwise your bot could find itself, along with any associated accounts, banned from social platforms very quickly as a result of policy violations.
 
 ## features
 - Reddit
 	- scrape subreddit(s) for lists of keyword, dump results in local file (red_scrape_dump.txt)
-		- seperate keyword lists for AND, OR, NOT search operations (red_subkey_pairs.json)
+		- separate keyword lists for AND, OR, NOT search operations (red_subkey_pairs.json)
 		- search new, hot, or rising categories
 	- reply to posts in red_scrape_dump.txt with random promotion from red_promos.txt
 		- ignore posts by marking them in dump file with "-" prefix
 	- praw.errors.HTTPException handling
 	- write all activity to log (log.txt)
 - Twitter
-	- maintain seperate jobs for different promotion projects
+	- maintain separate jobs for different promotion projects
 	- update user status
 	- unfollow users who don't reciprocate your follow
 	- scan twitter for list of custom queries, dump results in local file (twit_scrape_dump.txt)
