@@ -3,4 +3,5 @@ __pycache__/
 praw.ini
 *log.txt
 *_inactive*
-geckodriver.log
+geckodriver*
+facebook/data/*
