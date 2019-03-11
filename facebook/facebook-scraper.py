@@ -5,9 +5,11 @@ import os
 import platform
 import sys
 import urllib.request
+import random
 
 from selenium import webdriver
 from selenium.common.exceptions import TimeoutException
+from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
@@ -15,14 +17,70 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 
 # Global Variables
-
 driver = None
 
-total_scrolls = 20
+total_scrolls = 200
 current_scrolls = 0
-scroll_time = 5
+R = [3, 7] # random scroll time min/max bounds
 
 old_height = 0
+
+
+def login():
+    # read in groups to scrape
+    f = open("data/credentials.txt")
+    creds = f.readlines()
+    email = creds[0]
+    password = creds[1]
+    f.close()
+    #email = input('\nEnter facebook email: ')
+    #password = getpass.getpass()
+
+    try:
+        global driver
+
+        # customize browser behavior
+        _browser_profile = webdriver.FirefoxProfile()
+        _browser_profile.set_preference("dom.webnotifications.enabled", False)
+        #_browser_profile.set_preference("dom.push.enabled", False)
+
+        try:
+            driver = webdriver.Firefox(executable_path="../geckodriver", firefox_profile=_browser_profile)
+        except:
+            print("Need to download latest geckodriver to main directory: https://github.com/mozilla/geckodriver/releases")
+            exit()
+
+        driver.get("https://www.facebook.com")
+        driver.maximize_window()
+
+        driver.find_element_by_name('email').send_keys(email)
+        driver.find_element_by_name('pass').send_keys(password)
+        driver.find_element_by_id('loginbutton').click()
+
+    except Exception as e:
+        print("Error logging in.")
+        print(sys.exc_info()[0])
+        exit()
+
+
+def create_original_link(url):
+    
+    if url.find(".php") != -1:
+        original_link = "https://www.facebook.com/" + ((url.split("="))[1])
+
+        if original_link.find("&") != -1:
+            original_link = original_link.split("&")[0]
+
+    elif url.find("fnr_t") != -1:
+        original_link = "https://www.facebook.com/" + ((url.split("/"))[-1].split("?")[0])
+    elif url.find("_tab") != -1:
+        original_link = "https://www.facebook.com/" + (url.split("?")[0]).split("/")[-1]
+    else:
+        original_link = url
+
+    
+    #print("original_link= " + original_link)
+    return original_link
 
 
 def check_height():
@@ -42,7 +100,7 @@ def scroll():
 
             old_height = driver.execute_script("return document.body.scrollHeight")
             driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-            WebDriverWait(driver, scroll_time, 0.05).until(lambda driver: check_height())
+            WebDriverWait(driver, random.randint(R[0],R[1]), 0.05).until(lambda driver: check_height())
             current_scrolls += 1
         except TimeoutException:
             break
@@ -191,231 +249,111 @@ def extract_and_write_posts(filename, elements):
 
     return
 
-def extract_and_write_group_posts(filename, elements):
-    try:
-        f = open(filename, "w", newline='\r\n')
-        f.writelines(' TIME || TYPE  || TITLE || STATUS  ||   LINKS(Shared Posts/Shared Links etc) ' + '\n' + '\n')
 
-        for x in elements:
-            try:
-                video_link = " "
-                title = " "
-                status = " "
-                link = ""
-                img = " "
-                time = " "
+def scrape_profiles(ids):
 
-                # time
-                time = get_time(x)
-
-                # title
-                title = get_title(x)
-                if title.text.find("updated") != -1:
-                    x = x.find_element_by_xpath(".//div[@class='_1dwg _1w_m']")
-                    title = get_title(x)
-                    
-                status = get_status(x)
-                if title.text == driver.find_element_by_id("fb-timeline-cover-name").text:
-                    if status == '':
-                        temp = get_div_links(x, "img")
-                        if temp == '':  # no image tag which means . it is not a life event
-                            link = get_div_links(x, "a").get_attribute('href')
-                            type = "status update without text"
-                        else:
-                            type = 'life event'
-                            link = get_div_links(x, "a").get_attribute('href')
-                            status = get_div_links(x, "a").text
-                    else:
-                        type = "status update"
-                        if get_div_links(x, "a") != '':
-                            link = get_div_links(x, "a").get_attribute('href')
-
-                elif title.text.find(" shared ") != -1:
-
-                    x1, link = get_title_links(title)
-                    type = "shared " + x1
-
-                elif title.text.find(" at ") != -1 or title.text.find(" in ") != -1:
-                    if title.text.find(" at ") != -1:
-                        x1, link = get_title_links(title)
-                        type = "check in"
-                    elif title.text.find(" in ") != 1:
-                        status = get_div_links(x, "a").text
-
-                elif title.text.find(" added ") != -1 and title.text.find("photo") != -1:
-                    type = "added photo"
-                    link = get_div_links(x, "a").get_attribute('href')
-
-                elif title.text.find(" added ") != -1 and title.text.find("video") != -1:
-                    type = "added video"
-                    link = get_div_links(x, "a").get_attribute('href')
-
-                else:
-                    type = "others"
-
-                if not isinstance(title, str):
-                    title = title.text
-
-                status = status.replace("\n", " ")
-                title = title.replace("\n", " ")
-
-                line = str(time) + " || " + str(type) + ' || ' + str(title) + ' || ' + str(status) + ' || ' + str(
-                    link) + "\n"
-
-                try:
-                    f.writelines(line)
-                except:
-                    print('Posts: Could not map encoded characters')
-            except:
-                pass
-        f.close()
-    except:
-        print("Exception (extract_and_write_posts)", "Status =", sys.exc_info()[0])
-
-    return
-
-def scrape_data(id, scan_list, section, elements_path, file_names):
-
-    page = []
-    page.append(id)
-
-    for i in range(len(section)):
-        page.append(id + section[i])
-
-    for i in range(len(scan_list)):
-        try:
-            driver.get(page[i])
-
-            scroll()
-
-            data = driver.find_elements_by_xpath(elements_path[i])
-
-            #extract_and_write_posts(file_names[i], data)
-            extract_and_write_group_posts(file_names[i], data)
-
-        except:
-            print("Exception (scrape_data)", str(i), "Status =", sys.exc_info()[0])
-
-
-def create_original_link(url):
-    
-    if url.find(".php") != -1:
-        original_link = "https://www.facebook.com/" + ((url.split("="))[1])
-
-        if original_link.find("&") != -1:
-            original_link = original_link.split("&")[0]
-
-    elif url.find("fnr_t") != -1:
-        original_link = "https://www.facebook.com/" + ((url.split("/"))[-1].split("?")[0])
-    elif url.find("_tab") != -1:
-        original_link = "https://www.facebook.com/" + (url.split("?")[0]).split("/")[-1]
-    else:
-        original_link = url
-
-    
-    #print("original_link= " + original_link)
-    return original_link
-
-
-def scrape_profile(ids):
-
-    # execute for all profiles given in input.txt file
     for id in ids:
 
         driver.get(id)
-        url = driver.current_url
-        id = create_original_link(url)
+        #url = driver.current_url
+        #id = create_original_link(url)
 
-        scan_list = [None]
-        section = []
-        elements_path = ['//div[@class="_5pcb _4b0l _2q8l"]']
+        scroll()
 
-        file_names = ["data/posts.txt"]
-
-        scrape_data(id, scan_list, section, elements_path, file_names)
-        print("Posts(Statuses) Done")
-        print("----------------------------------------")
+        data = driver.find_elements_by_xpath('//div[@class="_5pcb _4b0l _2q8l"]')
+        extract_and_write_posts("data/posts.txt", data)
 
     return
+
+
+def buildPostDumpLine(link, time, title, txt, price, location):
+    return (time + ' || ' + price + ' || ' + location + '\n' + link + '\n' + title + '\n' + txt.replace("\n", "") + "\n\n")
+                
+
+def keyword_check(title, text, price, location, keys):    
+    for key in keys:
+        if title.find(key) != -1 or text.find(key) != -1:
+            return True
+    return False
+
+
+def extract_and_write_group_posts(posts):
+    keys = []
+    with open('data/keywords.txt') as f:
+        keys = f.read().splitlines()
+        
+    with open('data/grp-posts.txt', 'a') as f:
+        for post in posts:
+            time = post.find_element_by_tag_name('abbr').get_attribute('title')
+            link = post.find_element_by_xpath(".//span[@class='fsm fwn fcg']/a").get_attribute('href')
+            
+            try:
+                title = post.find_element_by_xpath(".//div[@class='_l53']/span[2]").text
+            except NoSuchElementException as e:
+                title = ''
+            try:
+                text = post.find_element_by_xpath('.//div[@class="_l52"]/div[2]/p').text
+            except NoSuchElementException as e:
+                text = ''
+            try:
+                price = post.find_element_by_xpath('.//div[@class="_l57"]').text
+            except NoSuchElementException as e:
+                price = ''
+            try:
+                location = post.find_element_by_xpath('.//div[@class="_l58"]').text.replace('::before','')
+            except NoSuchElementException as e:
+                location = ''
+            
+            if keyword_check(title, text, price, location, keys):
+                f.write(buildPostDumpLine(link,time,title,text, price, location))
+            
+    return
+
     
 def scrape_groups(groups):
-
+    
     print("\nScraping groups...")
     for grp in groups:
 
-        
         driver.get(grp)
         url = driver.current_url
         id = create_original_link(url)
+
         print("Scraping " + id)
-
-        scan_list = [None]
-        section = []
-        elements_path = ['//div[@class="_5pcb"]']
-        file_names = ["data/grp-posts.txt"]
-
-        scrape_data(id, scan_list, section, elements_path, file_names)
-
-        sys.exit()
+        scroll()
+        elements_path = []
+        data = driver.find_elements_by_xpath('//div[@class="_1dwg _1w_m _q7o"]')
+        extract_and_write_group_posts(data)
+       
     return
 
 
-def login():
-    # read in groups to scrape
-    f = open("data/credentials.txt")
-    creds = f.readlines()
-    email = creds[0]
-    password = creds[1]
-    f.close()
-    #email = input('\nEnter facebook email: ')
-    #password = getpass.getpass()
-
-    try:
-        global driver
-
-        # customize browser behavior
-        _browser_profile = webdriver.FirefoxProfile()
-        _browser_profile.set_preference("dom.webnotifications.enabled", False)
-        #_browser_profile.set_preference("dom.push.enabled", False)
-
-        try:
-            driver = webdriver.Firefox(executable_path="../geckodriver", firefox_profile=_browser_profile)
-        except:
-            print("Need to download latest geckodriver to main directory: https://github.com/mozilla/geckodriver/releases")
-            exit()
-
-        driver.get("https://www.facebook.com")
-        driver.maximize_window()
-
-        driver.find_element_by_name('email').send_keys(email)
-        driver.find_element_by_name('pass').send_keys(password)
-        driver.find_element_by_id('loginbutton').click()
-
-    except Exception as e:
-        print("Error logging in.")
-        print(sys.exc_info()[0])
-        exit()
-
-
 def main(argv):
-
-    # read in groups to scrape
-    f = open("data/groups.txt")
-    groups = f.readlines()
-    f.close()
-    # read in users to scrape
-    #users = ["https://www.facebook.com/" + line.split("/")[-1] for line in open("users.txt", newline='\n')]
+    groups = []
+    users = []
+    # read in users/groups to scrape
+    with open('data/groups.txt') as f:
+        groups = f.readlines()
+    with open('data/users.txt') as f:
+        users = f.readlines()
 
     login()
 
-    # scrape groups
-    if len(groups) > 0:
+    # scrape users
+    if argv[0] == 'users':
+        if len(users) > 0:
+            scrape_profiles(users)
+            driver.close()
+        else:
+            print("Need to populate data/users.txt with user urls to scrape...")
 
-        scrape_groups(groups)
-        print("Group posts done\n----------------------------------------")
-        driver.close()
-    else:
-        print("Need to populate group.txt with group urls to scrape...")
+    # scrape groups
+    if argv[0] == 'groups':
+        if len(groups) > 0:
+            scrape_groups(groups)
+            driver.close()
+        else:
+            print("Need to populate data/groups.txt with group urls to scrape...")
 
 
 # so main() isn't executed when script is imported
