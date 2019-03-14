@@ -19,7 +19,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 # Global Variables
 driver = None
 
-total_scrolls = 200
+total_scrolls = 500
 current_scrolls = 0
 R = [3, 7] # random scroll time min/max bounds
 

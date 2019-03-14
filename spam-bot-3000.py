@@ -508,32 +508,8 @@ def scrapeTwitter(con, eng, fol, pro, dm):
                 break
 
 
-# get command line arguments and execute appropriate functions
-def main(argv):
-    # for logging purposes
-    start_time = datetime.now()
-
-    count_reply = 0
-    count_follow = 0
-
-    def report_job_status():
-        # report how many actions performed
-        if args.t_pro or args.t_bro:
-            log("Replied to {rep} tweets.".format(rep=str(count_reply)))
-        if args.t_fol or args.t_bro:
-            log("Followed {fol} tweeters.".format(fol=str(count_follow)))
-
-        log("Total run time: " + str(datetime.now() - start_time))
-
-    # catch SIGINTs and KeyboardInterrupts
-    def signal_handler(signal, frame):
-        log("Current job terminated: received KeyboardInterrupt kill signal.")
-        report_job_status()
-        sys.exit(0)
-    # set SIGNINT listener to catch kill signals
-    signal.signal(signal.SIGINT, signal_handler)
-
-    parser = argparse.ArgumentParser(description="Beep, boop.. I'm a social media promotion bot - Let's get spammy!")
+def argument_handler():
+    parser = argparse.ArgumentParser(description="Beep, boop.. I'm a social media scraping and promotion bot - Let's get spammy!")
 
     subparsers = parser.add_subparsers(help='platforms', dest='platform')
 
@@ -565,8 +541,38 @@ def main(argv):
     categories.add_argument('-r', '--rising', action='store_true', dest='r_ris', help='scrape rising posts')
     reddit_parser.add_argument('-p', '--promote', action='store_true', dest='r_pro', help='promote to posts in red_scrape_dump.txt not marked with a "-" prefix')
 
+    return parser.parse_args()
+
+
+# get command line arguments and execute appropriate functions
+def main(argv):
+    # for logging purposes
+    start_time = datetime.now()
+
+    count_reply = 0
+    count_follow = 0
+
+    # deal with passed in arguments 
+    args = argument_handler()
+
+    def report_job_status():
+        # report how many actions performed
+        if args.t_pro or args.t_bro:
+            log("Replied to {rep} tweets.".format(rep=str(count_reply)))
+        if args.t_fol or args.t_bro:
+            log("Followed {fol} tweeters.".format(fol=str(count_follow)))
+
+        log("Total run time: " + str(datetime.now() - start_time))
+
+    # catch SIGINTs and KeyboardInterrupts
+    def signal_handler(signal, frame):
+        log("Current job terminated: received KeyboardInterrupt kill signal.")
+        report_job_status()
+        sys.exit(0)
+    # set SIGNINT listener to catch kill signals
+    signal.signal(signal.SIGINT, signal_handler)
+
     executed = 0 # catches any command/args that fall through below tree
-    args = parser.parse_args()
 
     # twitter handler
     if args.platform == 'twitter':

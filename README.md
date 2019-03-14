@@ -1,10 +1,10 @@
-# social-research-bot
-A python command-line (CLI) bot for automating research and promotion on popular social media sites (reddit, twitter, facebook, [TODO: instagram]). With a single command, scrape social media sites using custom queries and/or promote to all relevant results.
+# spam-bot-3000
+A python command-line (CLI) bot for automating research and promotion on popular social media platforms (reddit, twitter, facebook, [TODO: instagram]). With a single command, scrape social media sites using custom queries and/or promote to all relevant results.
 
-<b>Use at your own risk:</b> choose your input parameters wisely, otherwise your bot could find itself, along with any associated accounts, banned from social platforms very quickly as a result of policy violations.
+<b>Please use with discretion:</b> i.e. choose your input arguments wisely, otherwise your bot could find itself, along with any associated accounts, banned from platforms very quickly. The bot has some built in anti-spam filter avoidance features to help you remain undetected; however, no amount of avoidance can hide blatantly abusive use of this tool.
 
 ## features
-- Reddit
+- reddit
 	- scrape subreddit(s) for lists of keyword, dump results in local file (red_scrape_dump.txt)
 		- separate keyword lists for AND, OR, NOT search operations (red_subkey_pairs.json)
 		- search new, hot, or rising categories
@@ -12,26 +12,33 @@ A python command-line (CLI) bot for automating research and promotion on popular
 		- ignore posts by marking them in dump file with "-" prefix
 	- praw.errors.HTTPException handling
 	- write all activity to log (log.txt)
-- Twitter
+- twitter
 	- maintain separate jobs for different promotion projects
 	- update user status
 	- unfollow users who don't reciprocate your follow
 	- scan twitter for list of custom queries, dump results in local file (twit_scrape_dump.txt)
 		- scan continuously or in overwatch mode
+	- optional bypassing of proprietary twitter APIs and their inherent limitations
 	- promotion abilities
         - tweepy api
 		    - follow original posters
 		    - favorite relevant tweets
 		    - direct message relevant tweets
 		    - reply to relevant tweets with random promotional tweet from file (twit_promos.txt)
-        - in browser
-            - favorite, follow, reply to scraped results directly in browser to thwart api limits	    
+        - Selenium GUI browser
+            - favorite, follow, reply to scraped results while bypassing API limits	    
         - ignore tweets by marking them in dump file with "-" prefix
 	- script for new keyword, hashtag research by gleening scraped results
 	- script for filtering out irrelevant keywords, hashtags, screen names
 	- script for automating scraping, filtering, and spamming only most relevant results
 	- relatively graceful exception handling
 	- write all activity to log (log.txt)
+- facebook
+	- zero reliance on proprietary facebook APIs and their inherent limitations
+	- Selenium GUI browser agent
+	- scrape public and private user profiles for keywords
+		- note: access to private data requires login to authorized account with associated access
+	- scrape public and private group feeds for keywords
 
 ## dependencies
 - install dependencies you probably don't have already, errors will show up if you're missing any others
@@ -75,7 +82,7 @@ user_agent=fakebot 0.1
 
 ## reddit usage
 ```
-usage: twotBot.py reddit [-h] [-s N] [-n | -H | -r] [-p]
+usage: spam-bot-3000.py reddit [-h] [-s N] [-n | -H | -r] [-p]
 
 optional arguments:
   -h,	--help		show this help message and exit
@@ -111,9 +118,9 @@ your_twitter_password
 
 ## twitter usage
 ```
-usage: twotBot.py twitter [-h] [-j JOB_DIR] [-t] [-u UNF] [-s] [-c] [-e] [-b]
+usage: spam-bot-3000.py twitter [-h] [-j JOB_DIR] [-t] [-u UNF] [-s] [-c] [-e] [-b]
                           [-f] [-p] [-d]
-
+spam-bot-3000
 optional arguments:
  -h, --help		show this help message and exit
  -j JOB_DIR, --job JOB_DIR
@@ -166,7 +173,35 @@ spam -> tweepy api:
 7) specify job
     - `-j studfinder_example/` specify which job directory to execute
 
-## notes
-If you don't want to maintain individual jobs in separate directories, you may create single credentials, queries, promos, and scrape dump files in main working directory.
+Note: if you don't want to maintain individual jobs in separate directories, you may create single credentials, queries, promos, and scrape dump files in main working directory.
 
-Future updates will include modules for promoting to instagram, facebook, etc.
+## facebook initial setup
+- all the following files are stored in 'facebook/data' folder
+- create new 'credentials.txt' file to store your facebook login credentials
+<credentials.txt>
+```
+your_facebook_email
+your_facebook_password
+```
+
+- create new 'groups.txt' to list the urls of group feeds to scrape
+	- line format: 'https://www.facebook.com/groups/your_group_id_number_here'
+	- individual urls on separate lines
+- create new 'users.txt' to list the urls of users to scrape
+	- line format: 'https://www.facebook.com/your_user_name_here'
+	- individual urls on separate lines
+- create new 'keywords.txt' to list the keywords to scrape feeds for
+	- individual keywords on separate lines
+
+## facebook usage
+- scrape user profiles in 'users.txt' for keywords in 'keywords.txt'
+	- `facebook-scraper.py users`
+		- results output to 'posts.txt'
+- scrape group feeds in 'groups.txt' for keywords in 'keywords.txt'
+	- `facebook-scraper.py groups`
+		- results output to 'grp-posts.txt'
+
+## TODO
+- Flesh out additional suite of promotion and interaction tool for facebook platform
+- Organize platforms and their associated data and tools into their own folders and python scripts
+- Future updates will include modules for scraping and promoting to Instagram.
