@@ -178,6 +178,7 @@ Note: if you don't want to maintain individual jobs in separate directories, you
 ## facebook initial setup
 - all the following files are stored in 'facebook/data' folder
 - create new 'credentials.txt' file to store your facebook login credentials
+
 <credentials.txt>
 ```
 your_facebook_email
