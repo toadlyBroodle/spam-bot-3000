@@ -329,6 +329,11 @@ def scrape_groups(groups):
 
 
 def main(argv):
+    # check for input arguments
+    if not argv:
+        print("Must specify input arguments, e.g. 'users', or 'groups'")
+        sys.exit()
+    
     groups = []
     users = []
     # read in users/groups to scrape
@@ -338,6 +343,7 @@ def main(argv):
         users = f.readlines()
 
     login()
+
 
     # scrape users
     if argv[0] == 'users':
