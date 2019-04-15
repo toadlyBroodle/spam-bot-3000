@@ -36,9 +36,9 @@ A python command-line (CLI) bot for automating research and promotion on popular
 - facebook
 	- zero reliance on proprietary facebook APIs and their inherent limitations
 	- Selenium GUI browser agent
-	- scrape public and private user profiles for keywords
+	- scrape public and private user profiles for keywords using AND, OR, NOT operators
 		- note: access to private data requires login to authorized account with associated access
-	- scrape public and private group feeds for keywords
+	- scrape public and private group feeds for keywords using AND, OR, NOT operators
 
 ## dependencies
 - install dependencies you probably don't have already, errors will show up if you're missing any others
@@ -176,31 +176,35 @@ spam -> tweepy api:
 Note: if you don't want to maintain individual jobs in separate directories, you may create single credentials, queries, promos, and scrape dump files in main working directory.
 
 ## facebook initial setup
-- all the following files are stored in 'facebook/data' folder
-- create new 'credentials.txt' file to store your facebook login credentials
+- create new client folder in 'facebook/clients/YOUR_CLIENT'
+- create new 'jobs.json' file to store your client's job information in the following format:
 
-<credentials.txt>
+<jobs.json>
 ```
-your_facebook_email
-your_facebook_password
+{"client_data":
+	{"name": "",
+	"email": "",
+	"fb_login": "",
+	"fb_password": "",
+	"jobs": [
+		{"type": "groups",
+			"urls": ["",""],
+			"keywords_and": ["",""],
+			"keywords_or": ["",""],
+			"keywords_not": ["",""] },
+		{"type": "users",
+			"urls": [],
+			"keywords_and": [],
+			"keywords_or": [],
+			"keywords_not": [] }
+	]}
+}
 ```
-
-- create new 'groups.txt' to list the urls of group feeds to scrape
-	- line format: 'https://www.facebook.com/groups/your_group_id_number_here'
-	- individual urls on separate lines
-- create new 'users.txt' to list the urls of users to scrape
-	- line format: 'https://www.facebook.com/your_user_name_here'
-	- individual urls on separate lines
-- create new 'keywords.txt' to list the keywords to scrape feeds for
-	- individual keywords on separate lines
 
 ## facebook usage
-- scrape user profiles in 'users.txt' for keywords in 'keywords.txt'
-	- `facebook-scraper.py users`
-		- results output to 'posts.txt'
-- scrape group feeds in 'groups.txt' for keywords in 'keywords.txt'
-	- `facebook-scraper.py groups`
-		- results output to 'grp-posts.txt'
+- scrape user and group feed urls for keywords
+	- `facebook-scraper.py clients/YOUR_CLIENT/`
+		- results output to 'clients/YOUR_CLIENT/results.txt'
 
 ## TODO
 - Flesh out additional suite of promotion and interaction tool for facebook platform

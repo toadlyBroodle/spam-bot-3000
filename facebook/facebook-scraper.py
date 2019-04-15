@@ -6,6 +6,7 @@ import platform
 import sys
 import urllib.request
 import random
+import json
 
 from selenium import webdriver
 from selenium.common.exceptions import TimeoutException
@@ -18,7 +19,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 # Global Variables
 driver = None
-
+job_dir = ""
 total_scrolls = 500
 current_scrolls = 0
 R = [3, 7] # random scroll time min/max bounds
@@ -26,16 +27,8 @@ R = [3, 7] # random scroll time min/max bounds
 old_height = 0
 
 
-def login():
-    # read in groups to scrape
-    f = open("data/credentials.txt")
-    creds = f.readlines()
-    email = creds[0]
-    password = creds[1]
-    f.close()
-    #email = input('\nEnter facebook email: ')
-    #password = getpass.getpass()
-
+def login(login, password):
+    global job_dir
     try:
         global driver
 
@@ -53,7 +46,7 @@ def login():
         driver.get("https://www.facebook.com")
         driver.maximize_window()
 
-        driver.find_element_by_name('email').send_keys(email)
+        driver.find_element_by_name('email').send_keys(login)
         driver.find_element_by_name('pass').send_keys(password)
         driver.find_element_by_id('loginbutton').click()
 
@@ -64,7 +57,7 @@ def login():
 
 
 def create_original_link(url):
-    
+
     if url.find(".php") != -1:
         original_link = "https://www.facebook.com/" + ((url.split("="))[1])
 
@@ -78,7 +71,6 @@ def create_original_link(url):
     else:
         original_link = url
 
-    
     #print("original_link= " + original_link)
     return original_link
 
@@ -104,8 +96,6 @@ def scroll():
             current_scrolls += 1
         except TimeoutException:
             break
-
-    return
 
 
 # Helper Functions for Posts
@@ -247,8 +237,6 @@ def extract_and_write_posts(filename, elements):
     except:
         print("Exception (extract_and_write_posts)", "Status =", sys.exc_info()[0])
 
-    return
-
 
 def scrape_profiles(ids):
 
@@ -263,30 +251,43 @@ def scrape_profiles(ids):
         data = driver.find_elements_by_xpath('//div[@class="_5pcb _4b0l _2q8l"]')
         extract_and_write_posts("data/posts.txt", data)
 
-    return
-
 
 def buildPostDumpLine(link, time, title, txt, price, location):
     return (time + ' || ' + price + ' || ' + location + '\n' + link + '\n' + title + '\n' + txt.replace("\n", "") + "\n\n")
-                
 
-def keyword_check(title, text, price, location, keys):    
-    for key in keys:
-        if title.find(key) != -1 or text.find(key) != -1:
+
+def keyword_check(title, text, price, location, job):
+
+    # process any submission with title/text fitting and/or/not keywords
+    tit_txt = title.lower() + ' ' + text.lower()
+
+    # must not contain any NOT keywords
+    for kw in job.keywords_not:
+        if kw in tit_txt:
+            return False
+
+    # must contain all AND keywords
+    for kw in job.keywords_and:
+        if not kw in tit_txt:
+            return False
+
+    # must contain at least one OR keyword
+    at_least_one = False
+    for kw in job.keywords_or:
+        if kw in tit_txt:
             return True
+
     return False
 
 
-def extract_and_write_group_posts(posts):
-    keys = []
-    with open('data/keywords.txt') as f:
-        keys = f.read().splitlines()
-        
-    with open('data/grp-posts.txt', 'a') as f:
+def extract_and_write_group_posts(posts, job):
+    global job_dir
+
+    with open(job_dir + 'results.txt', 'a') as f:
         for post in posts:
             time = post.find_element_by_tag_name('abbr').get_attribute('title')
             link = post.find_element_by_xpath(".//span[@class='fsm fwn fcg']/a").get_attribute('href')
-            
+
             try:
                 title = post.find_element_by_xpath(".//div[@class='_l53']/span[2]").text
             except NoSuchElementException as e:
@@ -303,17 +304,15 @@ def extract_and_write_group_posts(posts):
                 location = post.find_element_by_xpath('.//div[@class="_l58"]').text.replace('::before','')
             except NoSuchElementException as e:
                 location = ''
-            
-            if keyword_check(title, text, price, location, keys):
-                f.write(buildPostDumpLine(link,time,title,text, price, location))
-            
-    return
 
-    
-def scrape_groups(groups):
-    
+            if keyword_check(title, text, price, location, job):
+                f.write(buildPostDumpLine(link,time,title,text,price,location))
+
+
+def scrape_groups(job):
+
     print("\nScraping groups...")
-    for grp in groups:
+    for grp in job.urls:
 
         driver.get(grp)
         url = driver.current_url
@@ -322,45 +321,35 @@ def scrape_groups(groups):
         print("Scraping " + id)
         scroll()
         elements_path = []
-        data = driver.find_elements_by_xpath('//div[@class="_1dwg _1w_m _q7o"]')
-        extract_and_write_group_posts(data)
-       
-    return
+        posts = driver.find_elements_by_xpath('//div[@class="_1dwg _1w_m _q7o"]')
+        extract_and_write_group_posts(posts, job)
 
 
 def main(argv):
+    global job_dir
+    client_data = []
+
     # check for input arguments
     if not argv:
-        print("Must specify input arguments, e.g. 'users', or 'groups'")
+        print("Must specify input arguments, e.g. 'python3 facebook-scraper.py JOB_DIR/'")
         sys.exit()
-    
-    groups = []
-    users = []
-    # read in users/groups to scrape
-    with open('data/groups.txt') as f:
-        groups = f.readlines()
-    with open('data/users.txt') as f:
-        users = f.readlines()
 
-    login()
+    # read in client data
+    job_dir = argv[0]
+    with open(job_dir + 'client_data.json') as json_data:
+        parsed = json.load(json_data)
+        client_data = parsed['client_data']
+        
+    login(client_data['fb_login'], client_data['fb_password'])
 
+    # scrape jobs
+    for job in client_data.jobs:
+        if job.type == 'users':
+            scrape_profiles(job)
+        if job.type == 'groups':
+            scrape_groups(job)
 
-    # scrape users
-    if argv[0] == 'users':
-        if len(users) > 0:
-            scrape_profiles(users)
-            driver.close()
-        else:
-            print("Need to populate data/users.txt with user urls to scrape...")
-
-    # scrape groups
-    if argv[0] == 'groups':
-        if len(groups) > 0:
-            scrape_groups(groups)
-            driver.close()
-        else:
-            print("Need to populate data/groups.txt with group urls to scrape...")
-
+    driver.close()
 
 # so main() isn't executed when script is imported
 if __name__ == '__main__':

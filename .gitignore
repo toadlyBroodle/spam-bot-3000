@@ -4,4 +4,5 @@ praw.ini
 *log.txt
 *_inactive*
 geckodriver*
+facebook/clients/*
 facebook/data/*
