@@ -262,18 +262,18 @@ def keyword_check(title, text, price, location, job):
     tit_txt = title.lower() + ' ' + text.lower()
 
     # must not contain any NOT keywords
-    for kw in job.keywords_not:
+    for kw in job['keywords_not']:
         if kw in tit_txt:
             return False
 
     # must contain all AND keywords
-    for kw in job.keywords_and:
+    for kw in job['keywords_and']:
         if not kw in tit_txt:
             return False
 
     # must contain at least one OR keyword
     at_least_one = False
-    for kw in job.keywords_or:
+    for kw in job['keywords_or']:
         if kw in tit_txt:
             return True
 
@@ -312,7 +312,7 @@ def extract_and_write_group_posts(posts, job):
 def scrape_groups(job):
 
     print("\nScraping groups...")
-    for grp in job.urls:
+    for grp in job['urls']:
 
         driver.get(grp)
         url = driver.current_url
@@ -339,14 +339,14 @@ def main(argv):
     with open(job_dir + 'client_data.json') as json_data:
         parsed = json.load(json_data)
         client_data = parsed['client_data']
-        
+
     login(client_data['fb_login'], client_data['fb_password'])
 
     # scrape jobs
-    for job in client_data.jobs:
-        if job.type == 'users':
-            scrape_profiles(job)
-        if job.type == 'groups':
+    for job in client_data['jobs']:
+        #if job['type'] == 'users':
+        #    scrape_profiles(job)
+        if job['type'] == 'groups':
             scrape_groups(job)
 
     driver.close()
